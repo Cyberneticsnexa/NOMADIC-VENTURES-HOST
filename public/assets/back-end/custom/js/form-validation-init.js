@@ -1054,7 +1054,7 @@ function updateBasisValidation() {
                         if (json.valid) {
                             return true;
                         } else {
-                            return '"This Code is already taken."';
+                            return false;
                         }
                     },
                 },
