@@ -1064,10 +1064,13 @@ function updateBasisValidation() {
                 select2: true,
             },
         },
-        submitHandler: function (form) {
+        submitHandler: function (form, event) {
+            event.preventDefault(); // Prevent default form submission
+            console.log("Form is valid and ready to submit."); // Debugging line
             loader();
-            form.submit();
+            form.submit(); // Manually submit the form
         },
+
     });
 }
 
