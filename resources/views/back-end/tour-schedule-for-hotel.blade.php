@@ -15,7 +15,9 @@
                     <th>Guide</th>
                     <th>Hotel</th>
                     <th>Booking Status</th>
-                    <th>Amended Count</th>
+                    @if ($tour->amended_count != 0)
+                        <th>Amended</th>
+                    @endif
                     <th>Reservation Voucher</th>
                     <th>Confirm</th>
                     @if ($tour->amended_count != 0)
@@ -80,7 +82,11 @@
                                 @endswitch
                             @endif
                         </td>
-                        <td>{{ $detail->amended_count }}</td>
+                        @if ($detail->amended_count > 0)
+                            <td>
+                                <span class="badge badge-danger">{{ $detail->amended_count }} Time Amended</span>
+                            </td>
+                        @endif
                         <td>
                             @if (!is_null($detail->hotel))
                                 @php
@@ -163,8 +169,7 @@
                                     @endif
                                 @else
                                     @if ($index == 0)
-                                        <a target="_blank"
-                                            href="/re-assign-hotel/{{ $tour_schedule->tour_number }}"
+                                        <a target="_blank" href="/re-assign-hotel/{{ $tour_schedule->tour_number }}"
                                             class="btn btn-xs btn-primary">Re Assign</a>
                                     @endif
                                 @endif
