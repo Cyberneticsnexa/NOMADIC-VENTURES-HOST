@@ -206,8 +206,10 @@ function updateUserValidation() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_user_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_user_btn').prop('disabled', true);
                             return '"This Email is already taken."';
                         }
                     },
@@ -796,8 +798,10 @@ function updateDriver() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#update_driver_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_driver_btn').prop('disabled', true);
                             return '"This Identity No is already taken."';
                         }
                     },
@@ -1052,8 +1056,10 @@ function updateBasisValidation() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1127,8 +1133,10 @@ function updateCountry() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_country_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_country_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1197,8 +1205,10 @@ function updateRoomType() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_room_type_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_room_type_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1377,8 +1387,10 @@ function updateVehicale() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_vehicle_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_vehicle_btn').prop('disabled', true);
                             return '"This Vehicle No is already taken."';
                         }
                     },
@@ -1458,8 +1470,10 @@ function updateGuide() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_guide_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_guide_btn').prop('disabled', true);
                             return '"This Nic is already Added"';
                         }
                     },
