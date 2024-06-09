@@ -27,6 +27,7 @@ $(document).ready(function () {
     editUserRoll();
     editTour();
     createTour();
+    createHotelReservation();
 });
 
 function loader() {
@@ -1483,4 +1484,13 @@ function updateGuide() {
             form.submit();
         },
     });
+}
+
+function createHotelReservation() {
+    $("#create-hotel-reservation-form").validate({
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
+    });
 }

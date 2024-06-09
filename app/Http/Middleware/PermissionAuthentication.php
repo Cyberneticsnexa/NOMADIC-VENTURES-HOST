@@ -19,7 +19,7 @@ class PermissionAuthentication {
             return redirect()->back()->with( [ 'error' => true, 'message' => "You don't  have permission for this !" ] );
         }
         if ($request->route()->getName() === 'edit-user-roll' && $request->route('id') === '1' && Auth::user()->user_roll != 1) {
-            return redirect()->back()->with( [ 'temp-success' => true, 'message' => "You don't have permission for this !" ]);
+            return redirect()->back();
         }
         return $next( $request );
     }

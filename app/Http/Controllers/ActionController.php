@@ -96,7 +96,7 @@ class ActionController extends Controller {
         try {
             $validator = Validator::make( $request->all(), [
                 'user_roll'     => 'required',
-                'permission.*'     => 'required',
+                // 'permission.*'     => 'required',
             ] );
 
             if ( $validator->fails() ) {
@@ -136,7 +136,7 @@ class ActionController extends Controller {
             $validator = Validator::make( $request->all(), [
                 'user_roll'         => 'required',
                 'is_active'         => 'required',
-                'permission.*'        => 'required',
+                // 'permission.*'        => 'required',
             ] );
 
             if ( $validator->fails() ) {
@@ -718,7 +718,7 @@ class ActionController extends Controller {
             ] );
 
             if ( $validator->fails() ) {
-                return redirect()->route('hotel')->with( [ 'error' => true, 'message' => implode( ' ', $validator->messages()->all() ) ] );
+                return redirect()->back()->with( [ 'error' => true, 'message' => implode( ' ', $validator->messages()->all() ) ] );
             }
 
             DB::beginTransaction();
@@ -752,7 +752,7 @@ class ActionController extends Controller {
             }
 
             DB::commit();
-            return redirect()->back()->with( [ 'temp-success' => true, 'message' => 'Hotel Details Created Successfully !' ] );
+            return redirect()->route('hotel')->with( [ 'temp-success' => true, 'message' => 'Hotel Details Created Successfully !' ] );
         } catch ( \Throwable $th ) {
             DB::rollback();
             return redirect()->back()->with( [ 'error' => true, 'message' => $th->getMessage() ] );

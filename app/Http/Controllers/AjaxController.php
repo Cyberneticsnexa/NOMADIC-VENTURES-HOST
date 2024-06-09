@@ -131,28 +131,62 @@ class AjaxController extends Controller
                             </button>';
 
             if($value->status == 1 ){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">
-                                <a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>
-                                <a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>
-                                <a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>
-                            </div>';
+                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
+
+                if(isPermissions('change-tour-action') ){
+                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>';
+                }
+
+                if( isPermissions('cancel-tour')){
+                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>';
+                }
+
+                if( isPermissions('edit-tour')){
+                    $action .=  '<a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>';
+                }
+
+                $action .= '</div>';
+
             }else if($value->status == 2){
-                $action .= '<div class="dropdown-menu btn-xs" role="menu">
-                                <a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>
-                                <a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>
-                                <a target="_blank" class="dropdown-item" href="/view-tour-schedule/' . $value->id . '">Tour Schedule</a>
-                            F    <a class="dropdown-item" href="/tour-status/'.$value->id.'/4">Complete</a>
-                            </div>';
+                $action .= '<div class="dropdown-menu btn-xs" role="menu">';
+
+                if(isPermissions('change-tour-action') ){
+                    // $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>';
+                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/4">Complete</a>';
+                }
+
+                if( isPermissions('cancel-tour')){
+                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>';
+                }
+
+                if( isPermissions('edit-tour')){
+                    $action .=  '<a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>';
+                }
+
+                if( isPermissions('view-tour-schedule-for-tour-manager')){
+                    $action .=  '<a target="_blank" class="dropdown-item" href="/view-tour-schedule/' . $value->id . '">Tour Schedule</a>';
+                }
+
+                $action .= '</div>';
+
             }else if($value->status == 3){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">
-                                <a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>
-                                <a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>
-                            </div>';
+                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
+                if( isPermissions('edit-tour')){
+                    $action .=  '<a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>';
+                }
+                if(isPermissions('change-tour-action') ){
+                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>';
+                }
+                $action .= '</div>';
+
             }
             else if($value->status == 4){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">
-                                <a class="dropdown-item" href="/view-tour-schedule/'.$value->id.'">Tour Schedule</a>
-                            </div>';
+                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
+                if( isPermissions('view-tour-schedule-for-tour-manager')){
+                    $action .=  '<a target="_blank" class="dropdown-item" href="/view-tour-schedule/' . $value->id . '">Tour Schedule</a>';
+                }
+
+                $action .= '</div>';
             }
             $action .= '</div>';
             if($value->status == 4){

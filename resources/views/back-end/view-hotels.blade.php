@@ -10,9 +10,7 @@
                     <th>Address</th>
                     <th>Rate</th>
                     <th>Status</th>
-                    @if (isPermissions('edit-hotel'))
-                        <th>Action</th>
-                    @endif
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>

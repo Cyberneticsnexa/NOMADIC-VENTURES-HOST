@@ -20,7 +20,10 @@ function getAllPermissions() {
             'data'=>array(
                 [ 'title' => 'Tour', 'permission'=>'tour', 'show_in_sidebar'=>true ],
                 [ 'title' => 'Create Tour', 'permission'=>'create-tour', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Confirm Tour', 'permission'=>'change-tour-action', 'show_in_sidebar'=>false ],
+                [ 'title' => 'View Tour Schedule', 'permission'=>'view-tour-schedule-for-tour-manager', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Complete Tour', 'permission'=>'change-tour-action', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Edit Tour', 'permission'=>'edit-tour', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Cancel Tour', 'permission'=>'cancel-tour', 'show_in_sidebar'=>false ],
                 //[ 'title' => 'Assign Franchises', 'permission'=>'assign-franchises', 'show_in_sidebar'=>false ],
 
                 [ 'title' => 'Agent', 'permission'=>'agent', 'show_in_sidebar'=>true ],

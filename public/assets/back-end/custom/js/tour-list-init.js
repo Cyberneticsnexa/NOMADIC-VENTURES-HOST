@@ -14,7 +14,7 @@ $(document).ready(function () {
         // { data: "confirmation_pdf", orderable: false, searchable: false },
     ];
 
-    if (is_permission == true) {
+    if (is_permission_change_action == true || is_permission_view_tour_schedule == true || is_permission_edit == true || is_permission_cancel == true) {
         columns.push({ data: "action", orderable: false, searchable: false });
     }
     columns.push();
