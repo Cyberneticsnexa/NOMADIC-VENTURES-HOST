@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th>Basis</th>
-                    <th>Short Codes</th>
+                    <th>Short Code</th>
                     <th>Status</th>
                     @if (isPermissions('edit-country-code'))
                         <th>Action</th>
