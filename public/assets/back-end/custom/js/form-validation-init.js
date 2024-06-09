@@ -14,7 +14,6 @@ $(document).ready(function () {
     updateVehicale();
     updateGuide();
 
-
     createVehicalType();
     createVehical();
     createHotelCity();
@@ -217,7 +216,7 @@ function updateUserValidation() {
             user_roll: {
                 required: true,
                 select2: true,
-            }
+            },
         },
         submitHandler: function (form) {
             loader();
@@ -1003,7 +1002,6 @@ function createBasis() {
     });
 }
 
-
 function updateBasisValidation() {
     $("#edit-basis-form").validate({
         ignore: [],
@@ -1064,7 +1062,7 @@ function updateBasisValidation() {
             is_active: {
                 required: true,
                 select2: true,
-            }
+            },
         },
         submitHandler: function (form) {
             loader();
@@ -1139,7 +1137,7 @@ function updateCountry() {
             is_active: {
                 required: true,
                 select2: true,
-            }
+            },
         },
         submitHandler: function (form) {
             loader();
@@ -1147,7 +1145,6 @@ function updateCountry() {
         },
     });
 }
-
 
 function updateRoomType() {
     $("#edit-room-type-form").validate({
@@ -1210,7 +1207,7 @@ function updateRoomType() {
             is_active: {
                 required: true,
                 select2: true,
-            }
+            },
         },
         submitHandler: function (form) {
             loader();
@@ -1304,28 +1301,24 @@ function createTour() {
     });
 }
 
-
 //room catogory validation
-function validationEditRoomCatogory(){
-
+function validationEditRoomCatogory() {
     $("#edit-room-category-form").validate({
-        errorPlacement: function(error, element) {
+        errorPlacement: function (error, element) {
             element.closest("div.form-group").append(error);
         },
         rules: {
             edit_room_category: {
                 required: true,
-                maxlength:50
-
+                maxlength: 50,
             },
             is_active: {
-                required: true
+                required: true,
             },
         },
         errorClass: "text-danger",
     });
 }
-
 
 //update vehicle
 function updateVehicale() {
@@ -1364,7 +1357,7 @@ function updateVehicale() {
             },
             edit_vehical_no: {
                 required: true,
-                maxlength:20 ,
+                maxlength: 20,
                 remote: {
                     url: "/update-vehicle-no-verification",
                     type: "post",
@@ -1394,7 +1387,7 @@ function updateVehicale() {
             is_active: {
                 required: true,
                 select2: true,
-            }
+            },
         },
         submitHandler: function (form) {
             loader();
@@ -1432,22 +1425,20 @@ function updateGuide() {
         rules: {
             edit_full_name: {
                 required: true,
-               
             },
             edit_address: {
                 required: true,
-                
             },
             edit_contact_no: {
                 required: true,
-                maxlength:11 ,
+                maxlength: 11,
             },
             edit_language: {
                 required: true,
             },
             edit_nic: {
                 required: true,
-                maxlength:12 ,
+                maxlength: 12,
                 remote: {
                     url: "/update-guide-nic-verification",
                     type: "post",
@@ -1477,7 +1468,7 @@ function updateGuide() {
             is_active: {
                 required: true,
                 select2: true,
-            }
+            },
         },
         submitHandler: function (form) {
             loader();
@@ -1491,6 +1482,6 @@ function createHotelReservation() {
         submitHandler: function (form) {
             loader();
             form.submit();
-        },
-    });
+        },
+    });
 }
