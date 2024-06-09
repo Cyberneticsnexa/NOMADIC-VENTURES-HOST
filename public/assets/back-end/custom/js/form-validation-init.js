@@ -1051,13 +1051,10 @@ function updateBasisValidation() {
                     },
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
-                        console.log(json);
                         if (json.valid) {
-                            $('#update_btn').prop('disabled', false);
                             return true;
                         } else {
-                            $('#update_btn').prop('disabled', true);
-                            return false;
+                            return '"This Code is already taken."';
                         }
                     },
                 },
