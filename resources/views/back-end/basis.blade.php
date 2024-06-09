@@ -11,7 +11,7 @@
         <table id="basis-code-table" class="table table-striped table-bordered nowrap" style="width:100%">
             <thead>
                 <tr>
-                    <th>Country</th>
+                    <th>Basis</th>
                     <th>Short Code</th>
                     <th>Status</th>
                     @if (isPermissions('edit-country-code'))

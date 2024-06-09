@@ -141,7 +141,7 @@ class AjaxController extends Controller
                                 <a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>
                                 <a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>
                                 <a target="_blank" class="dropdown-item" href="/view-tour-schedule/' . $value->id . '">Tour Schedule</a>
-                                <a class="dropdown-item" href="/tour-status/'.$value->id.'/4">Complete</a>
+                            F    <a class="dropdown-item" href="/tour-status/'.$value->id.'/4">Complete</a>
                             </div>';
             }else if($value->status == 3){
                 $action .=  '<div class="dropdown-menu btn-xs" role="menu">

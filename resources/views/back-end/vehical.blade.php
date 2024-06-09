@@ -13,7 +13,7 @@
                 <tr>
                     <th>Model</th>
                     <th>Type</th>
-                    <th>No</th>
+                    <th>Vehicle No</th>
                     <th>Status</th>
                     @if (isPermissions('edit-vehical'))
                         <th>Action</th>

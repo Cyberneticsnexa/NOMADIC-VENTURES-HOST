@@ -11,6 +11,8 @@ $(document).ready(function () {
     createDriver();
     updateCountry();
     createAgent();
+    updateVehicale();
+    updateGuide();
 
 
     createVehicalType();
@@ -276,6 +278,29 @@ function createVehical() {
             },
             add_vehical_no: {
                 required: true,
+                remote: {
+                    url: "/vehicle-no-verification",
+                    type: "post",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                    data: {
+                        add_vehical_no: function () {
+                            return $("#add_vehical_no").val();
+                        },
+                    },
+                    dataFilter: function (response) {
+                        var json = JSON.parse(response);
+                        console.log(response);
+                        if (json.valid) {
+                            return true;
+                        } else {
+                            return '"This Vehicle No is already taken."';
+                        }
+                    },
+                },
             },
             vehical_type: {
                 required: true,
@@ -754,7 +779,29 @@ function updateDriver() {
             },
             nic_no: {
                 required: true,
-                maxlength: 13,
+                remote: {
+                    url: "/update-driver-nic-verification",
+                    type: "post",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                    data: {
+                        nic_no: function () {
+                            return $("#nic_no").val();
+                        },
+                    },
+                    dataFilter: function (response) {
+                        var json = JSON.parse(response);
+                        console.log(response);
+                        if (json.valid) {
+                            return true;
+                        } else {
+                            return '"This Identity No is already taken."';
+                        }
+                    },
+                },
             },
             contact_no: {
                 required: true,
@@ -805,7 +852,29 @@ function registerGuide() {
             },
             add_nic: {
                 required: true,
-                maxlength: 12,
+                remote: {
+                    url: "/guide-nic-verification",
+                    type: "post",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                    data: {
+                        add_nic: function () {
+                            return $("#add_nic").val();
+                        },
+                    },
+                    dataFilter: function (response) {
+                        var json = JSON.parse(response);
+                        console.log(response);
+                        if (json.valid) {
+                            return true;
+                        } else {
+                            return '"This Identity No is already taken."';
+                        }
+                    },
+                },
             },
             add_address: {
                 required: true,
@@ -815,6 +884,12 @@ function registerGuide() {
             },
             "add_language[]": {
                 required: true,
+            },
+        },
+        messages: {
+            add_nic: {
+                required: "NIC number is required.",
+                remote: "This NIC number is already taken.",
             },
         },
         submitHandler: function (form) {
@@ -1247,5 +1322,165 @@ function validationEditRoomCatogory(){
             },
         },
         errorClass: "text-danger",
+    });
+}
+
+
+//update vehicle
+function updateVehicale() {
+    $("#edit-vehical-form").validate({
+        ignore: [],
+        errorClass: "text-danger custom",
+        successClass: "text-success",
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        errorPlacement: function (error, element) {
+            if (element.attr("name") === "image") {
+                error.insertAfter(element.closest(".row").find(".image_input"));
+            } else if (
+                element.hasClass("select2") &&
+                element.next(".select2-container").length
+            ) {
+                error.insertAfter(element.next(".select2-container"));
+            } else if ($(element).hasClass("hidden_method")) {
+                error.insertAfter(element);
+            } else {
+                element.closest("div.form-group").append(error);
+            }
+        },
+        rules: {
+            edit_vehical_model: {
+                required: true,
+                maxlength: 255,
+            },
+            edit_vehical_type: {
+                required: true,
+                maxlength: 11,
+            },
+            edit_vehical_no: {
+                required: true,
+                maxlength:20 ,
+                remote: {
+                    url: "/update-vehicle-no-verification",
+                    type: "post",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                    data: {
+                        code: function () {
+                            return $("#edit-vehical-form").val();
+                        },
+                        id: function () {
+                            return $("#id").val();
+                        },
+                    },
+                    dataFilter: function (response) {
+                        var json = JSON.parse(response);
+                        if (json.valid) {
+                            return true;
+                        } else {
+                            return '"This Vehicle No is already taken."';
+                        }
+                    },
+                },
+            },
+            is_active: {
+                required: true,
+                select2: true,
+            }
+        },
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
+    });
+}
+
+//update guide
+function updateGuide() {
+    $("#edit-guide-register-form").validate({
+        ignore: [],
+        errorClass: "text-danger custom",
+        successClass: "text-success",
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        errorPlacement: function (error, element) {
+            if (element.attr("name") === "image") {
+                error.insertAfter(element.closest(".row").find(".image_input"));
+            } else if (
+                element.hasClass("select2") &&
+                element.next(".select2-container").length
+            ) {
+                error.insertAfter(element.next(".select2-container"));
+            } else if ($(element).hasClass("hidden_method")) {
+                error.insertAfter(element);
+            } else {
+                element.closest("div.form-group").append(error);
+            }
+        },
+        rules: {
+            edit_full_name: {
+                required: true,
+               
+            },
+            edit_address: {
+                required: true,
+                
+            },
+            edit_contact_no: {
+                required: true,
+                maxlength:11 ,
+            },
+            edit_language: {
+                required: true,
+            },
+            edit_nic: {
+                required: true,
+                maxlength:12 ,
+                remote: {
+                    url: "/update-guide-nic-verification",
+                    type: "post",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                    data: {
+                        edit_nic: function () {
+                            return $("#edit_nic").val();
+                        },
+                        id: function () {
+                            return $("#id").val();
+                        },
+                    },
+                    dataFilter: function (response) {
+                        var json = JSON.parse(response);
+                        if (json.valid) {
+                            return true;
+                        } else {
+                            return '"This Nic is already Added"';
+                        }
+                    },
+                },
+            },
+            is_active: {
+                required: true,
+                select2: true,
+            }
+        },
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
     });
 }

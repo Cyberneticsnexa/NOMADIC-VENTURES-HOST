@@ -430,11 +430,21 @@ Route::group([
 
     Route::post('/driver-nic-verification'           , 'ValidationAjax@driverNicValidation')->name('driver-nic-verification');
 
+    Route::post('/guide-nic-verification'           , 'ValidationAjax@guideNicValidation')->name('guide-nic-verification');
+
+    Route::post('/vehicle-no-verification'           , 'ValidationAjax@vehicleNumberValidation')->name('vehicle-no-verification');
+
     Route::post('/driver-licence-verification'           , 'ValidationAjax@driverLicenceNoValidation')->name('driver-licence-verification');
 
     Route::post('/country-code-verification'           , 'ValidationAjax@countryCodeValidation')->name('country-code-verification');
 
     Route::post('/update-country-code-verification'           , 'ValidationAjax@updateCountryCodeValidation')->name('update-country-code-verification');
+
+    Route::post('/update-vehicle-no-verification'           , 'ValidationAjax@updateVehicleNoValidation')->name('update-vehicle-no-verification');
+
+    Route::post('/update-guide-nic-verification'           , 'ValidationAjax@updateGuideNicValidation')->name('update-guide-nic-verification');
+
+    Route::post('/update-driver-nic-verification'           , 'ValidationAjax@updateDriverNicValidation')->name('update-driver-nic-verification');
 
 
 

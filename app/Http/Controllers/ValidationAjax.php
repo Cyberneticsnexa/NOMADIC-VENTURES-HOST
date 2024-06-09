@@ -9,6 +9,8 @@ use App\Models\Basis;
 use App\Models\RoomType;
 use App\Models\Driver;
 use App\Models\Country;
+use App\Models\Guide;
+use App\Models\Vehical;
 
 class ValidationAjax extends Controller {
     public function userEmailValidation( Request $request ) {
@@ -70,6 +72,22 @@ class ValidationAjax extends Controller {
         return response()->json( [ 'valid' => $isUnique ] );
     }
 
+    public function guideNicValidation( Request $request ) {
+        $nic = $request->input( 'add_nic' );
+
+        $isUnique = !Guide::where( 'nic', $nic )->exists();
+
+        return response()->json( [ 'valid' => $isUnique ] );
+    }
+
+    public function vehicleNumberValidation( Request $request ) {
+        $no = $request->input( 'add_vehical_no' );
+
+        $isUnique = !Vehical::where( 'vehical_no', $no )->exists();
+
+        return response()->json( [ 'valid' => $isUnique ] );
+    }
+
     public function driverLicenceNoValidation( Request $request ) {
         $licence_no = $request->input( 'licence_no' );
 
@@ -94,5 +112,33 @@ class ValidationAjax extends Controller {
 
         return response()->json( [ 'valid' => $isUnique ] );
     }
+
+    public function updateVehicleNoValidation( Request $request ) {
+        $no = $request->input( 'edit_vehical_no' );
+        $id = $request->input( 'id' );
+
+        $isUnique = !Vehical::where( 'vehical_no', $no )->where( 'id','!=', $id )->exists();
+
+        return response()->json( [ 'valid' => $isUnique ] );
+    }
+
+    public function updateGuideNicValidation( Request $request ) {
+        $nic = $request->input( 'edit_nic' );
+        $id = $request->input( 'id' );
+
+        $isUnique = !Guide::where( 'nic', $nic )->where( 'id','!=', $id )->exists();
+
+        return response()->json( [ 'valid' => $isUnique ] );
+    }
+
+    public function updateDriverNicValidation( Request $request ) {
+        $no = $request->input( 'nic_no' );
+        $id = $request->input( 'id' );
+
+        $isUnique = !Driver::where( 'nic_no', $no )->where( 'id','!=', $id )->exists();
+
+        return response()->json( [ 'valid' => $isUnique ] );
+    }
+
 
 }
