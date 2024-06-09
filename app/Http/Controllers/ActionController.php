@@ -58,7 +58,7 @@ class ActionController extends Controller {
                 'site_name'     => 'required',
                 'image'         => 'required|image|mimes:jpeg,png,jpg|max:2048',
                 'meta_icon'     => 'required|image|mimes:jpeg,png,jpg|max:2048',
-                'login_bg_image'=> 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'login_bg_image'=> 'required|image|mimes:jpeg,png,jpg',
             ] );
 
             if ( $validator->fails() ) {
