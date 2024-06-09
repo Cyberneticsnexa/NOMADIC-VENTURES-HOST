@@ -28,6 +28,15 @@
             background-position: center;
             height: 100%;
         }
+
+        .card-primary {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Optional: Overlay to improve readability */
+            padding: 20px;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
