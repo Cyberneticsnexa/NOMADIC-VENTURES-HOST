@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th>Basis</th>
-                    <th>Short Code</th>
+                    <th>Short Codes</th>
                     <th>Status</th>
                     @if (isPermissions('edit-country-code'))
                         <th>Action</th>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" id="update_btn" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>

@@ -1052,8 +1052,10 @@ function updateBasisValidation() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_btn').prop('disabled', true);
                             return false;
                         }
                     },
@@ -1064,13 +1066,10 @@ function updateBasisValidation() {
                 select2: true,
             },
         },
-        submitHandler: function (form, event) {
-            event.preventDefault(); // Prevent default form submission
-            console.log("Form is valid and ready to submit."); // Debugging line
+        submitHandler: function (form) {
             loader();
-            form.submit(); // Manually submit the form
+            form.submit();
         },
-
     });
 }
 
