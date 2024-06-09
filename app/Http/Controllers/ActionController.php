@@ -58,6 +58,7 @@ class ActionController extends Controller {
                 'site_name'     => 'required',
                 'image'         => 'required|image|mimes:jpeg,png,jpg|max:2048',
                 'meta_icon'     => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'login_bg_image'=> 'required|image|mimes:jpeg,png,jpg|max:2048',
             ] );
 
             if ( $validator->fails() ) {
@@ -70,10 +71,13 @@ class ActionController extends Controller {
 
             $meta_icon = uploadImage( $request->meta_icon, 'logo' );
 
+            $login_bg_image = uploadImage( $request->login_bg_image, 'logo' );
+
             SiteSettings::create( [
                 'site_name'     => $request->site_name,
                 'logo'          => $logo,
                 'meta_icon'     => $meta_icon,
+                'login_bg_image'=> $login_bg_image,
             ] );
 
             DB::commit();

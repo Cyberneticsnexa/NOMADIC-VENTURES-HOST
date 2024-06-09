@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{getUploadImage( $site_settings->meta_icon, 'logo')}}">
-    <title>{{$site_settings->site_name}} | Login</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ getUploadImage($site_settings->meta_icon, 'logo') }}">
+    <title>{{ $site_settings->site_name }} | Login</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -19,6 +19,16 @@
     <!-- Theme style -->
     <link rel="stylesheet"
         href="{{ config('site-specific.live-path') }}/public/assets/back-end/default/dist/css/adminlte.min.css">
+    <style>
+        /* CSS for background image */
+        body {
+            background-image: url('{{ getUploadImage($site_settings->login_bg_image, 'background') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body class="hold-transition login-page">
@@ -27,9 +37,10 @@
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <div>
-                    <img style="width: 100px;border-radius:5%"  src="{{getUploadImage( $site_settings->logo, 'logo')}}" alt="">
+                    <img style="width: 100px;border-radius:5%" src="{{ getUploadImage($site_settings->logo, 'logo') }}"
+                        alt="">
                 </div>
-                <a href="/" class="h2" style="color:#8F8919"><b>{{$site_settings->site_name}}</b></a>
+                <a href="/" class="h2" style="color:#8F8919"><b>{{ $site_settings->site_name }}</b></a>
             </div>
             <div class="card-body">
                 <form action="/signin" method="post">
@@ -75,7 +86,8 @@
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="{{ config('site-specific.live-path') }}/public/assets/back-end/default/plugins/jquery/jquery.min.js"></script>
+    <script src="{{ config('site-specific.live-path') }}/public/assets/back-end/default/plugins/jquery/jquery.min.js">
+    </script>
     <!-- Bootstrap 4 -->
     <script
         src="{{ config('site-specific.live-path') }}/public/assets/back-end/default/plugins/bootstrap/js/bootstrap.bundle.min.js">

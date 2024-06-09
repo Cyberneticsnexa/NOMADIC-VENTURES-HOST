@@ -21,6 +21,7 @@ class SiteSettings extends Model
         'site_name',
         'logo',
         'meta_icon',
+        'login_bg_image',
         'created_at',
         'updated_at',
     ];

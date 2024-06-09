@@ -28,6 +28,15 @@
                                     data-default-file="{{ getUploadImage($site_settings->meta_icon, 'logo') }}">
                             </div>
                         </div>
+                        <div class="col-md-3 col-xm-6">
+                            <div class="col-md-12 col-12">
+                                <label for="image">Login Background Image</label>
+                            </div>
+                            <div class="col-md-12 div-12 image_input">
+                                <input type="file" class="dropify" id="login_bg_image" name="login_bg_image"
+                                    data-default-file="{{ getUploadImage($site_settings->login_bg_image, 'logo') }}">
+                            </div>
+                        </div>
 
                     </div>
                     <div>
