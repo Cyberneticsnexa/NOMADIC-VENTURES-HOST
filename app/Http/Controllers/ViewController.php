@@ -862,6 +862,7 @@ class ViewController extends DataController
                                         ),
 
             'tour_schedule'     => $tour_schedule,
+            'tour'              => $this->getTour($id),
             'hotel_city'        => $this->getHotelCity(1),
             'basis'             => $this->getBasis(1),
         ];

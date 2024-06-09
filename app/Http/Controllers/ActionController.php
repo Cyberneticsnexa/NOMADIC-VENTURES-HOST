@@ -41,6 +41,7 @@ use App\Models\TourRoomMap;
 use App\Models\TourRoomModificationHistory;
 use App\Models\ConfirmatonVoucher;
 use App\Models\ReservationVoucher;
+use App\Models\TempAmendmentTourSchedule;
 
 class ActionController extends Controller {
 
@@ -108,7 +109,7 @@ class ActionController extends Controller {
             }
             DB::beginTransaction();
             $permissions = $request->permission;
-            array_push($permissions, 'dashboard');
+            array_push( $permissions, 'dashboard' );
             $user_roll = UserRoll::create( [
                 'title'         => $request->user_roll,
                 'is_active'     => 1,
@@ -155,7 +156,7 @@ class ActionController extends Controller {
             UserRollPermission::where( 'user_roll_id', $id )->delete();
 
             $permissions = $request->permission;
-            array_push($permissions, 'dashboard');
+            array_push( $permissions, 'dashboard' );
             foreach ( $permissions as $key => $value ) {
                 UserRollPermission::create( [
                     'user_roll_id'       => $id,
@@ -203,7 +204,7 @@ class ActionController extends Controller {
                 'password'      => $request->password,
             ] );
 
-            if($request->image){
+            if ( $request->image ) {
                 $user_image = uploadImage( $request->image, 'user_image' );
 
                 UserImage::create( [
@@ -452,7 +453,7 @@ class ActionController extends Controller {
             return redirect()->back()->with( [ 'temp-success' => true, 'message' => 'Driver Created Successfully !' ] );
         } catch ( \Throwable $th ) {
             DB::rollback();
-            return redirect()->route('view-driver')->with( [ 'error' => true, 'message' => $th->getMessage() ] );
+            return redirect()->route( 'view-driver' )->with( [ 'error' => true, 'message' => $th->getMessage() ] );
         }
     }
 
@@ -756,7 +757,7 @@ class ActionController extends Controller {
             }
 
             DB::commit();
-            return redirect()->route('hotel')->with( [ 'temp-success' => true, 'message' => 'Hotel Details Created Successfully !' ] );
+            return redirect()->route( 'hotel' )->with( [ 'temp-success' => true, 'message' => 'Hotel Details Created Successfully !' ] );
         } catch ( \Throwable $th ) {
             DB::rollback();
             return redirect()->back()->with( [ 'error' => true, 'message' => $th->getMessage() ] );
@@ -1261,7 +1262,7 @@ class ActionController extends Controller {
             }
             if ( $status == 2 ) {
                 $tour_schedule = TourSchedule::where( 'tour_id', $id )->get();
-                foreach ($tour_schedule as $key => $value) {
+                foreach ( $tour_schedule as $key => $value ) {
                     $value->amended_count = $value->amended_count + 1;
                     $value->save();
                 }
@@ -1270,7 +1271,7 @@ class ActionController extends Controller {
             if ( $status == 3 ) {
                 $message_text = 'Canceled';
                 $tour_schedule = TourSchedule::where( 'tour_id', $id )->get();
-                foreach ($tour_schedule as $key => $value) {
+                foreach ( $tour_schedule as $key => $value ) {
                     $value->amended_count = $value->amended_count + 1;
                     $value->save();
                 }
@@ -1373,6 +1374,22 @@ class ActionController extends Controller {
                 return redirect()->back()->with( [ 'error' => true, 'message' => implode( ' ', $validator->messages()->all() ) ] );
             }
             DB::beginTransaction();
+            $tour_schedule = TourSchedule::where( 'tour_id', $id )->get();
+            TempAmendmentTourSchedule::where( 'tour_id', $id )->delete();
+            foreach ( $tour_schedule as $key => $value ) {
+                $temp_data = TempAmendmentTourSchedule::create( [
+                    'tour_id' => $value->tour_id,
+                    'tour_number' => $value->tour_number,
+                    'date' => $value->date,
+                    'guide' => $value->guide,
+                    'vehical' => $value->vehical,
+                    'hotel' => $value->hotel,
+                    'hotel_booking_status' => $value->hotel_booking_status,
+                    'special_requirement' => $value->special_requirement,
+                    'amended_count' => $value->amended_count,
+                    'created_at' => $value->created_at,
+                ] );
+            }
 
             $tour = Tour::find( $id );
             $before_arrivel_date = $tour->arrivel_date;
@@ -1385,19 +1402,31 @@ class ActionController extends Controller {
             $tour->departure_date = $request->departure_date;
             $tour->agent = $request->agent;
             $tour->status = 2;
+            $tour->amended_count = $tour->amended_count +1;
             $tour->save();
 
-            if ( $before_arrivel_date != $request->arrivel_date || $before_departure_date != $request->departure_date ) {
-                $tour_schedule = TourSchedule::where( 'tour_id', $id )->get();
-                $arrival_date = Carbon::parse( $tour->arrivel_date );
-                foreach ( $tour_schedule as $key => $value ) {
-                    ReservationVoucher::where('tour_schedule_id',$value->id)->delete();
-                    $value->date = $arrival_date->copy()->addDays( $key );
-                    $value->hotel_booking_status = 0;
-                    $value->amended_count = $value->amended_count + 1;
-                    $value->save();
-                }
+            $arrival_date = Carbon::parse( $request->arrivel_date );
+            $departure_date = Carbon::parse( $request->departure_date );
+            $diffInDays = $arrival_date->diffInDays( $departure_date );
+            TourSchedule::where( 'tour_id', $id )->delete();
+            for ( $i = 0; $i <= $diffInDays; $i++ ) {
+                TourSchedule::create( [
+                    'tour_id' => $id,
+                    'tour_number' => $tour->tour_number,
+                    'date' => $arrival_date->copy()->addDays( $i ),
+                    'amended_count' => $temp_data->amended_count + 1,
+                ] );
             }
+            // if ( $before_arrivel_date != $request->arrivel_date || $before_departure_date != $request->departure_date ) {
+            //     $arrival_date = Carbon::parse( $tour->arrivel_date );
+            //     foreach ( $tour_schedule as $key => $value ) {
+            //         ReservationVoucher::where( 'tour_schedule_id', $value->id )->delete();
+            //         $value->date = $arrival_date->copy()->addDays( $key );
+            //         $value->hotel_booking_status = 0;
+            //         $value->amended_count = $value->amended_count + 1;
+            //         $value->save();
+            //     }
+            // }
 
             DB::commit();
             return redirect()->route( 'tour' )->with( [ 'temp-success' => true, 'message' => 'Tour Updated Successfully !' ] );

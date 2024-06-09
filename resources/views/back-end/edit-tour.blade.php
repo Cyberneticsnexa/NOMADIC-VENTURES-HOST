@@ -62,7 +62,7 @@
                         <div class="col-sm-6 col-xm-12">
                             <div class="form-group">
                                 <label for="departure_date">Departure Date</label>
-                                <input type="date" class="form-control" id="departure_date" name="departure_date" readonly
+                                <input type="date" class="form-control" id="departure_date" name="departure_date"
                                     value="{{ $tour->departure_date }}">
                             </div>
                         </div>

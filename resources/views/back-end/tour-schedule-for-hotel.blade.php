@@ -3,7 +3,9 @@
         <table id="tour-schedule-table" class="table table-striped table-bordered nowrap" style="width:100%">
             <thead>
                 <tr>
-                    <th></th>
+                    @if ($tour->amended_count == 0)
+                        <th></th>
+                    @endif
                     <th>ID</th>
                     <th>Tour Number</th>
                     <th>Guest Name</th>
@@ -16,6 +18,9 @@
                     <th>Amended Count</th>
                     <th>Reservation Voucher</th>
                     <th>Confirm</th>
+                    @if ($tour->amended_count != 0)
+                        <th>Action</th>
+                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -24,11 +29,13 @@
                         @continue
                     @endif
                     <tr>
-                        <th>
-                            @if (is_null($detail->hotel))
-                                <input type="checkbox" id="select-all">
-                            @endif
-                        </th>
+                        @if ($tour->amended_count == 0)
+                            <th>
+                                @if (is_null($detail->hotel))
+                                    <input type="checkbox" id="select-all">
+                                @endif
+                            </th>
+                        @endif
                         <td>{{ $detail->id }}</td>
                         <td>{{ $tour_schedule->tour_number }}</td>
                         <td>{{ $tour_schedule->guest_name }}</td>
@@ -128,6 +135,41 @@
                                 <span class="badge badge-secondary">Not Assigned</span>
                             @endif
                         </td>
+                        @if ($tour->amended_count != 0)
+                            <td>
+                                @if (!is_null($detail->hotel))
+                                    @php
+                                        $is_same_hotel = false;
+                                    @endphp
+                                    @if ($index > 0)
+                                        @if ($tour_schedule->tourScheduleDetails[$index - 1]->hotel == $detail->hotel)
+                                            @php
+                                                $is_same_hotel = true;
+                                            @endphp
+                                        @endif
+                                    @endif
+                                    @if (!$is_same_hotel)
+                                        @if ($detail->hotel_booking_status == 0)
+                                            @if ($tour_schedule->ReservationDetails->contains('tour_schedule_id', $detail->id))
+                                                <a onclick="confirmReservation('{{ $detail->id }}','{{ $tour_schedule->id }}','{{ $tour_schedule->tour_number }}','{{ $detail->HotelDetails->hotel_name }}','{{ $detail->HotelDetails->id }}','{{ $detail->date }}')"
+                                                    class="btn btn-xs btn-primary">Confirm</a>
+                                            @else
+                                                <span class="badge badge-warning">Reservation voucher not sended</span>
+                                            @endif
+                                        @else
+                                            <p>Confirmation No : {{ $detail->ConfirmationDetails->confirmation_no }}
+                                            </p>
+                                        @endif
+                                    @endif
+                                @else
+                                    @if ($index == 0)
+                                        <a target="_blank"
+                                            href="/re-assign-hotel/{{ $tour_schedule->tour_number }}"
+                                            class="btn btn-xs btn-primary">Re Assign</a>
+                                    @endif
+                                @endif
+                            </td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>
