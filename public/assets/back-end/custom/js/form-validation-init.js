@@ -128,8 +128,10 @@ function createUserValidation() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_user_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_user_btn').prop('disabled', true);
                             return '"This Email is already taken."';
                         }
                     },
@@ -297,8 +299,10 @@ function createVehical() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_vehicle_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_vehicle_btn').prop('disabled', true);
                             return '"This Vehicle No is already taken."';
                         }
                     },
@@ -373,8 +377,10 @@ function createDriver() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_driver_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_driver_btn').prop('disabled', true);
                             return '"This Identity No is already taken."';
                         }
                     },
@@ -405,8 +411,10 @@ function createDriver() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_driver_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_driver_btn').prop('disabled', true);
                             return '"This Licence No is already taken."';
                         }
                     },
@@ -482,8 +490,10 @@ function createRoomType() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_room_type_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_room_type_btn').prop('disabled', true);
                             return '"This Short Code is already taken."';
                         }
                     },
@@ -707,8 +717,10 @@ function createCountry() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#create_country_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_country_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -873,8 +885,10 @@ function registerGuide() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_guide_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_guide_btn').prop('disabled', true);
                             return '"This Identity No is already taken."';
                         }
                     },
@@ -991,8 +1005,10 @@ function createBasis() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_basis_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_basis_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },

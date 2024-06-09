@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <input type="submit" class="btn btn-primary float-right" value="Submit">
+                    <input type="submit" id="create_driver_btn" class="btn btn-primary float-right" value="Submit">
                 </div>
             </form>
         </div>
