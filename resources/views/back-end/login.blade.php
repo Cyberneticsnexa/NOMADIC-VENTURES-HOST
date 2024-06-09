@@ -22,11 +22,20 @@
     <style>
         /* CSS for background image */
         body {
-            background-image: url('{{ getUploadImage($site_settings->login_bg_image, 'background') }}');
+            background-image: url('{{ getUploadImage($site_settings->login_bg_image, "logo") }}');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             height: 100%;
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Optional: Overlay to improve readability */
+            padding: 20px;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 10px;
         }
     </style>
 </head>
