@@ -42,7 +42,7 @@
                             @if ($item->driver == null)
                                 <span class="badge badge-secondary">Not Assign</span>
                             @else
-                                {{ $item->DriverDetails->short_name }}
+                                {{ $item->DriverDetails->full_name }}
                             @endif
                         </td>
                         <td>

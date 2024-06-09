@@ -13,7 +13,7 @@
                     <th>Departure Date</th>
                     <th>Status</th>
                     {{-- <th>Confirmation Voucher</th> --}}
-                    @if (isPermissions('change-tour-action'))
+                    @if (isPermissions('change-tour-action') || isPermissions('view-tour-schedule-for-tour-manager') || isPermissions('edit-tour') || isPermissions('cancel-tour'))
                         <th>Action</th>
                     @endif
                 </tr>
@@ -26,5 +26,8 @@
 </div>
 
 <script>
-    var is_permission = <?php echo isPermissions('change-tour-action') ? 'true' : 'false'; ?>;
+    var is_permission_change_action = <?php echo isPermissions('change-tour-action') ? 'true' : 'false'; ?>;
+    var is_permission_view_tour_schedule = <?php echo isPermissions('view-tour-schedule-for-tour-manager') ? 'true' : 'false'; ?>;
+    var is_permission_edit = <?php echo isPermissions('edit-tour') ? 'true' : 'false'; ?>;
+    var is_permission_cancel = <?php echo isPermissions('cancel-tour') ? 'true' : 'false'; ?>;
 </script>

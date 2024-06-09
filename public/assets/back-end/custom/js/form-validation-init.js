@@ -11,7 +11,7 @@ $(document).ready(function () {
     createDriver();
     updateCountry();
     createAgent();
-
+    createHotelReservation();
 
     createVehicalType();
     createVehical();
@@ -1247,5 +1247,16 @@ function validationEditRoomCatogory(){
             },
         },
         errorClass: "text-danger",
+    });
+}
+
+
+
+function createHotelReservation() {
+    $("#create-hotel-reservation-form").validate({
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
     });
 }
