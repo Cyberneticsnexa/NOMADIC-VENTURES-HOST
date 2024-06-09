@@ -462,7 +462,7 @@ class DataController extends Controller {
             }
         }
 
-        $confirmation_voucher = ConfirmatonVoucher::with('hotelDetails','tourScheduleDetails.reservationDetails','tourScheduleDetails.roomDetails','tourScheduleDetails.roomDetails.roomType','tourScheduleDetails.roomDetails.roomCategory','tourScheduleDetails.roomDetails.roomBasis')->where( 'tour_id', $id )->get();
+        $confirmation_voucher = ConfirmatonVoucher::with('hotelDetails','tourScheduleDetails.reservationDetails','tourScheduleDetails.roomDetails','tourScheduleDetails.roomDetails.roomType','tourScheduleDetails.roomDetails.roomCategory','tourScheduleDetails.roomDetails.roomBasis')->where( 'tour_id', $id )->orderBy('tour_schedule_id','asc')->get();
         $data = [
             'tour_details' => $tour_details,
             'guide' => $guide,

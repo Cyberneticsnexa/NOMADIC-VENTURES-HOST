@@ -13,6 +13,8 @@ $(document).ready(function () {
         responsive: true,
         lengthChange: false,
         autoWidth: false,
+        order: [[1, 'asc']],
+        dom: 'Bfrtip',
         buttons: ["copy", "csv", "excel", "pdf", "print"],
         columnDefs: [
             {
@@ -23,10 +25,11 @@ $(document).ready(function () {
         ],
     });
 
-    table
-        .buttons()
-        .container()
-        .appendTo("#tour-schedule-table_wrapper .col-md-6:eq(0)");
+
+    // table
+    //     .buttons()
+    //     .container()
+    //     .appendTo("#tour-schedule-table_wrapper .col-md-6:eq(0)");
 
     $("#tour-schedule-table tbody").on(
         "change",

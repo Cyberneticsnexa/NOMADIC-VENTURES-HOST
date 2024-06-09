@@ -1,5 +1,5 @@
 <div class="card card-default color-palette-box">
-    @if (isPermissions('add-country-code'))
+    @if (isPermissions('create-country-code'))
         <div class="card-header">
             <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal"
                 data-target="#add-country">

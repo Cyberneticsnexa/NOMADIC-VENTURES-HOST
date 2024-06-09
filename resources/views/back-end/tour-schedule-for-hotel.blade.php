@@ -115,13 +115,13 @@
                                 @if (!$is_same_hotel)
                                     @if ($detail->hotel_booking_status == 0)
                                         @if ($tour_schedule->ReservationDetails->contains('tour_schedule_id', $detail->id))
-                                            <a onclick="confirmReservation('{{ $detail->id  }}','{{ $tour_schedule->id }}','{{ $tour_schedule->tour_number }}','{{ $detail->HotelDetails->hotel_name }}','{{ $detail->HotelDetails->id }}','{{ $detail->date }}')"
+                                            <a onclick="confirmReservation('{{ $detail->id }}','{{ $tour_schedule->id }}','{{ $tour_schedule->tour_number }}','{{ $detail->HotelDetails->hotel_name }}','{{ $detail->HotelDetails->id }}','{{ $detail->date }}')"
                                                 class="btn btn-xs btn-primary">Confirm</a>
                                         @else
                                             <span class="badge badge-warning">Reservation voucher not sended</span>
                                         @endif
                                     @else
-                                        <p>Confirmation No : {{$detail->ConfirmationDetails->confirmation_no}}</p>
+                                        <p>Confirmation No : {{ $detail->ConfirmationDetails->confirmation_no }}</p>
                                     @endif
                                 @endif
                             @else
@@ -185,17 +185,19 @@
                     <div id="additional-room-info">
 
                     </div>
-                    <div class="col-md-4 col-xs-12 d-none" id="basis_selection">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12 d-none" id="basis_selection">
 
-                        <label for="">Basis</label>
-                        <select class="form-control select2 " name="basis" style="width: 100%;" data-select2-id="1"
-                            tabindex="-1" aria-hidden="true">
-                            <option value="">No Select</option>
-                            @foreach ($basis as $item)
-                                <option value="{{ $item->id }}">{{ $item->title }}</option>
-                            @endforeach
-                        </select>
+                            <label for="">Basis</label>
+                            <select class="form-control select2 " name="basis" style="width: 100%;"
+                                data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option value="">No Select</option>
+                                @foreach ($basis as $item)
+                                    <option value="{{ $item->id }}">{{ $item->title }}</option>
+                                @endforeach
+                            </select>
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,7 +241,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form action="/create-hotel-reservation" method="post" id="confirm-hotel-details-form"
+            <form action="/create-hotel-reservation" method="post" id="create-hotel-reservation-form"
                 enctype="multipart/form-data">
                 <div class="modal-body">
                     @csrf
