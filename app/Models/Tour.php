@@ -26,6 +26,7 @@ class Tour extends Model
         'departure_date',
         'agent',
         'status',
+        'amended_count',
         'created_at',
         'updated_at',
     ];

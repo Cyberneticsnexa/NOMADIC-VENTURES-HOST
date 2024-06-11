@@ -417,12 +417,11 @@ class ActionController extends Controller {
                 'full_name'             => 'required',
                 'nic_no'            => 'required|unique:driver',
                 'contact_no'            => 'required',
-
                 'date_of_birth'         => 'required',
                 'licence_no'            => 'required|unique:driver',
-                'licence_front'         => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'licence_front'         => 'required|image|mimes:jpeg,png,jpg',
                 'address'               => 'required',
-                'licence_back'          => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'licence_back'          => 'required|image|mimes:jpeg,png,jpg',
             ] );
 
             if ( $validator->fails() ) {
@@ -434,7 +433,6 @@ class ActionController extends Controller {
                 'full_name'         => $request->full_name,
                 'nic_no'            => $request->nic_no,
                 'contact_no'            => $request->contact_no,
-
                 'date_of_birth'          => Carbon::parse( $request->date_of_birth ),
                 'licence_no'          => $request->licence_no,
                 'address'          => $request->address,
@@ -450,7 +448,7 @@ class ActionController extends Controller {
             ] );
 
             DB::commit();
-            return redirect()->back()->with( [ 'temp-success' => true, 'message' => 'Driver Created Successfully !' ] );
+            return redirect()->route('view-driver')->with( [ 'temp-success' => true, 'message' => 'Driver Created Successfully !' ] );
         } catch ( \Throwable $th ) {
             DB::rollback();
             return redirect()->route( 'view-driver' )->with( [ 'error' => true, 'message' => $th->getMessage() ] );
@@ -1375,9 +1373,14 @@ class ActionController extends Controller {
             }
             DB::beginTransaction();
             $tour_schedule = TourSchedule::where( 'tour_id', $id )->get();
+            $is_hotel_booked = false;
+            if($tour_schedule[0]->hotel != null){
+                $is_hotel_booked = true;
+            }
             TempAmendmentTourSchedule::where( 'tour_id', $id )->delete();
             foreach ( $tour_schedule as $key => $value ) {
                 $temp_data = TempAmendmentTourSchedule::create( [
+                    'id' => $value->id,
                     'tour_id' => $value->tour_id,
                     'tour_number' => $value->tour_number,
                     'date' => $value->date,
@@ -1402,19 +1405,24 @@ class ActionController extends Controller {
             $tour->departure_date = $request->departure_date;
             $tour->agent = $request->agent;
             $tour->status = 2;
-            $tour->amended_count = $tour->amended_count +1;
+            $tour->amended_count = $tour->amended_count + 1;
             $tour->save();
 
             $arrival_date = Carbon::parse( $request->arrivel_date );
             $departure_date = Carbon::parse( $request->departure_date );
             $diffInDays = $arrival_date->diffInDays( $departure_date );
             TourSchedule::where( 'tour_id', $id )->delete();
+            if($is_hotel_booked == true){
+                $amended_count = $temp_data->amended_count + 1;
+            }else{
+                $amended_count = 0;
+            }
             for ( $i = 0; $i <= $diffInDays; $i++ ) {
                 TourSchedule::create( [
                     'tour_id' => $id,
                     'tour_number' => $tour->tour_number,
                     'date' => $arrival_date->copy()->addDays( $i ),
-                    'amended_count' => $temp_data->amended_count + 1,
+                    'amended_count' => $amended_count,
                 ] );
             }
             // if ( $before_arrivel_date != $request->arrivel_date || $before_departure_date != $request->departure_date ) {
@@ -1530,7 +1538,7 @@ class ActionController extends Controller {
 
     /*
     ----------------------------------------------------------------------------------------------------------
-    PUBLIC FUNCTION CREATE TRANSPORT FRANCHISE
+    PUBLIC FUNCTION ASSIGN HOTEL
     ----------------------------------------------------------------------------------------------------------
     */
 
@@ -1597,6 +1605,85 @@ class ActionController extends Controller {
             return redirect()->back()->with( [
                 'temp-success' => true,
                 'message' => 'Hotel Assigned Successfully!'
+            ] );
+        } catch ( \Throwable $th ) {
+            DB::rollback();
+            return redirect()->back()->with( [
+                'error' => true,
+                'message' => $th->getMessage() . ' at line ' . $th->getLine()
+            ] );
+        }
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION RE ASSIGN HOTEL
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function reAssignHotelFromHM( Request $request ) {
+        try {
+            // return $request;
+            // Convert comma-separated strings to arrays
+            $ids = explode( ',', $request->input( 'ids' ) );
+            $request->merge( [ 'ids' => $ids ] );
+
+            // Validate the request data
+            $validator = Validator::make( $request->all(), [
+                'hotel' => 'required|integer',
+                'room_category' => 'required|array',
+                'room_category.*' => 'required|integer',
+                'room_type' => 'required|array',
+                'room_type.*' => 'required|integer',
+                'basis' => 'required|integer',
+                'rooms_count' => 'required|array',
+                'rooms_count.*' => 'required|integer',
+            ] );
+
+            if ( $validator->fails() ) {
+                return redirect()->back()->with( [
+                    'error' => true,
+                    'message' => implode( ' ', $validator->messages()->all() )
+                ] );
+            }
+
+            DB::beginTransaction();
+            foreach ( $request->ids as $key => $value ) {
+                $tour_schedule = TourSchedule::find( $value );
+                if ( !$tour_schedule ) {
+                    return redirect()->back()->with( [
+                        'error' => true,
+                        'message' => 'Tour Schedule not found for ID ' . $value
+                    ] );
+                }
+                $tour_schedule->hotel = $request->hotel;
+                $tour_schedule->save();
+
+                foreach ( $request->room_category as $category_key => $value2 ) {
+                    $tour_id = ( int ) $tour_schedule->tour_id;
+                    $tour_schedule_id = ( int ) $value;
+                    $hotel_id = ( int ) $request->hotel;
+                    $room_category_id = ( int ) $value2;
+                    $room_type_id = ( int ) $request->room_type[ $category_key ];
+                    $basis_id = ( int ) $request->basis;
+                    $no_of_room = ( int ) $request->rooms_count[ $category_key ];
+
+                    TourRoomMap::create( [
+                        'tour_id' => $tour_id,
+                        'tour_schedule_id' => $tour_schedule_id,
+                        'hotel_id' => $hotel_id,
+                        'room_category_id' => $room_category_id,
+                        'room_type_id' => $room_type_id,
+                        'basis_id' => $basis_id,
+                        'no_of_room' => $no_of_room,
+                    ] );
+                }
+            }
+
+            DB::commit();
+            return redirect()->back()->with( [
+                'temp-success' => true,
+                'message' => 'Hotel Re Assigned Successfully!'
             ] );
         } catch ( \Throwable $th ) {
             DB::rollback();

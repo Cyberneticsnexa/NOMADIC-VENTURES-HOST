@@ -36,6 +36,7 @@ use App\Models\TourRoomMap;
 use App\Models\TourRoomModificationHistory;
 use App\Models\HotelCityMap;
 use App\Models\ConfirmatonVoucher;
+use App\Models\TempAmendmentTourSchedule;
 
 class DataController extends Controller {
     //                                  FUNCTIONS FOR GET DEVELOPER TOOLS DETAILS
@@ -501,6 +502,23 @@ class DataController extends Controller {
             'complete_count' => $complete_count,
         ];
 
+        return $data;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION GET AMMENDED TOUR SCHEDULE
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getAmmendedTourSchedule( $tour_number ) {
+        $data = [];
+        $tour = Tour::where('tour_number',$tour_number)->select('id')->first();
+        $reservation_details = ReservationVoucher::where('tour_id',$tour->id)->get();
+        foreach ($reservation_details as $key => $value) {
+            $data['schedule_details'][] = TempAmendmentTourSchedule::with('hotelDetails.hotelCityDetails.cityName','roomDetails.roomCategory','roomDetails.roomType','roomDetails.roomBasis')->where( 'id',$value->tour_schedule_id )->whereNot( 'hotel',null )->first();
+        }
+        $data ['reservation_details'] = $reservation_details;
         return $data;
     }
 

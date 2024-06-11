@@ -12,6 +12,7 @@
                     <th>Arrival Date</th>
                     <th>Departure Date</th>
                     <th>Tour Status</th>
+                    <th>Amended</th>
                     <th>Assign</th>
                     <th>Confirmation Voucher</th>
                     @if (isPermissions('assign-franchise-from-hotel'))

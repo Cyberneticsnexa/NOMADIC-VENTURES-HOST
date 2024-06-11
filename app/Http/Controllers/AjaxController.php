@@ -121,7 +121,12 @@ class AjaxController extends Controller
         }
 
         foreach ($query as $key => $value) {
-
+            if($value->amended_count > 0){
+                $amended_span = '<span class="badge badge-danger">'.$value->amended_count.' Time Amended</span>';
+            }else{
+                $amended_span = '<span class="badge badge-success">No</span>';
+            }
+            $query[$key]->amended = $amended_span;
             $query[$key]->status_badge = '<span class="badge badge-' . $value->statusDetails->class . '">' .$value->statusDetails->title. '</span>';
 
             $action =  '<div class="btn-group">
@@ -300,7 +305,12 @@ class AjaxController extends Controller
         }
 
         foreach ($query as $key => $value) {
-
+            if($value->amended_count > 0){
+                $amended_span = '<span class="badge badge-danger">'.$value->amended_count.' Time Amended</span>';
+            }else{
+                $amended_span = '<span class="badge badge-success">No</span>';
+            }
+            $query[$key]->amended = $amended_span;
             $query[$key]->status_badge = '<span class="badge badge-' . $value->statusDetails->class . '">' .$value->statusDetails->title. '</span>';
 
             $has_tour_schedule = TourSchedule::where('tour_id',$value->id)->first();
@@ -437,7 +447,12 @@ class AjaxController extends Controller
         }
 
         foreach ($query as $key => $value) {
-
+            if($value->amended_count > 0){
+                $amended_span = '<span class="badge badge-danger">'.$value->amended_count.' Time Amended</span>';
+            }else{
+                $amended_span = '<span class="badge badge-success">No</span>';
+            }
+            $query[$key]->amended = $amended_span;
             $has_tour_schedules = TourSchedule::with('confirmationDetails')->where('tour_id', $value->id)->get();
             $is_assigned = true;
             $is_confirm = true;

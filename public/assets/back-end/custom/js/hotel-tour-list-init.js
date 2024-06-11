@@ -11,6 +11,7 @@ $(document).ready(function () {
         { data: "arrivel_date" },
         { data: "departure_date" },
         { data: "status_badge", orderable: false },
+        { data: "amended", orderable: false },
         { data: "is_assign", orderable: false },
         { data: "confirmation_voucher", orderable: false },
     ];

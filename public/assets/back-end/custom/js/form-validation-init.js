@@ -13,6 +13,7 @@ $(document).ready(function () {
     createAgent();
     updateVehicale();
     updateGuide();
+    assignHotels();
 
     createVehicalType();
     createVehical();
@@ -321,6 +322,12 @@ function createVehical() {
 }
 
 function createDriver() {
+    $.validator.addMethod("image", function (value, element) {
+        // Custom validation logic for image files
+        // Adjust this logic as per your requirements
+        return true; // Replace with actual validation condition
+    }, "Please upload a valid image file.");
+
     $("#create-driver-form").validate({
         ignore: [],
         errorClass: "text-danger custom",
@@ -424,9 +431,6 @@ function createDriver() {
                 required: true,
                 select2: true,
             },
-            date_of_birth: {
-                required: true,
-            },
             licence_front: {
                 required: true,
                 image: true,
@@ -439,18 +443,13 @@ function createDriver() {
                 required: true,
             },
         },
-        messages: {
-            nic_no: {
-                required: "NIC number is required.",
-                remote: "This NIC number is already taken.",
-            },
-        },
         submitHandler: function (form) {
             loader();
             form.submit();
         },
     });
 }
+
 
 function createRoomType() {
     $("#create-room-type-form").validate({
@@ -1293,12 +1292,25 @@ function editTour() {
             },
         },
         errorClass: "text-danger",
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
     });
 }
 
 //create tour validation
 function createTour() {
     $("#create-tour-form").validate({
+        ignore: [],
+        errorClass: "text-danger custom",
+        successClass: "text-success",
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
         errorPlacement: function (error, element) {
             element.closest("div.form-group").append(error);
         },
@@ -1323,7 +1335,10 @@ function createTour() {
                 required: true,
             },
         },
-        errorClass: "text-danger",
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
     });
 }
 
@@ -1509,6 +1524,45 @@ function updateGuide() {
 
 function createHotelReservation() {
     $("#create-hotel-reservation-form").validate({
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
+    });
+}
+
+//create tour validation
+function assignHotels() {
+    $("#assign-hotel-for-tour").validate({
+        ignore: [],
+        errorClass: "text-danger custom",
+        successClass: "text-success",
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        errorPlacement: function (error, element) {
+            element.closest("div.form-group").append(error);
+        },
+        rules: {
+            hotel: {
+                required: true,
+            },
+            room_category: {
+                required: true,
+            },
+            room_type: {
+                required: true,
+            },
+            basis: {
+                required: true,
+            },
+            rooms_count: {
+                required: true,
+            },
+        },
         submitHandler: function (form) {
             loader();
             form.submit();

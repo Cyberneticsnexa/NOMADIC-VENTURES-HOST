@@ -316,6 +316,11 @@ Route::group([
 
     Route::post('/assign-hotel-for-tour'            , 'ActionController@assignHotelFromHM')->name('assign-hotel-for-tour');
 
+    Route::post('/re-assign-hotel-for-tour'            , 'ActionController@reAssignHotelFromHM')->name('re-assign-hotel-for-tour');
+
+    Route::get('/re-assign-hotel/{tour_number?}/{id?}'          , 'ViewController@reAssignHotelView');
+
+
 
 
 

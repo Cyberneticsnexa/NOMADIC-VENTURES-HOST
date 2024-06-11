@@ -84,6 +84,7 @@
                     <th>No of Packs</th>
                     <th>Arrival Date</th>
                     <th>Departure Date</th>
+                    <th>Amended</th>
                     <th>Tour Status</th>
                 </tr>
             </thead>
