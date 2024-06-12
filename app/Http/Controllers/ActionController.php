@@ -42,6 +42,7 @@ use App\Models\TourRoomModificationHistory;
 use App\Models\ConfirmatonVoucher;
 use App\Models\ReservationVoucher;
 use App\Models\TempAmendmentTourSchedule;
+use App\Models\TempReservationVoucher;
 
 class ActionController extends Controller {
 
@@ -448,7 +449,7 @@ class ActionController extends Controller {
             ] );
 
             DB::commit();
-            return redirect()->route('view-driver')->with( [ 'temp-success' => true, 'message' => 'Driver Created Successfully !' ] );
+            return redirect()->route( 'view-driver' )->with( [ 'temp-success' => true, 'message' => 'Driver Created Successfully !' ] );
         } catch ( \Throwable $th ) {
             DB::rollback();
             return redirect()->route( 'view-driver' )->with( [ 'error' => true, 'message' => $th->getMessage() ] );
@@ -1374,7 +1375,7 @@ class ActionController extends Controller {
             DB::beginTransaction();
             $tour_schedule = TourSchedule::where( 'tour_id', $id )->get();
             $is_hotel_booked = false;
-            if($tour_schedule[0]->hotel != null){
+            if ( $tour_schedule[ 0 ]->hotel != null ) {
                 $is_hotel_booked = true;
             }
             TempAmendmentTourSchedule::where( 'tour_id', $id )->delete();
@@ -1394,6 +1395,25 @@ class ActionController extends Controller {
                 ] );
             }
 
+            $reservation_details = ReservationVoucher::where( 'tour_id', $id )->get();
+            TempReservationVoucher::where( 'tour_id', $id )->delete();
+            foreach ( $reservation_details as $key => $value ) {
+                TempReservationVoucher::create( [
+                    'id' => $value->id,
+                    'tour_schedule_id' => $value->tour_schedule_id,
+                    'tour_id' => $value->tour_id,
+                    'hotel_id' => $value->hotel_id,
+                    'checkin_date' => $value->checkin_date,
+                    'checkout_date' => $value->checkout_date,
+                    'no_of_nights' => $value->id,
+                    'rate' => $value->no_of_nights,
+                    'special_requirement' => $value->special_requirement,
+                    'is_generated' => $value->is_generated,
+                ] );
+            }
+
+            ReservationVoucher::where( 'tour_id', $id )->delete();
+
             $tour = Tour::find( $id );
             $before_arrivel_date = $tour->arrivel_date;
             $before_departure_date = $tour->departure_date;
@@ -1412,9 +1432,9 @@ class ActionController extends Controller {
             $departure_date = Carbon::parse( $request->departure_date );
             $diffInDays = $arrival_date->diffInDays( $departure_date );
             TourSchedule::where( 'tour_id', $id )->delete();
-            if($is_hotel_booked == true){
+            if ( $is_hotel_booked == true ) {
                 $amended_count = $temp_data->amended_count + 1;
-            }else{
+            } else {
                 $amended_count = 0;
             }
             for ( $i = 0; $i <= $diffInDays; $i++ ) {

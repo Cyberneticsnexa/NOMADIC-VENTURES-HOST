@@ -4,15 +4,18 @@
             $is_amended = collect($tour_schedule->tourScheduleDetails)->contains(function ($detail) {
                 if ($detail->amended_count == 0) {
                     return false;
-                }
-                return true;
-            });
-            $all_hotel_assign = true;
-            $all_hotel_assign = collect($tour_schedule->tourScheduleDetails)->contains(function ($detail) {
-                if ($detail->hotel == null) {
-                    return false;
+                }else{
+                    return true;
                 }
             });
+            $all_hotel_assign = collect($tour_schedule->tourScheduleDetails)
+                ->contains(function ($detail) {
+                    if ($detail->hotel == null) {
+                        return false;
+                    }else{
+                        return true;
+                    }
+                });
         @endphp
         @if ($is_amended && $all_hotel_assign == false)
             <div class="row mb-2">

@@ -17,6 +17,7 @@ class PDFController extends DataController {
     public function viewHotelReservatonPDF( Request $request ) {
 
         $voucher_data = $this->getHotelReservationVoucherData( $request->tour_schedule_id, $request->tour_schedule_start_date, $request->rates, $request->special_requirement );
+        return $amended_voucher_data = $this->getAmendedHotelReservationVoucherData( $request->tour_schedule_id );
 
         $title = $voucher_data[ 'reservation_details' ]->tour_number . '-';
 
