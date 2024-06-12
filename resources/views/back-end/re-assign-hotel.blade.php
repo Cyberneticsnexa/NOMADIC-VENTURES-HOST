@@ -78,8 +78,8 @@
                     <th>Hotel</th>
                     <th>Booking Status</th>
                     <th>Amended</th>
-                    <th>Reservation Voucher</th>
-                    <th>Confirm</th>
+                    {{-- <th>Reservation Voucher</th>
+                    <th>Confirm</th> --}}
                 </tr>
             </thead>
             <tbody>
@@ -142,7 +142,7 @@
                                 <span class="badge badge-danger">{{ $detail->amended_count }} Time Amended</span>
                             </td>
                         @endif
-                        <td>
+                        {{-- <td>
                             @if (!is_null($detail->hotel))
                                 @php
                                     $is_same_hotel = false;
@@ -195,7 +195,7 @@
                             @else
                                 <span class="badge badge-secondary">Not Assigned</span>
                             @endif
-                        </td>
+                        </td> --}}
                     </tr>
                 @endforeach
             </tbody>

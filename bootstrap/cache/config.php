@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:nhZWTIzZp8snrBLVPhTbnILXvqR2UMKiPo8jAcf3Fmw=',
+    'key' => 'base64:BfHHWfrkuXzqIYSdVSdwRE1y1laABxQ7TsX8l3ubOPE=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -199,7 +199,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -282,7 +282,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'nom',
+        'database' => 'nomadic_new',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -292,7 +292,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'nom',
+        'database' => 'nomadic_new',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -312,7 +312,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'nom',
+        'database' => 'nomadic_new',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -327,7 +327,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'nom',
+        'database' => 'nomadic_new',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -371,10 +371,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\fonts',
-      'font_cache' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\user\\AppData\\Local\\Temp',
-      'chroot' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST',
+      'font_dir' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\fonts',
+      'font_cache' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\Indunil\\AppData\\Local\\Temp',
+      'chroot' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -419,28 +419,28 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\app',
+        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\app',
         'throw' => false,
       ),
       'image' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\uploads/images',
+        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\uploads/images',
       ),
       'attachment' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\uploads/attachment',
+        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\uploads/attachment',
       ),
       'video' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\uploads/video',
+        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\uploads/video',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\app/public',
+        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -460,7 +460,7 @@
     ),
     'links' => 
     array (
-      'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\storage' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\app/public',
+      'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\storage' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -499,13 +499,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -557,7 +557,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -623,7 +623,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -730,7 +730,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -769,7 +769,7 @@
     'datatable-select-min-css' => 'https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css',
     'cropper-min-css' => 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.0.0-rc.1/cropper.min.css',
     'codemirror-min-css' => 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css',
-    'custom-css' => '/assets/back-end/custom/css/custom.css?v=1.1',
+    'custom-css' => '/assets/back-end/custom/css/custom.css?v=5',
     'dropify-css' => '/assets/back-end/custom/css/dropify.css',
     'jquery-min-js' => '/assets/back-end/default/plugins/jquery/jquery.min.js',
     'jquery-ui-min-js' => '/assets/back-end/default/plugins/jquery-ui/jquery-ui.min.js',
@@ -795,7 +795,7 @@
     'additional-methods-js' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js',
     'codemirror-min-js' => 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js',
     'codemirror-htmlmixed-js' => 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/htmlmixed/htmlmixed.min.js',
-    'form-validation-init-js' => '/assets/back-end/custom/js/form-validation-init.js?v=1.1',
+    'form-validation-init-js' => '/assets/back-end/custom/js/form-validation-init.js?v=5',
     'dropify-init-js' => '/assets/back-end/custom/js/dropify.js',
     'jquery-datatable-min-js' => '/assets/back-end/default/plugins/datatables/jquery.dataTables.min.js',
     'datatable-bootstrap-min-js' => '/assets/back-end/default/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js',
@@ -810,45 +810,45 @@
     'buttons-print-min-js' => '/assets/back-end/default/plugins/datatables-buttons/js/buttons.print.min.js',
     'buttons-colvis-min-js' => '/assets/back-end/default/plugins/datatables-buttons/js/buttons.colVis.min.js',
     'datatable-select-min-js' => 'https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js',
-    'user-roll-init-js' => '/assets/back-end/custom/js/user-roll-init.js?v=1.1',
-    'edit-user-roll-init-js' => '/assets/back-end/custom/js/edit-user-roll-init.js?v=1.1',
-    'user-init-js' => '/assets/back-end/custom/js/user-init.js?v=1.1',
-    'vehical-type-init-js' => '/assets/back-end/custom/js/vehical-type-init.js?v=1.1',
-    'vehical-init-js' => '/assets/back-end/custom/js/vehical-init.js?v=1.1',
+    'user-roll-init-js' => '/assets/back-end/custom/js/user-roll-init.js?v=5',
+    'edit-user-roll-init-js' => '/assets/back-end/custom/js/edit-user-roll-init.js?v=5',
+    'user-init-js' => '/assets/back-end/custom/js/user-init.js?v=5',
+    'vehical-type-init-js' => '/assets/back-end/custom/js/vehical-type-init.js?v=5',
+    'vehical-init-js' => '/assets/back-end/custom/js/vehical-init.js?v=5',
     'cropper-min-init-js' => 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.0.0-rc.1/cropper.min.js',
-    'create-driver-init-js' => '/assets/back-end/custom/js/create-driver-init.js?v=1.1',
-    'room-type-init-js' => '/assets/back-end/custom/js/room-type-init.js?v=1.1',
-    'basis-init-js' => '/assets/back-end/custom/js/basis-init.js?v=1.1',
-    'room-category-init-js' => '/assets/back-end/custom/js/room-category-init.js?v=1.1',
-    'create-hotel-init-js' => '/assets/back-end/custom/js/create-hotel-init.js?v=1.1',
-    'update-hotel-init-js' => '/assets/back-end/custom/js/update-hotel-init.js?v=1.1',
-    'hotel-cities-init-js' => '/assets/back-end/custom/js/hotel-cities-init.js?v=1.1',
-    'hotels-init-js' => '/assets/back-end/custom/js/hotels-init.js?v=1.1',
-    'country-init-js' => '/assets/back-end/custom/js/country-init.js?v=1.1',
-    'nationality-init-js' => '/assets/back-end/custom/js/nationality-init.js?v=1.1',
-    'guide-init-js' => '/assets/back-end/custom/js/guide-init.js?v=1.1',
-    'guide-register-init-js' => '/assets/back-end/custom/js/guide-register-init.js?v=1.1',
-    'agent-init-js' => '/assets/back-end/custom/js/agent-init.js?v=1.1',
-    'tour-list-init-js' => '/assets/back-end/custom/js/tour-list-init.js?v=1.1',
-    'tour-schedule-init-js' => '/assets/back-end/custom/js/tour-schedule-init.js?v=1.1',
-    'tour-schedule-for-hotel-init-js' => '/assets/back-end/custom/js/tour-schedule-for-hotel-init.js?v=1.1',
-    'assign-franchise-init-js' => '/assets/back-end/custom/js/assign-franchise-init.js?v=1.1',
-    'assign-franchise-from-transport-init-js' => '/assets/back-end/custom/js/assign-franchise-from-transport-init.js?v=1.1',
-    'transport-tour-list-init-js' => '/assets/back-end/custom/js/transport-tour-list-init.js?v=1.1',
-    'hotel-tour-list-init-js' => '/assets/back-end/custom/js/hotel-tour-list-init.js?v=1.1',
-    'site-settings-init-js' => '/assets/back-end/custom/js/site-settings-init.js?v=1.1',
-    'edit-driver-init-js' => '/assets/back-end/custom/js/edit-driver-init.js?v=1.1',
-    'dashboard-init-js' => '/assets/back-end/custom/js/dashboard-init.js?v=1.1',
-    'edit-tour-init-js' => '/assets/back-end/custom/js/edit-tour-init.js?v=1.1',
+    'create-driver-init-js' => '/assets/back-end/custom/js/create-driver-init.js?v=5',
+    'room-type-init-js' => '/assets/back-end/custom/js/room-type-init.js?v=5',
+    'basis-init-js' => '/assets/back-end/custom/js/basis-init.js?v=5',
+    'room-category-init-js' => '/assets/back-end/custom/js/room-category-init.js?v=5',
+    'create-hotel-init-js' => '/assets/back-end/custom/js/create-hotel-init.js?v=5',
+    'update-hotel-init-js' => '/assets/back-end/custom/js/update-hotel-init.js?v=5',
+    'hotel-cities-init-js' => '/assets/back-end/custom/js/hotel-cities-init.js?v=5',
+    'hotels-init-js' => '/assets/back-end/custom/js/hotels-init.js?v=5',
+    'country-init-js' => '/assets/back-end/custom/js/country-init.js?v=5',
+    'nationality-init-js' => '/assets/back-end/custom/js/nationality-init.js?v=5',
+    'guide-init-js' => '/assets/back-end/custom/js/guide-init.js?v=5',
+    'guide-register-init-js' => '/assets/back-end/custom/js/guide-register-init.js?v=5',
+    'agent-init-js' => '/assets/back-end/custom/js/agent-init.js?v=5',
+    'tour-list-init-js' => '/assets/back-end/custom/js/tour-list-init.js?v=5',
+    'tour-schedule-init-js' => '/assets/back-end/custom/js/tour-schedule-init.js?v=5',
+    'tour-schedule-for-hotel-init-js' => '/assets/back-end/custom/js/tour-schedule-for-hotel-init.js?v=5',
+    'assign-franchise-init-js' => '/assets/back-end/custom/js/assign-franchise-init.js?v=5',
+    'assign-franchise-from-transport-init-js' => '/assets/back-end/custom/js/assign-franchise-from-transport-init.js?v=5',
+    'transport-tour-list-init-js' => '/assets/back-end/custom/js/transport-tour-list-init.js?v=5',
+    'hotel-tour-list-init-js' => '/assets/back-end/custom/js/hotel-tour-list-init.js?v=5',
+    'site-settings-init-js' => '/assets/back-end/custom/js/site-settings-init.js?v=5',
+    'edit-driver-init-js' => '/assets/back-end/custom/js/edit-driver-init.js?v=5',
+    'dashboard-init-js' => '/assets/back-end/custom/js/dashboard-init.js?v=5',
+    'edit-tour-init-js' => '/assets/back-end/custom/js/edit-tour-init.js?v=5',
     'live-path' => '',
   ),
   'view' => 
   array (
     'paths' => 
     array (
-      0 => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\resources\\views',
+      0 => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\resources\\views',
     ),
-    'compiled' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -930,7 +930,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST',
+    'remote_sites_path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

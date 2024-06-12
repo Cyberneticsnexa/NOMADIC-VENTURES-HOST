@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::3FI8EbDCR2m26gkr',
+            '_route' => 'generated::KAC5lbvLgo2CK12w',
           ),
           1 => NULL,
           2 => 
@@ -1033,6 +1033,25 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/re-assign-hotel-for-tour' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 're-assign-hotel-for-tour',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/create-country' => 
       array (
         0 => 
@@ -1096,7 +1115,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::FJACACDF2szeiOtn',
+            '_route' => 'generated::4VvDJtPPaFoFJfh6',
           ),
           1 => NULL,
           2 => 
@@ -1115,7 +1134,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::UEOCaoXVxA3S5b9S',
+            '_route' => 'generated::mn0Lzb524NgfR3X0',
           ),
           1 => NULL,
           2 => 
@@ -1645,7 +1664,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/edit\\-(?|user\\-roll(?:/([^/]++))?(*:41)|driver(?:/([^/]++))?(*:68)|hotel(?:/([^/]++))?(*:94)|tour(?:/([^/]++))?(*:119))|/assign\\-franchise(?|\\-from\\-transport(?:/([^/]++))?(*:180)|s(?:/([^/]++))?(*:203))|/view\\-(?|hotel(?|(?:/([^/]++))?(*:244)|\\-reservation(?:/([^/]++)(?:/([^/]++))?)?(*:293))|tour\\-schedule(?|\\-for\\-hotel\\-management(?:/([^/]++))?(*:357)|(?:/([^/]++))?(*:379)|\\-for\\-transpotaion(?:/([^/]++))?(*:420))|confirmation\\-voucher(?:/([^/]++)(?:/([^/]++))?)?(*:478))|/update\\-(?|user\\-roll(?:/([^/]++))?(*:523)|driver(?:/([^/]++))?(*:551)|hotel(?:/([^/]++))?(*:578)|tour(?|(?:/([^/]++))?(*:607)|\\-franchise(?:/([^/]++))?(*:640)))|/create\\-transport\\-franchise(?:/([^/]++))?(*:693)|/tour\\-status(?:/([^/]++)(?:/([^/]++))?)?(*:742))/?$}sDu',
+      0 => '{^(?|/edit\\-(?|user\\-roll(?:/([^/]++))?(*:41)|driver(?:/([^/]++))?(*:68)|hotel(?:/([^/]++))?(*:94)|tour(?:/([^/]++))?(*:119))|/assign\\-franchise(?|\\-from\\-transport(?:/([^/]++))?(*:180)|s(?:/([^/]++))?(*:203))|/view\\-(?|hotel(?|(?:/([^/]++))?(*:244)|\\-reservation(?:/([^/]++)(?:/([^/]++))?)?(*:293))|tour\\-schedule(?|\\-for\\-hotel\\-management(?:/([^/]++))?(*:357)|(?:/([^/]++))?(*:379)|\\-for\\-transpotaion(?:/([^/]++))?(*:420))|confirmation\\-voucher(?:/([^/]++)(?:/([^/]++))?)?(*:478))|/update\\-(?|user\\-roll(?:/([^/]++))?(*:523)|driver(?:/([^/]++))?(*:551)|hotel(?:/([^/]++))?(*:578)|tour(?|(?:/([^/]++))?(*:607)|\\-franchise(?:/([^/]++))?(*:640)))|/create\\-transport\\-franchise(?:/([^/]++))?(*:693)|/re\\-assign\\-hotel(?:/([^/]++)(?:/([^/]++))?)?(*:747)|/tour\\-status(?:/([^/]++)(?:/([^/]++))?)?(*:796))/?$}sDu',
     ),
     3 => 
     array (
@@ -1727,7 +1746,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::CLcBMICbwHiDiQeg',
+            '_route' => 'generated::SnAnnDFQEu1XAGLz',
             'id' => NULL,
           ),
           1 => 
@@ -1799,7 +1818,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::aMr3fVKINdP9mS17',
+            '_route' => 'generated::RZiqS2LhKxxuhQR1',
             'id' => NULL,
           ),
           1 => 
@@ -1849,7 +1868,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::TMqfH9AIAIwKOGLL',
+            '_route' => 'generated::1XqtBxkOaEbnNInk',
             'id' => NULL,
           ),
           1 => 
@@ -1873,7 +1892,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::y0Y8wNTqvmY6npkv',
+            '_route' => 'generated::lVGdGsd6NtCc5qYU',
             'id' => NULL,
           ),
           1 => 
@@ -1897,7 +1916,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::tLVPnvGJjZKM7LA8',
+            '_route' => 'generated::Bqqluh4YQFYvfgvH',
             'id' => NULL,
           ),
           1 => 
@@ -2039,7 +2058,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::gMV2KJYUkA5fNOZF',
+            '_route' => 'generated::fS3eYOqWbkIWE4ck',
             'id' => NULL,
           ),
           1 => 
@@ -2079,7 +2098,33 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      742 => 
+      747 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::8OY8haB3GmYHGNbk',
+            'tour_number' => NULL,
+            'id' => NULL,
+          ),
+          1 => 
+          array (
+            0 => 'tour_number',
+            1 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      796 => 
       array (
         0 => 
         array (
@@ -2266,7 +2311,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::3FI8EbDCR2m26gkr' => 
+    'generated::KAC5lbvLgo2CK12w' => 
     array (
       'methods' => 
       array (
@@ -2289,7 +2334,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::3FI8EbDCR2m26gkr',
+        'as' => 'generated::KAC5lbvLgo2CK12w',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4189,7 +4234,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::aMr3fVKINdP9mS17' => 
+    'generated::RZiqS2LhKxxuhQR1' => 
     array (
       'methods' => 
       array (
@@ -4211,7 +4256,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::aMr3fVKINdP9mS17',
+        'as' => 'generated::RZiqS2LhKxxuhQR1',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4449,7 +4494,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::TMqfH9AIAIwKOGLL' => 
+    'generated::1XqtBxkOaEbnNInk' => 
     array (
       'methods' => 
       array (
@@ -4471,7 +4516,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::TMqfH9AIAIwKOGLL',
+        'as' => 'generated::1XqtBxkOaEbnNInk',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4509,6 +4554,81 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'assign-hotel-for-tour',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    're-assign-hotel-for-tour' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 're-assign-hotel-for-tour',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'login_validation',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ActionController@reAssignHotelFromHM',
+        'controller' => 'App\\Http\\Controllers\\ActionController@reAssignHotelFromHM',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 're-assign-hotel-for-tour',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::8OY8haB3GmYHGNbk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 're-assign-hotel/{tour_number?}/{id?}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'login_validation',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ViewController@reAssignHotelView',
+        'controller' => 'App\\Http\\Controllers\\ViewController@reAssignHotelView',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::8OY8haB3GmYHGNbk',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4710,7 +4830,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::y0Y8wNTqvmY6npkv' => 
+    'generated::lVGdGsd6NtCc5qYU' => 
     array (
       'methods' => 
       array (
@@ -4732,7 +4852,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::y0Y8wNTqvmY6npkv',
+        'as' => 'generated::lVGdGsd6NtCc5qYU',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4748,7 +4868,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::tLVPnvGJjZKM7LA8' => 
+    'generated::Bqqluh4YQFYvfgvH' => 
     array (
       'methods' => 
       array (
@@ -4770,7 +4890,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::tLVPnvGJjZKM7LA8',
+        'as' => 'generated::Bqqluh4YQFYvfgvH',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4786,7 +4906,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::CLcBMICbwHiDiQeg' => 
+    'generated::SnAnnDFQEu1XAGLz' => 
     array (
       'methods' => 
       array (
@@ -4808,7 +4928,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::CLcBMICbwHiDiQeg',
+        'as' => 'generated::SnAnnDFQEu1XAGLz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4824,7 +4944,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::gMV2KJYUkA5fNOZF' => 
+    'generated::fS3eYOqWbkIWE4ck' => 
     array (
       'methods' => 
       array (
@@ -4845,7 +4965,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::gMV2KJYUkA5fNOZF',
+        'as' => 'generated::fS3eYOqWbkIWE4ck',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4861,7 +4981,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::FJACACDF2szeiOtn' => 
+    'generated::4VvDJtPPaFoFJfh6' => 
     array (
       'methods' => 
       array (
@@ -4882,7 +5002,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::FJACACDF2szeiOtn',
+        'as' => 'generated::4VvDJtPPaFoFJfh6',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4898,7 +5018,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::UEOCaoXVxA3S5b9S' => 
+    'generated::mn0Lzb524NgfR3X0' => 
     array (
       'methods' => 
       array (
@@ -4919,7 +5039,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::UEOCaoXVxA3S5b9S',
+        'as' => 'generated::mn0Lzb524NgfR3X0',
       ),
       'fallback' => false,
       'defaults' => 

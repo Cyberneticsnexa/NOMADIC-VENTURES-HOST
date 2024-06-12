@@ -22,6 +22,9 @@ use Carbon\Carbon;
     </title>
 
     <style>
+        .new-details{
+            color: red;
+        }
         .company-name {
             font-size: 16px;
             font-weight: bold;

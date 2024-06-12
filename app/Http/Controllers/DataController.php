@@ -38,6 +38,7 @@ use App\Models\HotelCityMap;
 use App\Models\ConfirmatonVoucher;
 use App\Models\TempAmendmentTourSchedule;
 use App\Models\TempReservationVoucher;
+use App\Models\TempReservationVoucherNumber;
 
 class DataController extends Controller {
     //                                  FUNCTIONS FOR GET DEVELOPER TOOLS DETAILS
@@ -455,10 +456,12 @@ class DataController extends Controller {
     public function getAmendedHotelReservationVoucherData( $id ) {
         $old_reservation_details = TourSchedule::with( 'hotelDetails' )->find( $id );
         $reservation_details = TempAmendmentTourSchedule::where( 'tour_id', $old_reservation_details->tour_id )->where( 'hotel', $old_reservation_details->hotel )->first();
+        if($reservation_details == null){
+            return 0;
+        }
+        $voucher = TempReservationVoucherNumber::where( 'tour_id', $reservation_details->tour_id )->where( 'hotel_id', $reservation_details->hotel )->first();
 
-        $voucher = TempReservationVoucher::where( 'tour_schedule_id', $reservation_details->id )->first();
-
-        $voucher_no = str_pad( $voucher->id, 5, '0', STR_PAD_LEFT );
+        $voucher_no = str_pad( $voucher->voucher_number, 5, '0', STR_PAD_LEFT );
 
         $tour_details = Tour::with( 'countryDetails' )->find( $reservation_details->tour_id );
 

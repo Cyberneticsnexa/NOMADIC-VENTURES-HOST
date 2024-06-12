@@ -43,6 +43,7 @@ use App\Models\ConfirmatonVoucher;
 use App\Models\ReservationVoucher;
 use App\Models\TempAmendmentTourSchedule;
 use App\Models\TempReservationVoucher;
+use App\Models\TempReservationVoucherNumber;
 
 class ActionController extends Controller {
 
@@ -1398,6 +1399,14 @@ class ActionController extends Controller {
             $reservation_details = ReservationVoucher::where( 'tour_id', $id )->get();
             TempReservationVoucher::where( 'tour_id', $id )->delete();
             foreach ( $reservation_details as $key => $value ) {
+                $voucher_number = TempReservationVoucherNumber::where('tour_id',$value->tour_id)->where('hotel_id',$value->hotel_id)->first();
+                if(!$voucher_number){
+                    TempReservationVoucherNumber::create([
+                        'tour_id' => $value->tour_id,
+                        'hotel_id' => $value->hotel_id,
+                        'voucher_number' => $value->id,
+                    ]);
+                }
                 TempReservationVoucher::create( [
                     'id' => $value->id,
                     'tour_schedule_id' => $value->tour_schedule_id,
