@@ -129,6 +129,9 @@ class AjaxController extends Controller
                             <button type="button" class="btn btn-info dropdown-toggle dropdown-icon btn-xs" data-toggle="dropdown">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>';
+                            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
+                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
+
 
             if($value->status == 1 ){
                 $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
@@ -316,6 +319,9 @@ class AjaxController extends Controller
                             <button type="button" class="btn btn-info dropdown-toggle dropdown-icon btn-xs" data-toggle="dropdown">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>';
+                            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
+                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
+
 
             if($value->status == 2){
                 $action .=  '<div class="dropdown-menu btn-xs"  role="menu">';
@@ -485,6 +491,9 @@ class AjaxController extends Controller
                             <button type="button" class="btn btn-info dropdown-toggle dropdown-icon btn-xs" data-toggle="dropdown">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>';
+                            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
+                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
+
 
             if($value->status == 2){
                 $action .=  '<div class="dropdown-menu btn-xs" role="menu">';

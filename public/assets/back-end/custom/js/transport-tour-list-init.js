@@ -8,8 +8,8 @@ $(document).ready(function () {
         { data: "country_details.nationality", orderable: false},
         { data: "agent_details.name", orderable: false },
         { data: "no_of_visiter" },
-        { data: "arrivel_date" },
-        { data: "departure_date" },
+        { data: "formated_arrivel_date" },
+        { data: "formated_departure_date" },
         { data: "status_badge", orderable: false },
         { data: "is_assign", orderable: false },
     ];

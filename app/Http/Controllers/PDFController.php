@@ -13,6 +13,11 @@ class PDFController extends DataController {
         $pdf = PDF::loadView( 'back-end.pdf.pdf-template', $data );
         return $pdf->stream( $pdf_name );
     }
+    public function defaultPDF2( $data, $pdf_name ) {
+        $pdf = PDF::loadView( 'back-end.pdf.pdf-template2', $data );
+        return $pdf->stream( $pdf_name );
+    }
+
 
     public function viewHotelReservatonPDF( Request $request ) {
 
@@ -73,7 +78,7 @@ class PDFController extends DataController {
             $booking_date = Carbon::parse( $voucher_data[ 'reservation_details' ]->created_at )->format( 'd-M-Y' );
         }
         $pdf_name = $voucher_data[ 'reservation_details' ]->tour_number .' - ' .$booking_date .' hotel reservation voucher.pdf';
-        return $this->defaultPDF( $data, $pdf_name );
+        return $this->defaultPDF2( $data, $pdf_name );
     }
 
     public function viewConfirmationPDF( $id ) {
@@ -95,6 +100,6 @@ class PDFController extends DataController {
         }
 
         $pdf_name = $voucher_data[ 'tour_details' ]->tour_number .' - ' .$booking_date .' confirmation voucher.pdf';
-        return $this->defaultPDF( $data, $pdf_name );
+        return $this->defaultPDF2( $data, $pdf_name );
     }
 }
