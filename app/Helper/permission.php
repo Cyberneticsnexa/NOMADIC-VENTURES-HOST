@@ -37,6 +37,34 @@ function getAllPermissions() {
             )
         ],
         [
+            'group'=>'Hotel Management',
+            'icon'=>'nav-icon fas fa-hotel',
+            'is_dev_tool' => false,
+            'type'=>'multiple',
+            'data'=>array(
+                [ 'title' => 'Manage Tour', 'permission'=>'manage-tour-from-hotel-management', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Assign Hotel', 'permission'=>'assign-franchise-from-hotel', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Hotel', 'permission'=>'hotel', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Create Hotel', 'permission'=>'create-hotel', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Update Hotel', 'permission'=>'edit-hotel', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Hotel Cities', 'permission'=>'hotel-cities', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Create Hotel Cities', 'permission'=>'create-hotel-cities', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Update Hotel Cities', 'permission'=>'edit-hotel-city', 'show_in_sidebar'=>false ],
+
+                [ 'title' => 'Room Type', 'permission'=>'room-type', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Create Room Type', 'permission'=>'create-room-type', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Update Room Type', 'permission'=>'edit-room-type', 'show_in_sidebar'=>false ],
+
+                [ 'title' => 'Room Category', 'permission'=>'room-category', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Create Category', 'permission'=>'create-room-category', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Update Category', 'permission'=>'edit-room-category', 'show_in_sidebar'=>false ],
+
+                [ 'title' => 'Basis', 'permission'=>'basis', 'show_in_sidebar'=>true ],
+                [ 'title' => 'Create Basis', 'permission'=>'create-basis', 'show_in_sidebar'=>false ],
+                [ 'title' => 'Update Basis', 'permission'=>'edit-basis', 'show_in_sidebar'=>false ],
+            )
+        ],
+        [
             'group'=>'Transport Management',
             'icon'=>'nav-icon fas fa-car',
             'is_dev_tool' => false,
@@ -68,34 +96,7 @@ function getAllPermissions() {
 
             )
         ],
-        [
-            'group'=>'Hotel Management',
-            'icon'=>'nav-icon fas fa-hotel',
-            'is_dev_tool' => false,
-            'type'=>'multiple',
-            'data'=>array(
-                [ 'title' => 'Manage Tour', 'permission'=>'manage-tour-from-hotel-management', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Assign Hotel', 'permission'=>'assign-franchise-from-hotel', 'show_in_sidebar'=>false ],
-                [ 'title' => 'Hotel', 'permission'=>'hotel', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Create Hotel', 'permission'=>'create-hotel', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Update Hotel', 'permission'=>'edit-hotel', 'show_in_sidebar'=>false ],
-                [ 'title' => 'Hotel Cities', 'permission'=>'hotel-cities', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Create Hotel Cities', 'permission'=>'create-hotel-cities', 'show_in_sidebar'=>false ],
-                [ 'title' => 'Update Hotel Cities', 'permission'=>'edit-hotel-city', 'show_in_sidebar'=>false ],
 
-                [ 'title' => 'Room Type', 'permission'=>'room-type', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Create Room Type', 'permission'=>'create-room-type', 'show_in_sidebar'=>false ],
-                [ 'title' => 'Update Room Type', 'permission'=>'edit-room-type', 'show_in_sidebar'=>false ],
-
-                [ 'title' => 'Room Category', 'permission'=>'room-category', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Create Category', 'permission'=>'create-room-category', 'show_in_sidebar'=>false ],
-                [ 'title' => 'Update Category', 'permission'=>'edit-room-category', 'show_in_sidebar'=>false ],
-
-                [ 'title' => 'Basis', 'permission'=>'basis', 'show_in_sidebar'=>true ],
-                [ 'title' => 'Create Basis', 'permission'=>'create-basis', 'show_in_sidebar'=>false ],
-                [ 'title' => 'Update Basis', 'permission'=>'edit-basis', 'show_in_sidebar'=>false ],
-            )
-        ],
         [
             'group'=>'Admin Tools',
             'icon'=>'nav-icon fas fa-gears',

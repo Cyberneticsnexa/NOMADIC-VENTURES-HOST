@@ -13,6 +13,7 @@ $(document).ready(function () {
     createAgent();
     updateVehicale();
     updateGuide();
+    assignHotels();
 
     createVehicalType();
     createVehical();
@@ -128,8 +129,10 @@ function createUserValidation() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_user_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_user_btn').prop('disabled', true);
                             return '"This Email is already taken."';
                         }
                     },
@@ -206,8 +209,10 @@ function updateUserValidation() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_user_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_user_btn').prop('disabled', true);
                             return '"This Email is already taken."';
                         }
                     },
@@ -295,8 +300,10 @@ function createVehical() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_vehicle_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_vehicle_btn').prop('disabled', true);
                             return '"This Vehicle No is already taken."';
                         }
                     },
@@ -315,6 +322,12 @@ function createVehical() {
 }
 
 function createDriver() {
+    $.validator.addMethod("image", function (value, element) {
+        // Custom validation logic for image files
+        // Adjust this logic as per your requirements
+        return true; // Replace with actual validation condition
+    }, "Please upload a valid image file.");
+
     $("#create-driver-form").validate({
         ignore: [],
         errorClass: "text-danger custom",
@@ -371,8 +384,10 @@ function createDriver() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_driver_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_driver_btn').prop('disabled', true);
                             return '"This Identity No is already taken."';
                         }
                     },
@@ -403,8 +418,10 @@ function createDriver() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_driver_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_driver_btn').prop('disabled', true);
                             return '"This Licence No is already taken."';
                         }
                     },
@@ -413,9 +430,6 @@ function createDriver() {
             user_roll: {
                 required: true,
                 select2: true,
-            },
-            date_of_birth: {
-                required: true,
             },
             licence_front: {
                 required: true,
@@ -429,18 +443,13 @@ function createDriver() {
                 required: true,
             },
         },
-        messages: {
-            nic_no: {
-                required: "NIC number is required.",
-                remote: "This NIC number is already taken.",
-            },
-        },
         submitHandler: function (form) {
             loader();
             form.submit();
         },
     });
 }
+
 
 function createRoomType() {
     $("#create-room-type-form").validate({
@@ -480,8 +489,10 @@ function createRoomType() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_room_type_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_room_type_btn').prop('disabled', true);
                             return '"This Short Code is already taken."';
                         }
                     },
@@ -705,8 +716,10 @@ function createCountry() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#create_country_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_country_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -796,8 +809,10 @@ function updateDriver() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#update_driver_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_driver_btn').prop('disabled', true);
                             return '"This Identity No is already taken."';
                         }
                     },
@@ -869,8 +884,10 @@ function registerGuide() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_guide_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_guide_btn').prop('disabled', true);
                             return '"This Identity No is already taken."';
                         }
                     },
@@ -987,8 +1004,10 @@ function createBasis() {
                         var json = JSON.parse(response);
                         console.log(response);
                         if (json.valid) {
+                            $('#create_basis_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#create_basis_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1052,8 +1071,10 @@ function updateBasisValidation() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1127,8 +1148,10 @@ function updateCountry() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_country_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_country_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1197,8 +1220,10 @@ function updateRoomType() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_room_type_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_room_type_btn').prop('disabled', true);
                             return '"This Code is already taken."';
                         }
                     },
@@ -1267,12 +1292,25 @@ function editTour() {
             },
         },
         errorClass: "text-danger",
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
     });
 }
 
 //create tour validation
 function createTour() {
     $("#create-tour-form").validate({
+        ignore: [],
+        errorClass: "text-danger custom",
+        successClass: "text-success",
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
         errorPlacement: function (error, element) {
             element.closest("div.form-group").append(error);
         },
@@ -1297,7 +1335,10 @@ function createTour() {
                 required: true,
             },
         },
-        errorClass: "text-danger",
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
     });
 }
 
@@ -1377,8 +1418,10 @@ function updateVehicale() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_vehicle_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_vehicle_btn').prop('disabled', true);
                             return '"This Vehicle No is already taken."';
                         }
                     },
@@ -1458,8 +1501,10 @@ function updateGuide() {
                     dataFilter: function (response) {
                         var json = JSON.parse(response);
                         if (json.valid) {
+                            $('#update_guide_btn').prop('disabled', false);
                             return true;
                         } else {
+                            $('#update_guide_btn').prop('disabled', true);
                             return '"This Nic is already Added"';
                         }
                     },
@@ -1479,6 +1524,45 @@ function updateGuide() {
 
 function createHotelReservation() {
     $("#create-hotel-reservation-form").validate({
+        submitHandler: function (form) {
+            loader();
+            form.submit();
+        },
+    });
+}
+
+//create tour validation
+function assignHotels() {
+    $("#assign-hotel-for-tour").validate({
+        ignore: [],
+        errorClass: "text-danger custom",
+        successClass: "text-success",
+        highlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        unhighlight: function (element, errorClass) {
+            $(element).removeClass(errorClass);
+        },
+        errorPlacement: function (error, element) {
+            element.closest("div.form-group").append(error);
+        },
+        rules: {
+            hotel: {
+                required: true,
+            },
+            room_category: {
+                required: true,
+            },
+            room_type: {
+                required: true,
+            },
+            basis: {
+                required: true,
+            },
+            rooms_count: {
+                required: true,
+            },
+        },
         submitHandler: function (form) {
             loader();
             form.submit();

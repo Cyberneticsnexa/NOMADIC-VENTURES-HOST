@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <input type="submit" class="btn btn-primary float-right" value="Update">
+                    <input type="submit" id="update_driver_btn" class="btn btn-primary float-right" value="Update">
                 </div>
             </form>
         </div>

@@ -1,36 +1,73 @@
-<div class="card card-default color-palette-box">
+<div class="card">
+    <div class="card-header">
+        <b>{{ $amended_schedule['schedule_details'][0]->tour_number }} ( Old Hotel Booking Details )</b>
+    </div>
     <div class="card-body">
-        @php
-            $is_amended = collect($tour_schedule->tourScheduleDetails)->contains(function ($detail) {
-                if ($detail->amended_count == 0) {
-                    return false;
-                }else{
-                    return true;
-                }
-            });
-            $all_hotel_assign = collect($tour_schedule->tourScheduleDetails)
-                ->contains(function ($detail) {
-                    if ($detail->hotel == null) {
-                        return false;
-                    }else{
-                        return true;
-                    }
-                });
-        @endphp
-        @if ($is_amended && $all_hotel_assign == false)
-            <div class="row mb-2">
-                <div class="col-12">
-                    <a target="_blank" href="/re-assign-hotel/{{ $tour_schedule->tour_number }}/{{ $tour->id }}"
-                        class="btn btn-xs btn-primary">Re Assign</a>
-                </div>
-            </div>
-        @endif
+        <div class="row">
+            @foreach ($amended_schedule['reservation_details'] as $key => $item)
+                <div class="col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong>{{ $amended_schedule['schedule_details'][$key]->HotelDetails->hotel_name }}
+                                        -
+                                        {{ $amended_schedule['schedule_details'][$key]->HotelDetails->HotelCityDetails->CityName->city }}
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>Check In: </strong>{{ $item->checkin_date }}
+                                </div>
+                                <div class="col-6">
+                                    <strong>Check Out: </strong>{{ $item->checkout_date }}
+                                </div>
+                            </div>
+                            <strong>No of Nights: </strong>{{ $item->no_of_nights }}
+                            <br>
+                            <strong>Special Requirement: </strong>{{ $item->special_requirement }}
+                            <br>
+                            <strong>Rooms Details:</strong>
+                            <table class="table" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Room Category</th>
+                                        <th>Room Type</th>
+                                        <th>Room Basis</th>
+                                        <th>No of Rooms</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($amended_schedule['schedule_details'][$key]->RoomDetails as $item2)
+                                        <tr>
+                                            <td>{{ $item2->RoomCategory->room_category }}</td>
+                                            <td>{{ $item2->RoomType->room_type }}</td>
+                                            <td>{{ $item2->RoomBasis->title }}</td>
+                                            <td>{{ $item2->no_of_room }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!-- Close col-md-6 col-xs-12 div here -->
+            @endforeach
+        </div>
+    </div>
+</div>
+
+
+<div class="card card-default color-palette-box">
+    <div class="card-header">
+        <b>{{ $amended_schedule['schedule_details'][0]->tour_number }} ( New Schedule )</b>
+    </div>
+    <div class="card-body">
         <table id="tour-schedule-table" class="table table-striped table-bordered nowrap" style="width:100%">
             <thead>
                 <tr>
-                    @if (!$is_amended)
-                        <th></th>
-                    @endif
+
+                    <th></th>
                     <th>ID</th>
                     <th>Tour Number</th>
                     <th>Guest Name</th>
@@ -40,9 +77,7 @@
                     <th>Guide</th>
                     <th>Hotel</th>
                     <th>Booking Status</th>
-                    @if ($is_amended)
-                        <th>Amended</th>
-                    @endif
+                    <th>Amended</th>
                     <th>Reservation Voucher</th>
                     <th>Confirm</th>
                 </tr>
@@ -53,13 +88,11 @@
                         @continue
                     @endif
                     <tr>
-                        @if ($detail->amended_count == 0)
-                            <th>
-                                @if (is_null($detail->hotel))
-                                    <input type="checkbox" id="select-all">
-                                @endif
-                            </th>
-                        @endif
+                        <td>
+                            @if (is_null($detail->hotel))
+                                <input type="checkbox" id="select-all">
+                            @endif
+                        </td>
                         <td>{{ $detail->id }}</td>
                         <td>{{ $tour_schedule->tour_number }}</td>
                         <td>{{ $tour_schedule->guest_name }}</td>
@@ -173,7 +206,7 @@
     <div class="card-header">
         <h5 class="mt-2">Hotel</h5>
     </div>
-    <form action="/assign-hotel-for-tour" method="post" id="assign-hotel-for-tour">
+    <form action="/re-assign-hotel-for-tour" method="post" id="re-assign-hotel-for-tour">
         @csrf
         <div class="card-body">
             <div class="row">

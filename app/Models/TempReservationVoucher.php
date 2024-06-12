@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SiteSettings extends Model
+class TempReservationVoucher extends Model
 {
     use HasFactory;
 
-    protected $table = 'site_settings';
-
+    protected $table='temp_hotel_reservation_voucher';
     /**
     * The attributes that are mass assignable.
     *
@@ -18,10 +17,14 @@ class SiteSettings extends Model
     */
     protected $fillable = [
         'id',
-        'site_name',
-        'logo',
-        'meta_icon',
-        'login_bg_image',
+        'tour_schedule_id',
+        'tour_id',
+        'hotel_id',
+        'checkin_date',
+        'checkout_date',
+        'no_of_nights',
+        'rate',
+        'special_requirement',
         'created_at',
         'updated_at',
     ];

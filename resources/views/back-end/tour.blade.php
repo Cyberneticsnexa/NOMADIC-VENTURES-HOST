@@ -11,6 +11,7 @@
                     <th>No of Packs</th>
                     <th>Arrival Date</th>
                     <th>Departure Date</th>
+                    <th>Amended</th>
                     <th>Status</th>
                     {{-- <th>Confirmation Voucher</th> --}}
                     @if (isPermissions('change-tour-action') || isPermissions('view-tour-schedule-for-tour-manager') || isPermissions('edit-tour') || isPermissions('cancel-tour'))

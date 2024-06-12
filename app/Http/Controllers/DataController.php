@@ -36,6 +36,8 @@ use App\Models\TourRoomMap;
 use App\Models\TourRoomModificationHistory;
 use App\Models\HotelCityMap;
 use App\Models\ConfirmatonVoucher;
+use App\Models\TempAmendmentTourSchedule;
+use App\Models\TempReservationVoucher;
 
 class DataController extends Controller {
     //                                  FUNCTIONS FOR GET DEVELOPER TOOLS DETAILS
@@ -446,23 +448,104 @@ class DataController extends Controller {
 
     /*
     ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION AMENDED GET HOTEL RESERVATION VOUCHER DATA
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getAmendedHotelReservationVoucherData( $id ) {
+        $old_reservation_details = TourSchedule::with( 'hotelDetails' )->find( $id );
+        $reservation_details = TempAmendmentTourSchedule::where( 'tour_id', $old_reservation_details->tour_id )->where( 'hotel', $old_reservation_details->hotel )->first();
+
+        $voucher = TempReservationVoucher::where( 'tour_schedule_id', $reservation_details->id )->first();
+
+        $voucher_no = str_pad( $voucher->id, 5, '0', STR_PAD_LEFT );
+
+        $tour_details = Tour::with( 'countryDetails' )->find( $reservation_details->tour_id );
+
+        $hotel_city = null;
+        $hotel_city_map = HotelCityMap::with( 'cityName' )->where( 'hotel_id', $reservation_details->hotel )->first();
+        if ( $hotel_city_map ) {
+            $hotel_city = $hotel_city_map->cityName->city;
+        }
+
+        $checkin_date = $reservation_details->date;
+        $checkout_date = null;
+
+        $checkout = TempAmendmentTourSchedule::where( 'tour_id', $reservation_details->tour_id )
+        ->where( 'hotel', $reservation_details->hotel )
+        ->where( 'date', '>=', $reservation_details->date )
+        ->orderBy( 'date' )
+        ->get();
+
+        if ( count( $checkout ) == 1 ) {
+            $checkout_date =  Carbon::parse( $checkout[ 0 ]->date )->addDays( 1 );
+            $no_of_nights = 1;
+        } else {
+            for ( $key = 1; $key < count( $checkout );
+            $key++ ) {
+                $prev_date = Carbon::parse( $checkout[ $key - 1 ]->date );
+                $current_date = Carbon::parse( $checkout[ $key ]->date );
+                $different = $prev_date->diffInDays( $current_date );
+                if ( $different != 1 ) {
+                    $checkout_date = Carbon::parse( $checkout[ $key - 1 ]->date )->addDays( 1 );
+                    break;
+                } elseif ( $key + 1 == count( $checkout ) ) {
+                    $checkout_date = Carbon::parse( $checkout[ $key - 1 ]->date )->addDays( 2 );
+                    break;
+                }
+            }
+
+            $no_of_nights = $this->dayDiff( $checkin_date, $checkout_date );
+        }
+
+        // Retrieve room details for the given tour schedule
+        $room_details = TourRoomMap::with( 'roomCategory', 'roomType', 'roomBasis' )
+        ->where( 'tour_schedule_id', $reservation_details->id )
+        ->where( 'hotel_id', $reservation_details->hotel )
+        ->get();
+
+        $get_hotel_rooms = HotelRoomTypeMap::with( 'roomTypeDetails' )
+        ->select( 'room_type_id', DB::raw( 'MAX(id) as max_id' ) )
+        ->where( 'hotel_id', $reservation_details->hotel )
+        ->groupBy( 'room_type_id' )
+        ->get();
+
+        // Prepare data array to return
+        $data = [
+            'voucher_details' => $voucher,
+            'voucher_no' => $voucher_no,
+            'reservation_details' => $reservation_details,
+            'tour_details' => $tour_details,
+            'no_of_nights' => $no_of_nights,
+            'hotel_city' => $hotel_city,
+            'checkin_date' => $checkin_date,
+            'checkout_date' => $checkout_date,
+            'room_details' => $room_details,
+            'get_hotel_rooms' => $get_hotel_rooms,
+        ];
+
+        return $data;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
     PUBLIC FUNCTION GET CONFIRMATION VOUCHER DATA
     ----------------------------------------------------------------------------------------------------------
     */
 
     public function getConfirmationVoucherData( $id ) {
 
-        $tour_details = Tour::with( 'agentDetails', 'countryDetails','tourScheduleDetails.guideDetails' )->find( $id );
+        $tour_details = Tour::with( 'agentDetails', 'countryDetails', 'tourScheduleDetails.guideDetails' )->find( $id );
         $guide = [];
-        foreach ($tour_details->tourScheduleDetails as $key => $value) {
-            if($value->guideDetails){
-                if(!in_array($value->guideDetails->full_name,$guide)){
+        foreach ( $tour_details->tourScheduleDetails as $key => $value ) {
+            if ( $value->guideDetails ) {
+                if ( !in_array( $value->guideDetails->full_name, $guide ) ) {
                     $guide[] = $value->guideDetails->full_name;
                 }
             }
         }
 
-        $confirmation_voucher = ConfirmatonVoucher::with('hotelDetails','tourScheduleDetails.reservationDetails','tourScheduleDetails.roomDetails','tourScheduleDetails.roomDetails.roomType','tourScheduleDetails.roomDetails.roomCategory','tourScheduleDetails.roomDetails.roomBasis')->where( 'tour_id', $id )->orderBy('tour_schedule_id','asc')->get();
+        $confirmation_voucher = ConfirmatonVoucher::with( 'hotelDetails', 'tourScheduleDetails.reservationDetails', 'tourScheduleDetails.roomDetails', 'tourScheduleDetails.roomDetails.roomType', 'tourScheduleDetails.roomDetails.roomCategory', 'tourScheduleDetails.roomDetails.roomBasis' )->where( 'tour_id', $id )->orderBy( 'tour_schedule_id', 'asc' )->get();
         $data = [
             'tour_details' => $tour_details,
             'guide' => $guide,
@@ -501,6 +584,23 @@ class DataController extends Controller {
             'complete_count' => $complete_count,
         ];
 
+        return $data;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION GET AMMENDED TOUR SCHEDULE
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getAmmendedTourSchedule( $tour_number ) {
+        $data = [];
+        $tour = Tour::where( 'tour_number', $tour_number )->select( 'id' )->first();
+        $reservation_details = TempReservationVoucher::where( 'tour_id', $tour->id )->get();
+        foreach ( $reservation_details as $key => $value ) {
+            $data[ 'schedule_details' ][] = TempAmendmentTourSchedule::with( 'hotelDetails.hotelCityDetails.cityName', 'roomDetails.roomCategory', 'roomDetails.roomType', 'roomDetails.roomBasis' )->where( 'id', $value->tour_schedule_id )->whereNot( 'hotel', null )->first();
+        }
+        $data [ 'reservation_details' ] = $reservation_details;
         return $data;
     }
 

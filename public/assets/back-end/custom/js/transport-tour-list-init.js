@@ -11,6 +11,7 @@ $(document).ready(function () {
         { data: "formated_arrivel_date" },
         { data: "formated_departure_date" },
         { data: "status_badge", orderable: false },
+        { data: "amended", orderable: false },
         { data: "is_assign", orderable: false },
     ];
 
