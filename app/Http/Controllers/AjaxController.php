@@ -246,10 +246,10 @@ class AjaxController extends Controller
 
 
             if($value->status == 2){
-                if(!$has_tour_schedule->guide){
-                    $action .= '<a data-toggle="tooltip" data-placement="bottom" title="Assign" target="_blank" class="btn btn-success btn-sm" href="/assign-franchise-from-transport/'.$value->id.'"><i class="fa-solid fa-van-shuttle"></i></a>';
-                }
                 $action .=      '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule-for-transpotaion/'.$value->id.'"><i class="fa-solid fa-list"></i></a>';
+                if(!$has_tour_schedule->guide){
+                    $action .= '<a data-toggle="tooltip" data-placement="bottom" title="Assign" target="_blank" class="btn btn-success btn-sm ml-1" href="/assign-franchise-from-transport/'.$value->id.'"><i class="fa-solid fa-van-shuttle"></i></a>';
+                }
             }
             else if($value->status == 4){
                 $action .=  '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule-for-transpotaion/'.$value->id.'"><i class="fa-solid fa-list"></i></a>';
