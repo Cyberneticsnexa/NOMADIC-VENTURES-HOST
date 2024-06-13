@@ -29,14 +29,6 @@ class AjaxController extends Controller
         // filter
         $year_filter = $request->columns[1]['search']['value'];
         $month_filter = $request->columns[2]['search']['value'];
-        // $status = $request->columns[7]['search']['value'];
-        // return response()->json($task_category_filter);
-        // $project_filter = $request->columns[0]['search']['value'];
-        // $task_category_filter = $request->columns[3]['search']['value'];
-        // $status = $request->columns[7]['search']['value'];
-        // return response()->json($project_filter);
-        // $user_name_filter = $request->columns[0]['search']['value'];
-        // filter
 
         // ordering
         $column_index = $request->order[0]['column'];
@@ -67,29 +59,6 @@ class AjaxController extends Controller
         if($month_filter != null){
             $query->whereMonth('arrivel_date', $month_filter);
         }
-
-        // if($task_category_filter != null){
-        //     $query->where('task_category_id', $task_category_filter);
-        // }
-        // if($status != null){
-        //     if($status == 1){
-        //         $query->where('status', 1);
-        //         $query->orWhere('status', 2);
-        //         $query->orWhere('status', 3);
-        //     }else if($status == 2){
-        //         $query->where('status', 4);
-        //     }else if($status == 3){
-        //         $query->where('status', 5);
-        //         $query->orWhere('status', 6);
-        //         $query->orWhere('status', 7);
-        //     }else if($status == 4){
-        //         $query->where('status', 8);
-        //         $query->orWhere('status', 9);
-        //     }else if($status == 5){
-        //         $query->where('status', 10);
-        //     }
-        // }
-        // filter query
 
         if ($request->has('search') && $request->search['value'] != null) {
             $search_value = $request->search['value'];
@@ -126,83 +95,68 @@ class AjaxController extends Controller
             }else{
                 $amended_span = '<span class="badge badge-success">No</span>';
             }
+            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
+            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
+
             $query[$key]->amended = $amended_span;
             $query[$key]->status_badge = '<span class="badge badge-' . $value->statusDetails->class . '">' .$value->statusDetails->title. '</span>';
 
-            $action =  '<div class="btn-group">
-                            <button type="button" class="btn btn-info btn-xs">Action</button>
-                            <button type="button" class="btn btn-info dropdown-toggle dropdown-icon btn-xs" data-toggle="dropdown">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>';
-                            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
-                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
+            $action =  '<p>';
 
 
-            if($value->status == 1 ){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
+                if($value->status == 1 ){
 
-                if(isPermissions('change-tour-action') ){
-                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>';
+                        // if(isPermissions('change-tour-action') ){
+                        //     $action .=  '<a  href="/tour-status/'.$value->id.'/2"><i class="fa-solid fa-check"></i></a>';
+                        // }
+
+                        // if( isPermissions('cancel-tour')){
+                        //     $action .=  '<a class="btn btn-primary btn-sm" href="/tour-status/'.$value->id.'/3"><i class="fa-solid fa-ban"></i></a>';
+                        // }
+
+                        // if( isPermissions('edit-tour')){
+                        //     $action .=  '<a class="btn btn-primary btn-sm" target="_blank"  href="/edit-tour/'.$value->id.'"><i class="fas fa-edit"></i></a>';
+                        // }
+
                 }
+                 else if($value->status == 2){
 
-                if( isPermissions('cancel-tour')){
-                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>';
+                    if( isPermissions('view-tour-schedule-for-tour-manager')){
+                        $action .=  '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule/' . $value->id . '"><i class="fa-solid fa-list"></i></a>';
+                    }
+                    if(isPermissions('change-tour-action')) {
+                        $action .= '<button data-toggle="tooltip" data-placement="bottom" title="Complete Tour" class="btn btn-success btn-sm ml-1" onclick="completeTour(\'/tour-status/'.$value->id.'/4\')"><i class="fa-solid fa-check"></i></button>';
+                    }
+                    if (isPermissions('edit-tour')) {
+                        $action .= '<button data-toggle="tooltip" data-placement="bottom" title="Edit Tour" target="_blank" class="btn btn-warning btn-sm ml-1" onclick="editTours(\'/edit-tour/'.$value->id.'\')"><i class="fas fa-edit"></i></button>';
+                    }
+                    if( isPermissions('cancel-tour')){
+                        $action .=  '<button data-toggle="tooltip" data-placement="bottom" title="Cancel Tour" class="btn btn-danger btn-sm ml-1" onclick="cancelTour(\'/tour-status/'.$value->id.'/3\')"><i class="fa-solid fa-ban"></i></button>';
+                    }
                 }
+                else if($value->status == 3){
+                    if( isPermissions('edit-tour')){
+                        $action .=  '<button data-toggle="tooltip" data-placement="bottom" title="Edit Tour" target="_blank" class="btn btn-warning btn-sm ml-1" onclick="editTours(\'/edit-tour/'.$value->id.'\')"><i class="fas fa-edit"></i></button>';
+                    }
+                    // if(isPermissions('change-tour-action') ){
+                    //     $action .=  '<a class="btn btn-primary btn-sm ml-1"  href="/tour-status/'.$value->id.'/2"><i class="fa-solid fa-check"></i></a>';
+                    // }
 
-                if( isPermissions('edit-tour')){
-                    $action .=  '<a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>';
                 }
-
-                $action .= '</div>';
-
-            }else if($value->status == 2){
-                $action .= '<div class="dropdown-menu btn-xs" role="menu">';
-
-                if(isPermissions('change-tour-action') ){
-                    // $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>';
-                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/4">Complete</a>';
+                else if($value->status == 4){
+                    if( isPermissions('view-tour-schedule-for-tour-manager')){
+                        $action .=  '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule/' . $value->id . '"><i class="fa-solid fa-list"></i></a>';
+                    }
                 }
+            $action .= '</ul>';
 
-                if( isPermissions('cancel-tour')){
-                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/3">Cancel</a>';
-                }
+            $query[$key]->action = $action;
 
-                if( isPermissions('edit-tour')){
-                    $action .=  '<a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>';
-                }
-
-                if( isPermissions('view-tour-schedule-for-tour-manager')){
-                    $action .=  '<a target="_blank" class="dropdown-item" href="/view-tour-schedule/' . $value->id . '">Tour Schedule</a>';
-                }
-
-                $action .= '</div>';
-
-            }else if($value->status == 3){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
-                if( isPermissions('edit-tour')){
-                    $action .=  '<a target="_blank" class="dropdown-item" href="/edit-tour/'.$value->id.'">Edit</a>';
-                }
-                if(isPermissions('change-tour-action') ){
-                    $action .=  '<a class="dropdown-item" href="/tour-status/'.$value->id.'/2">Confirm</a>';
-                }
-                $action .= '</div>';
-
-            }
-            else if($value->status == 4){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
-                if( isPermissions('view-tour-schedule-for-tour-manager')){
-                    $action .=  '<a target="_blank" class="dropdown-item" href="/view-tour-schedule/' . $value->id . '">Tour Schedule</a>';
-                }
-
-                $action .= '</div>';
-            }
-            $action .= '</div>';
             if($value->status == 4){
                 $query[$key]->confirmation_pdf = '<a target="_Blank" href="/view-confirmation-voucher/'.$value->id.'" class="btn btn-xs btn-primary">Download</a>';
             }else{
                 $query[$key]->confirmation_pdf = '<span class="badge badge-warning">Pending</span>';
             }
-            $query[$key]->action = $action;
         }
 
         $paginated_list = json_decode(json_encode($query));
@@ -228,14 +182,6 @@ class AjaxController extends Controller
     {
         $query = Tour::with('countryDetails','agentDetails','statusDetails')->whereIn('status',[2,4]);
 
-        // filter
-        // $project_filter = $request->columns[0]['search']['value'];
-        // $task_category_filter = $request->columns[3]['search']['value'];
-        // $status = $request->columns[7]['search']['value'];
-        // return response()->json($project_filter);
-        // $user_name_filter = $request->columns[0]['search']['value'];
-        // filter
-
         // ordering
         $column_index = $request->order[0]['column'];
         $order_dir = $request->order[0]['dir'];
@@ -249,34 +195,6 @@ class AjaxController extends Controller
         $query = $query->orderBy($column_name, $order_dir);
 
         // ordering end
-
-        // // filter query
-        // if($project_filter != null){
-        //     $query->where('project_id', $project_filter);
-        // }
-
-        // if($task_category_filter != null){
-        //     $query->where('task_category_id', $task_category_filter);
-        // }
-        // if($status != null){
-        //     if($status == 1){
-        //         $query->where('status', 1);
-        //         $query->orWhere('status', 2);
-        //         $query->orWhere('status', 3);
-        //     }else if($status == 2){
-        //         $query->where('status', 4);
-        //     }else if($status == 3){
-        //         $query->where('status', 5);
-        //         $query->orWhere('status', 6);
-        //         $query->orWhere('status', 7);
-        //     }else if($status == 4){
-        //         $query->where('status', 8);
-        //         $query->orWhere('status', 9);
-        //     }else if($status == 5){
-        //         $query->where('status', 10);
-        //     }
-        // }
-        // filter query
 
         if ($request->has('search') && $request->search['value'] != null) {
             $search_value = $request->search['value'];
@@ -324,30 +242,22 @@ class AjaxController extends Controller
                 $query[$key]->is_assign = '<span class="badge badge-warning">Not Assigned</span>';
             }
 
-            $action =  '<div class="btn-group">
-                            <button type="button" class="btn btn-info btn-xs">Action</button>
-                            <button type="button" class="btn btn-info dropdown-toggle dropdown-icon btn-xs" data-toggle="dropdown">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>';
-                            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
-                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
+            $action =  '<p>';
 
 
             if($value->status == 2){
-                $action .=  '<div class="dropdown-menu btn-xs"  role="menu">';
                 if(!$has_tour_schedule->guide){
-                    $action .= '<a target="_blank" class="dropdown-item" href="/assign-franchise-from-transport/'.$value->id.'">Assign</a>';
+                    $action .= '<a data-toggle="tooltip" data-placement="bottom" title="Assign" target="_blank" class="btn btn-success btn-sm" href="/assign-franchise-from-transport/'.$value->id.'"><i class="fa-solid fa-van-shuttle"></i></a>';
                 }
-                $action .=      '<a target="_blank" class="dropdown-item" href="/view-tour-schedule-for-transpotaion/'.$value->id.'">Tour Schedule</a>
-                            </div>';
+                $action .=      '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule-for-transpotaion/'.$value->id.'"><i class="fa-solid fa-list"></i></a>';
             }
             else if($value->status == 4){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">
-                                <a class="dropdown-item" href="/view-tour-schedule-for-transpotaion/'.$value->id.'">Tour Schedule</a>
-                            </div>';
+                $action .=  '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule-for-transpotaion/'.$value->id.'"><i class="fa-solid fa-list"></i></a>';
             }
-            $action .= '</div>';
+            $action .= '</p>';
             $query[$key]->action = $action;
+            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
+                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
         }
 
         $paginated_list = json_decode(json_encode($query));
@@ -373,14 +283,6 @@ class AjaxController extends Controller
     {
         $query = Tour::with('countryDetails','agentDetails','statusDetails')->whereIn('status',[2,4]);
 
-        // filter
-        // $project_filter = $request->columns[0]['search']['value'];
-        // $task_category_filter = $request->columns[3]['search']['value'];
-        // $status = $request->columns[7]['search']['value'];
-        // return response()->json($project_filter);
-        // $user_name_filter = $request->columns[0]['search']['value'];
-        // filter
-
         // ordering
         $column_index = $request->order[0]['column'];
         $order_dir = $request->order[0]['dir'];
@@ -394,34 +296,6 @@ class AjaxController extends Controller
         $query = $query->orderBy($column_name, $order_dir);
 
         // ordering end
-
-        // // filter query
-        // if($project_filter != null){
-        //     $query->where('project_id', $project_filter);
-        // }
-
-        // if($task_category_filter != null){
-        //     $query->where('task_category_id', $task_category_filter);
-        // }
-        // if($status != null){
-        //     if($status == 1){
-        //         $query->where('status', 1);
-        //         $query->orWhere('status', 2);
-        //         $query->orWhere('status', 3);
-        //     }else if($status == 2){
-        //         $query->where('status', 4);
-        //     }else if($status == 3){
-        //         $query->where('status', 5);
-        //         $query->orWhere('status', 6);
-        //         $query->orWhere('status', 7);
-        //     }else if($status == 4){
-        //         $query->where('status', 8);
-        //         $query->orWhere('status', 9);
-        //     }else if($status == 5){
-        //         $query->where('status', 10);
-        //     }
-        // }
-        // filter query
 
         if ($request->has('search') && $request->search['value'] != null) {
             $search_value = $request->search['value'];
@@ -501,27 +375,20 @@ class AjaxController extends Controller
 
 
 
-            $action =  '<div class="btn-group">
-                            <button type="button" class="btn btn-info btn-xs">Action</button>
-                            <button type="button" class="btn btn-info dropdown-toggle dropdown-icon btn-xs" data-toggle="dropdown">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>';
-                            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
-                            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
-
+            $action =  '<p>';
 
             if($value->status == 2){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">';
-                $action .=      '<a target="_blank" class="dropdown-item" href="/view-tour-schedule-for-hotel-management/'.$value->id.'">Tour Schedule</a>
-                            </div>';
+                $action .=      '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" class="dropdown-item" href="/view-tour-schedule-for-hotel-management/'.$value->id.'"><i class="fa-solid fa-list"></i></a>';
             }
             else if($value->status == 4){
-                $action .=  '<div class="dropdown-menu btn-xs" role="menu">
-                                <a class="dropdown-item" href="/view-tour-schedule-for-hotel-management/'.$value->id.'">Tour Schedule</a>
-                            </div>';
+                $action .=  '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule-for-hotel-management/'.$value->id.'"><i class="fa-solid fa-list"></i></a>';
             }
-            $action .= '</div>';
+            $action .= '</p>';
+
             $query[$key]->action = $action;
+
+            $query[$key]->formated_arrivel_date=Carbon::parse($value->arrivel_date)->format('d-M-Y');
+            $query[$key]->formated_departure_date=Carbon::parse($value->departure_date)->format('d-M-Y');
         }
 
         $paginated_list = json_decode(json_encode($query));

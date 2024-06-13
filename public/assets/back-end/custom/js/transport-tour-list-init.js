@@ -5,13 +5,13 @@ $(document).ready(function () {
         { data: "tour_number" },
         { data: "guest_name" },
         { data: "country_details.country_name", orderable: false },
-        { data: "country_details.nationality", orderable: false},
+        { data: "country_details.nationality", orderable: false },
         { data: "agent_details.name", orderable: false },
         { data: "no_of_visiter" },
         { data: "formated_arrivel_date" },
         { data: "formated_departure_date" },
-        { data: "status_badge", orderable: false },
         { data: "amended", orderable: false },
+        { data: "status_badge", orderable: false },
         { data: "is_assign", orderable: false },
     ];
 
@@ -33,33 +33,33 @@ $(document).ready(function () {
             {
                 extend: "copy",
                 exportOptions: {
-                    columns: ":not(:last-child)"
-                }
+                    columns: ":not(:last-child)",
+                },
             },
             {
                 extend: "csv",
                 exportOptions: {
-                    columns: ":not(:last-child)"
-                }
+                    columns: ":not(:last-child)",
+                },
             },
             {
                 extend: "excel",
                 exportOptions: {
-                    columns: ":not(:last-child)"
-                }
+                    columns: ":not(:last-child)",
+                },
             },
             {
                 extend: "pdf",
                 exportOptions: {
-                    columns: ":not(:last-child)"
-                }
+                    columns: ":not(:last-child)",
+                },
             },
             {
                 extend: "print",
                 exportOptions: {
-                    columns: ":not(:last-child)"
-                }
-            }
+                    columns: ":not(:last-child)",
+                },
+            },
         ],
         lengthMenu: [
             [10, 25, 50, 100],
@@ -75,39 +75,39 @@ $(document).ready(function () {
             data: {
                 _token: token,
             },
-            complete: function() {
+            complete: function () {
                 removeLoader();
-            }
+            },
         },
     });
 });
 
-$("#project_id").change(function() {
+$("#project_id").change(function () {
     var value = $("#project_id").val();
     table.columns(1).search(value).draw();
 });
 
-$("#status").change(function() {
+$("#status").change(function () {
     var value = $("#status").val();
     table.columns(2).search(value).draw();
 });
 
-$("#task_category_id").change(function() {
+$("#task_category_id").change(function () {
     var value = $("#task_category_id").val();
     table.columns(3).search(value).draw();
 });
 
-$("#developer").change(function() {
+$("#developer").change(function () {
     var value = $("#developer").val();
     table.columns(4).search(value).draw();
 });
 
-$("#qa").change(function() {
+$("#qa").change(function () {
     var value = $("#qa").val();
     table.columns(5).search(value).draw();
 });
 
-$("#live").change(function() {
+$("#live").change(function () {
     var value = $("#live").val();
     table.columns(6).search(value).draw();
 });

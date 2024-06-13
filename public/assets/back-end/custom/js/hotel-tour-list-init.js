@@ -10,8 +10,8 @@ $(document).ready(function () {
         { data: "no_of_visiter" },
         { data: "formated_arrivel_date" },
         { data: "formated_departure_date" },
-        { data: "status_badge", orderable: false },
         { data: "amended", orderable: false },
+        { data: "status_badge", orderable: false },
         { data: "is_assign", orderable: false },
         { data: "confirmation_voucher", orderable: false },
     ];

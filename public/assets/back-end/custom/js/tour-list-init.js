@@ -10,12 +10,17 @@ $(document).ready(function () {
         { data: "no_of_visiter" },
         { data: "formated_arrivel_date" },
         { data: "formated_departure_date" },
-        { data: "status_badge", orderable: false },
         { data: "amended", orderable: false },
+        { data: "status_badge", orderable: false },
         // { data: "confirmation_pdf", orderable: false, searchable: false },
     ];
 
-    if (is_permission_change_action == true || is_permission_view_tour_schedule == true || is_permission_edit == true || is_permission_cancel == true) {
+    if (
+        is_permission_change_action == true ||
+        is_permission_view_tour_schedule == true ||
+        is_permission_edit == true ||
+        is_permission_cancel == true
+    ) {
         columns.push({ data: "action", orderable: false, searchable: false });
     }
     columns.push();
@@ -76,9 +81,9 @@ $(document).ready(function () {
             data: {
                 _token: token,
             },
-            complete: function() {
+            complete: function () {
                 removeLoader();
-            }
+            },
         },
     });
 });
@@ -101,9 +106,59 @@ function getHotelsDetails(tour_id, tour_number, status) {
         success: function (response) {
             if (response.success == true) {
                 console.log(response);
-                setConfirmationFields(response.data, tour_number,status,tour_id);
+                setConfirmationFields(
+                    response.data,
+                    tour_number,
+                    status,
+                    tour_id
+                );
             }
         },
     });
 }
-
+function completeTour(url) {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't complete this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Confirm it!",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = url;
+        }
+    });
+}
+function editTours(url) {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't edit this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Edit!",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = url;
+        }
+    });
+}
+function cancelTour(url) {
+    console.log(url);
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't cancel this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes,  Cancel it!",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = url;
+        }
+    });
+}

@@ -30,7 +30,7 @@ class PDFController extends DataController {
         return $pdf->stream($pdf_name);
     }
 
-    public function viewHotelReservationPDF(Request $request) {
+    public function viewHotelReservatonPDF(Request $request) {
         $voucher_data = $this->getHotelReservationVoucherData($request->tour_schedule_id, $request->tour_schedule_start_date, $request->rates, $request->special_requirement);
         $amended_voucher_data = $this->getAmendedHotelReservationVoucherData($request->tour_schedule_id);
         if($amended_voucher_data != 0){
@@ -42,7 +42,7 @@ class PDFController extends DataController {
                 $is_equal = 0;
             }
         }else{
-            $is_equal = 0;
+            $is_equal = 1;
         }
 
         $title = $voucher_data['reservation_details']->tour_number . ' ';

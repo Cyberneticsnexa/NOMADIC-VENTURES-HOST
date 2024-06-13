@@ -116,7 +116,8 @@ use Carbon\Carbon;
             <a href="/" class="brand-link">
                 <img src="{{ getUploadImage($site_settings->logo, 'logo') }}" alt="Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light" style="font-size: 17px">{{ $site_settings->site_name }}</span>
+                <span class="brand-text font-weight-light"
+                    style="font-size: 17px">{{ $site_settings->site_name }}</span>
             </a>
 
             <!-- Sidebar -->
@@ -124,8 +125,9 @@ use Carbon\Carbon;
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img style="width:35px;height:35px" src="{{ getAuthImage( 'user_image' ) == null ? getUploadImage('no.avif', 'user_image') : getAuthImage( 'user_image' )  }}" class="img-circle elevation-2"1
-                            alt="User Image">
+                        <img style="width:35px;height:35px"
+                            src="{{ getAuthImage('user_image') == null ? getUploadImage('no.avif', 'user_image') : getAuthImage('user_image') }}"
+                            class="img-circle elevation-2"1 alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -167,15 +169,15 @@ use Carbon\Carbon;
                                     if ($item['show_in_sidebar'] && isPermissions($item['permission'])) {
                                         $links .=
                                             ' <li class="nav-item">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a href="' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a href="' .
                                             route($item['permission']) .
                                             '" class="nav-link">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <i class="far fa-circle nav-icon"></i>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <p class="text-capitalize">' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <i class="far fa-circle nav-icon"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <p class="text-capitalize">' .
                                             $item['title'] .
                                             '</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </li>';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </li>';
                                     }
                                 }
                                 ?>
@@ -233,7 +235,7 @@ use Carbon\Carbon;
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <span>© Copyright 2024 NomadicVentures (Pvt) Ltd. All right reserved. designed &amp; developed by
-            <a href="https://cyberneticsnexa.com/" target="_blank" rel="noopener">CyberneticsNexa</a>.</span>
+                <a href="https://cyberneticsnexa.com/" target="_blank" rel="noopener">CyberneticsNexa</a>.</span>
         </footer>
 
         <!-- Control Sidebar -->
@@ -383,6 +385,9 @@ use Carbon\Carbon;
         $('#reservationdate').datetimepicker({
             format: 'L'
         });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
         $(function() {
             $('.dropify').dropify();
             $('.summernote').summernote({
