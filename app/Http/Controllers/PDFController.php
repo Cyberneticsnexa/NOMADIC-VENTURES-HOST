@@ -33,13 +33,18 @@ class PDFController extends DataController {
     public function viewHotelReservationPDF(Request $request) {
         $voucher_data = $this->getHotelReservationVoucherData($request->tour_schedule_id, $request->tour_schedule_start_date, $request->rates, $request->special_requirement);
         $amended_voucher_data = $this->getAmendedHotelReservationVoucherData($request->tour_schedule_id);
-        $array1 = json_decode(json_encode($voucher_data), true);
-        $array2 = json_decode(json_encode($amended_voucher_data), true);
-        if ($this->arraysAreEqual($array1, $array2)) {
-            $is_equal = 1;
-        } else {
+        if($amended_voucher_data != 0){
+            $array1 = json_decode(json_encode($voucher_data), true);
+            $array2 = json_decode(json_encode($amended_voucher_data), true);
+            if ($this->arraysAreEqual($array1, $array2)) {
+                $is_equal = 1;
+            } else {
+                $is_equal = 0;
+            }
+        }else{
             $is_equal = 0;
         }
+
         $title = $voucher_data['reservation_details']->tour_number . ' ';
 
         if ($amended_voucher_data != 0) {
