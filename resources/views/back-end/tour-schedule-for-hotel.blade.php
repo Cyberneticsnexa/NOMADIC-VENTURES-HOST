@@ -4,24 +4,31 @@
             $is_amended = collect($tour_schedule->tourScheduleDetails)->contains(function ($detail) {
                 if ($detail->amended_count == 0) {
                     return false;
-                }else{
+                } else {
                     return true;
                 }
             });
-            $all_hotel_assign = collect($tour_schedule->tourScheduleDetails)
-                ->contains(function ($detail) {
-                    if ($detail->hotel == null) {
-                        return false;
-                    }else{
-                        return true;
-                    }
-                });
+            $all_hotel_assign = collect($tour_schedule->tourScheduleDetails)->contains(function ($detail) {
+                if ($detail->hotel == null) {
+                    return false;
+                } else {
+                    return true;
+                }
+            });
         @endphp
         @if ($is_amended && $all_hotel_assign == false)
             <div class="row mb-2">
                 <div class="col-12">
                     <a target="_blank" href="/re-assign-hotel/{{ $tour_schedule->tour_number }}/{{ $tour->id }}"
                         class="btn btn-xs btn-primary">Re Assign</a>
+                </div>
+            </div>
+        @endif
+        @if ($cancelled_booking['cancelled_count'] > 0)
+            <div class="row mb-2">
+                <div class="col-12">
+                    <a target="_blank" href="/cancelled-bookings/{{ $tour_schedule->tour_number }}"
+                        class="btn btn-xs btn-danger">Cancelled Booking</a>
                 </div>
             </div>
         @endif
@@ -98,7 +105,7 @@
                                         <span class="badge badge-secondary">Pending Cancellation</span>
                                     @break
 
-                                    @case(4)
+                                    @case(3)
                                         <span class="badge badge-danger">Cancelled</span>
                                     @break
                                 @endswitch

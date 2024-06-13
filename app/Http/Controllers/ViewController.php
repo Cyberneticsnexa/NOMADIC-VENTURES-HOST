@@ -846,6 +846,7 @@ class ViewController extends DataController
     public function viewTourScheduleForHotel($id) {
 
         $tour_schedule = $this->getTourScheduleDetails($id);
+        $cancelled_booking = $this->getCancelledBooking($tour_schedule->tour_number);
         $data = [
             'title'             => $tour_schedule->tour_number.' Schedule',
             'view'              => 'back-end.tour-schedule-for-hotel',
@@ -862,6 +863,7 @@ class ViewController extends DataController
                                         ),
 
             'tour_schedule'     => $tour_schedule,
+            'cancelled_booking'     => $cancelled_booking,
             'tour'              => $this->getTour($id),
             'hotel_city'        => $this->getHotelCity(1),
             'basis'             => $this->getBasis(1),
@@ -900,6 +902,29 @@ class ViewController extends DataController
             'basis'             => $this->getBasis(1),
         ];
         // return $data['amended_schedule'];
+        return $this->default( $data );
+    }
+
+    public function cancelledBooking($tour_number) {
+        $cancelled_schedule = $this->getCancelledBooking($tour_number);
+        $data = [
+            'title'             => $tour_number.' Cancelled Hotel Booking',
+            'view'              => 'back-end.cancelled-hotel-booking',
+            'css'               => array( config( 'site-specific.datatable-bootstrap-min-css' ), config( 'site-specific.responsive-bootstrap-min-css' ),
+                                config( 'site-specific.buttons-bootstrap-min-css' ),config( 'site-specific.datatable-select-min-css' ) ),
+            'script'            => array( config( 'site-specific.jquery-datatable-min-js' ), config( 'site-specific.datatable-bootstrap-min-js' ),
+                                            config( 'site-specific.datatable-responsive-min-js' ),config( 'site-specific.responsive-bootstrap-min-js' ),
+                                            config( 'site-specific.datatable-buttons-min-js' ),config( 'site-specific.buttons-bootstrap-min-js' ),
+                                            config( 'site-specific.pdfmake-min-js' ),
+                                            config( 'site-specific.vfs_fonts-min-js' ),config( 'site-specific.buttons-html5-min-js' ),
+                                            config( 'site-specific.buttons-print-min-js' ),config( 'site-specific.buttons-colvis-min-js' ),
+                                            config( 'site-specific.datatable-select-min-js' ),
+                                            config( 'site-specific.tour-schedule-for-hotel-init-js' )
+                                        ),
+            'tour_schedule'     => $cancelled_schedule,
+            'tour_number'     => $tour_number,
+        ];
+        // return $data['tour_schedule'];
         return $this->default( $data );
     }
 

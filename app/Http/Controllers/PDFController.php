@@ -82,12 +82,16 @@ class PDFController extends DataController {
         $voucher_data = $this->getHotelReservationVoucherData($id, $date);
         $amended_voucher_data = $this->getAmendedHotelReservationVoucherData($id);
 
-        $array1 = json_decode(json_encode($voucher_data), true);
-        $array2 = json_decode(json_encode($amended_voucher_data), true);
-        if ($this->arraysAreEqual($array1, $array2)) {
+        if($amended_voucher_data != 0){
+            $array1 = json_decode(json_encode($voucher_data), true);
+            $array2 = json_decode(json_encode($amended_voucher_data), true);
+            if ($this->arraysAreEqual($array1, $array2)) {
+                $is_equal = 1;
+            } else {
+                $is_equal = 0;
+            }
+        }else{
             $is_equal = 1;
-        } else {
-            $is_equal = 0;
         }
 
         $title = $voucher_data['reservation_details']->tour_number . ' ';

@@ -320,6 +320,8 @@ Route::group([
 
     Route::get('/re-assign-hotel/{tour_number?}/{id?}'          , 'ViewController@reAssignHotelView');
 
+    Route::get('/cancelled-bookings/{tour_number?}'          , 'ViewController@cancelledBooking');
+
 
 
 

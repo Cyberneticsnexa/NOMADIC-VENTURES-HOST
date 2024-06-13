@@ -607,4 +607,19 @@ class DataController extends Controller {
         return $data;
     }
 
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION GET CANCELLED BOOKING
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getCancelledBooking( $tour_number ) {
+        $data = [];
+        $cancelled_booking = TempAmendmentTourSchedule::with('hotelDetails','confirmationDetails')->where('tour_number',$tour_number)->whereIn('hotel_booking_status',[2,3])->get();
+        $cancelled_count = count($cancelled_booking);
+        $data['cancelled_booking'] = $cancelled_booking ;
+        $data['cancelled_count'] = $cancelled_count ;
+        return $data;
+    }
+
 }

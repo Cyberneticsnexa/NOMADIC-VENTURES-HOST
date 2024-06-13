@@ -1399,13 +1399,13 @@ class ActionController extends Controller {
             $reservation_details = ReservationVoucher::where( 'tour_id', $id )->get();
             TempReservationVoucher::where( 'tour_id', $id )->delete();
             foreach ( $reservation_details as $key => $value ) {
-                $voucher_number = TempReservationVoucherNumber::where('tour_id',$value->tour_id)->where('hotel_id',$value->hotel_id)->first();
-                if(!$voucher_number){
-                    TempReservationVoucherNumber::create([
+                $voucher_number = TempReservationVoucherNumber::where( 'tour_id', $value->tour_id )->where( 'hotel_id', $value->hotel_id )->first();
+                if ( !$voucher_number ) {
+                    TempReservationVoucherNumber::create( [
                         'tour_id' => $value->tour_id,
                         'hotel_id' => $value->hotel_id,
                         'voucher_number' => $value->id,
-                    ]);
+                    ] );
                 }
                 TempReservationVoucher::create( [
                     'id' => $value->id,
@@ -1677,6 +1677,7 @@ class ActionController extends Controller {
             }
 
             DB::beginTransaction();
+
             foreach ( $request->ids as $key => $value ) {
                 $tour_schedule = TourSchedule::find( $value );
                 if ( !$tour_schedule ) {
@@ -1706,6 +1707,35 @@ class ActionController extends Controller {
                         'basis_id' => $basis_id,
                         'no_of_room' => $no_of_room,
                     ] );
+                }
+            }
+            $new_tourSchedule = TourSchedule::find( $request->ids[ 0 ] );
+            $all_new_tour_schedule = TourSchedule::where( 'tour_id', $new_tourSchedule->tour_id )->get();
+            $whole_schedule_hotel_assign = false;
+            for ( $i = 0; $i < count( $all_new_tour_schedule ) - 1 ;$i++ ) {
+                if ( $all_new_tour_schedule[ $i ]->hotel == null ) {
+                    break;
+                } else {
+                    $whole_schedule_hotel_assign = true;
+                }
+            }
+            if ($whole_schedule_hotel_assign) {
+                $old_hotels = TempAmendmentTourSchedule::where('tour_id', $new_tourSchedule->tour_id)->pluck('hotel')->toArray();
+                $new_hotels = TourSchedule::where('tour_id', $new_tourSchedule->tour_id)->pluck('hotel')->toArray();
+
+                $unmatched_hotels = array_diff($old_hotels, $new_hotels);
+
+                $already_unmatched_hotels = [];
+
+                foreach ($unmatched_hotels as $unmatched_hotel) {
+                    if (!in_array($unmatched_hotel, $already_unmatched_hotels)) {
+                        $already_unmatched_hotels[] = $unmatched_hotel;
+                        $updated_amended_schedules = TempAmendmentTourSchedule::where('tour_id', $new_tourSchedule->tour_id)->where('hotel',$unmatched_hotel)->get();
+                        foreach ($updated_amended_schedules as $key => $updated_amended_schedule) {
+                           $updated_amended_schedule->hotel_booking_status = 2;
+                           $updated_amended_schedule->save();
+                        }
+                    }
                 }
             }
 
