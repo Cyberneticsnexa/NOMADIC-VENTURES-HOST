@@ -124,7 +124,7 @@ class AjaxController extends Controller
                     if( isPermissions('view-tour-schedule-for-tour-manager')){
                         $action .=  '<a data-toggle="tooltip" data-placement="bottom" title="Tour Schedule" target="_blank" class="btn btn-info btn-sm" href="/view-tour-schedule/' . $value->id . '"><i class="fa-solid fa-list"></i></a>';
                     }
-                    if(isPermissions('change-tour-action')) {
+                    if(isPermissions('change-tour-action') ) {
                         $action .= '<button data-toggle="tooltip" data-placement="bottom" title="Complete Tour" class="btn btn-success btn-sm ml-1" onclick="completeTour(\'/tour-status/'.$value->id.'/4\')"><i class="fa-solid fa-check"></i></button>';
                     }
                     if (isPermissions('edit-tour')) {

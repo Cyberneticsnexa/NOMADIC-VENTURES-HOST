@@ -134,7 +134,7 @@ function completeTour(url) {
 function editTours(url) {
     Swal.fire({
         title: "Are you sure?",
-        text: "You won't edit this!",
+        text: "Do you won't edit this!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -149,7 +149,7 @@ function editTours(url) {
 function cancelTour(url) {
     Swal.fire({
         title: "Are you sure?",
-        text: "You won't cancel this!",
+        text: "Do you won't cancel this!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",

@@ -411,11 +411,15 @@ Route::group([
 
     Route::post('/create-hotel-reservation'                , 'PDFController@viewHotelReservatonPDF')->name('create-hotel-reservation');
 
+    Route::post('/create-cancelled-hotel-reservation'                , 'PDFController@viewHotelCancelledReservatonPDF')->name('create-cancelled-hotel-reservation');
+
+    Route::get('/view-cancelled-hotel-reservation/{id?}'                , 'PDFController@viewPrintedHotelCancelledReservatonPDF')->name('view-cancelled-hotel-reservation');
+
     Route::get('/view-hotel-reservation/{id?}/{date?}'                , 'PDFController@viewPrintedHotelReservatonPDF')->name('view-hotel-reservation');
 
     Route::get('/view-confirmation-voucher/{id?}/{date?}'                , 'PDFController@viewConfirmationPDF')->name('view-confirmation-voucher');
 
-
+    Route::post('/cancellation-hotel-booking-accept'            , 'ActionController@cancellationAccept')->name('cancellation-hotel-booking-accept');
 
     /*
     ----------------------------------------------------------------------------------------------------------

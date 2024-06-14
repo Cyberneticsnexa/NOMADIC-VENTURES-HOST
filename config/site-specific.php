@@ -230,6 +230,8 @@ return [
 
     'edit-tour-init-js'           =>'/assets/back-end/custom/js/edit-tour-init.js?v='.$version,
 
+    'cancelled-hotel-booking-init-js'           =>'/assets/back-end/custom/js/cancelled-hotel-booking-init.js?v='.$version,
+
     // 'edit-driver-image-init-js'           =>'/assets/back-end/custom/js/edit-driver-image-init.js?v='.$version,
 
 

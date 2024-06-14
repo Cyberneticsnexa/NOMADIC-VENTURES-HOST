@@ -846,7 +846,7 @@ class ViewController extends DataController
     public function viewTourScheduleForHotel($id) {
 
         $tour_schedule = $this->getTourScheduleDetails($id);
-        $cancelled_booking = $this->getCancelledBooking($tour_schedule->tour_number);
+        $cancelled_count = $this->getCancelledBookingCount($tour_schedule->tour_number);
         $data = [
             'title'             => $tour_schedule->tour_number.' Schedule',
             'view'              => 'back-end.tour-schedule-for-hotel',
@@ -863,7 +863,7 @@ class ViewController extends DataController
                                         ),
 
             'tour_schedule'     => $tour_schedule,
-            'cancelled_booking'     => $cancelled_booking,
+            'cancelled_booking'     => $cancelled_count,
             'tour'              => $this->getTour($id),
             'hotel_city'        => $this->getHotelCity(1),
             'basis'             => $this->getBasis(1),
@@ -919,9 +919,9 @@ class ViewController extends DataController
                                             config( 'site-specific.vfs_fonts-min-js' ),config( 'site-specific.buttons-html5-min-js' ),
                                             config( 'site-specific.buttons-print-min-js' ),config( 'site-specific.buttons-colvis-min-js' ),
                                             config( 'site-specific.datatable-select-min-js' ),
-                                            config( 'site-specific.tour-schedule-for-hotel-init-js' )
+                                            config( 'site-specific.cancelled-hotel-booking-init-js' )
                                         ),
-            'tour_schedule'     => $cancelled_schedule,
+            'cancelled_schedule'     => $cancelled_schedule,
             'tour_number'     => $tour_number,
         ];
         // return $data['tour_schedule'];

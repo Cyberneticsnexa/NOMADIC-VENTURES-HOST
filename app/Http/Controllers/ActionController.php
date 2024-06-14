@@ -44,6 +44,7 @@ use App\Models\ReservationVoucher;
 use App\Models\TempAmendmentTourSchedule;
 use App\Models\TempReservationVoucher;
 use App\Models\TempReservationVoucherNumber;
+use App\Models\CancelledReservation;
 
 class ActionController extends Controller {
 
@@ -1414,8 +1415,8 @@ class ActionController extends Controller {
                     'hotel_id' => $value->hotel_id,
                     'checkin_date' => $value->checkin_date,
                     'checkout_date' => $value->checkout_date,
-                    'no_of_nights' => $value->id,
-                    'rate' => $value->no_of_nights,
+                    'no_of_nights' => $value->no_of_nights,
+                    'rate' => $value->rate,
                     'special_requirement' => $value->special_requirement,
                     'is_generated' => $value->is_generated,
                 ] );
@@ -1711,15 +1712,15 @@ class ActionController extends Controller {
             }
             $new_tourSchedule = TourSchedule::find( $request->ids[ 0 ] );
             $all_new_tour_schedule = TourSchedule::where( 'tour_id', $new_tourSchedule->tour_id )->get();
-            $whole_schedule_hotel_assign = false;
+            $whole_schedule_hotel_assign = true;
             for ( $i = 0; $i < count( $all_new_tour_schedule ) - 1 ;$i++ ) {
                 if ( $all_new_tour_schedule[ $i ]->hotel == null ) {
+                    $whole_schedule_hotel_assign = false;
                     break;
-                } else {
-                    $whole_schedule_hotel_assign = true;
                 }
             }
-            if ($whole_schedule_hotel_assign) {
+            if ($whole_schedule_hotel_assign == true) {
+
                 $old_hotels = TempAmendmentTourSchedule::where('tour_id', $new_tourSchedule->tour_id)->pluck('hotel')->toArray();
                 $new_hotels = TourSchedule::where('tour_id', $new_tourSchedule->tour_id)->pluck('hotel')->toArray();
 
@@ -1735,6 +1736,21 @@ class ActionController extends Controller {
                            $updated_amended_schedule->hotel_booking_status = 2;
                            $updated_amended_schedule->save();
                         }
+                        $temp_reservation_voucher = TempReservationVoucher::where('tour_id', $new_tourSchedule->tour_id)->where('hotel_id',$unmatched_hotel)->get();
+                        foreach ($temp_reservation_voucher as $key => $value) {
+                            CancelledReservation::create([
+                                'tour_number' => $new_tourSchedule->tour_number,
+                                'tour_id' => $value->tour_id,
+                                'tour_schedule_id' => $value->tour_schedule_id,
+                                'hotel_id' => $value->hotel_id,
+                                'reservation_voucher_no' => $value->id,
+                                'checkin_date' => $value->checkin_date,
+                                'checkout_date' => $value->checkout_date,
+                                'booking_status' => 2,
+                                'no_of_nights' => $value->no_of_nights,
+                            ]);
+                        }
+
                     }
                 }
             }
@@ -1743,6 +1759,50 @@ class ActionController extends Controller {
             return redirect()->back()->with( [
                 'temp-success' => true,
                 'message' => 'Hotel Re Assigned Successfully!'
+            ] );
+        } catch ( \Throwable $th ) {
+            DB::rollback();
+            return redirect()->back()->with( [
+                'error' => true,
+                'message' => $th->getMessage() . ' at line ' . $th->getLine()
+            ] );
+        }
+    }
+
+
+     /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION CANCELLATION ACCEPT
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function cancellationAccept( Request $request ) {
+        try {
+
+            // Validate the request data
+            $validator = Validator::make( $request->all(), [
+                'id' => 'required|integer',
+                'confirmation_number' => 'required',
+            ] );
+
+            if ( $validator->fails() ) {
+                return redirect()->back()->with( [
+                    'error' => true,
+                    'message' => implode( ' ', $validator->messages()->all() )
+                ] );
+            }
+
+            DB::beginTransaction();
+
+            $cancel_reservation = CancelledReservation::find($request->id);
+            $cancel_reservation->confirmation_no = $request->confirmation_number;
+            $cancel_reservation->booking_status = 3;
+            $cancel_reservation->save();
+
+            DB::commit();
+            return redirect()->back()->with( [
+                'temp-success' => true,
+                'message' => 'Cancel Reservation Confirmed Successfully!'
             ] );
         } catch ( \Throwable $th ) {
             DB::rollback();

@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::YCusdy88EoSEcoaf',
+            '_route' => 'generated::o5NbTRJSDNpRKQDi',
           ),
           1 => NULL,
           2 => 
@@ -1115,7 +1115,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::577m3hGYLPJ34pta',
+            '_route' => 'generated::8FewXnzXNF08etwt',
           ),
           1 => NULL,
           2 => 
@@ -1134,7 +1134,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2GPTdpdKP0aY1Izu',
+            '_route' => 'generated::nNVfS33991JpO5YV',
           ),
           1 => NULL,
           2 => 
@@ -1364,6 +1364,44 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'create-hotel-reservation',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/create-cancelled-hotel-reservation' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'create-cancelled-hotel-reservation',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/cancellation-hotel-booking-accept' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'cancellation-hotel-booking-accept',
           ),
           1 => NULL,
           2 => 
@@ -1664,7 +1702,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/edit\\-(?|user\\-roll(?:/([^/]++))?(*:41)|driver(?:/([^/]++))?(*:68)|hotel(?:/([^/]++))?(*:94)|tour(?:/([^/]++))?(*:119))|/assign\\-franchise(?|\\-from\\-transport(?:/([^/]++))?(*:180)|s(?:/([^/]++))?(*:203))|/view\\-(?|hotel(?|(?:/([^/]++))?(*:244)|\\-reservation(?:/([^/]++)(?:/([^/]++))?)?(*:293))|tour\\-schedule(?|\\-for\\-hotel\\-management(?:/([^/]++))?(*:357)|(?:/([^/]++))?(*:379)|\\-for\\-transpotaion(?:/([^/]++))?(*:420))|confirmation\\-voucher(?:/([^/]++)(?:/([^/]++))?)?(*:478))|/update\\-(?|user\\-roll(?:/([^/]++))?(*:523)|driver(?:/([^/]++))?(*:551)|hotel(?:/([^/]++))?(*:578)|tour(?|(?:/([^/]++))?(*:607)|\\-franchise(?:/([^/]++))?(*:640)))|/c(?|reate\\-transport\\-franchise(?:/([^/]++))?(*:696)|ancelled\\-bookings(?:/([^/]++))?(*:736))|/re\\-assign\\-hotel(?:/([^/]++)(?:/([^/]++))?)?(*:791)|/tour\\-status(?:/([^/]++)(?:/([^/]++))?)?(*:840))/?$}sDu',
+      0 => '{^(?|/edit\\-(?|user\\-roll(?:/([^/]++))?(*:41)|driver(?:/([^/]++))?(*:68)|hotel(?:/([^/]++))?(*:94)|tour(?:/([^/]++))?(*:119))|/assign\\-franchise(?|\\-from\\-transport(?:/([^/]++))?(*:180)|s(?:/([^/]++))?(*:203))|/view\\-(?|hotel(?|(?:/([^/]++))?(*:244)|\\-reservation(?:/([^/]++)(?:/([^/]++))?)?(*:293))|tour\\-schedule(?|\\-for\\-hotel\\-management(?:/([^/]++))?(*:357)|(?:/([^/]++))?(*:379)|\\-for\\-transpotaion(?:/([^/]++))?(*:420))|c(?|ancelled\\-hotel\\-reservation(?:/([^/]++))?(*:475)|onfirmation\\-voucher(?:/([^/]++)(?:/([^/]++))?)?(*:531)))|/update\\-(?|user\\-roll(?:/([^/]++))?(*:577)|driver(?:/([^/]++))?(*:605)|hotel(?:/([^/]++))?(*:632)|tour(?|(?:/([^/]++))?(*:661)|\\-franchise(?:/([^/]++))?(*:694)))|/c(?|reate\\-transport\\-franchise(?:/([^/]++))?(*:750)|ancelled\\-bookings(?:/([^/]++))?(*:790))|/re\\-assign\\-hotel(?:/([^/]++)(?:/([^/]++))?)?(*:845)|/tour\\-status(?:/([^/]++)(?:/([^/]++))?)?(*:894))/?$}sDu',
     ),
     3 => 
     array (
@@ -1746,7 +1784,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::fvV2429lKHZKULVC',
+            '_route' => 'generated::SJEFI63NVcb5Fsta',
             'id' => NULL,
           ),
           1 => 
@@ -1818,7 +1856,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::yffpL5xnPbEebimf',
+            '_route' => 'generated::uYMK3EjJXgJ05Tjx',
             'id' => NULL,
           ),
           1 => 
@@ -1868,7 +1906,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::tVeaBWIwXIVudBoZ',
+            '_route' => 'generated::Q6IM4QjpdUmgcqkN',
             'id' => NULL,
           ),
           1 => 
@@ -1892,7 +1930,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::GICz7tg9yvOn3Zqm',
+            '_route' => 'generated::ytMKKWFGjDLSfx4P',
             'id' => NULL,
           ),
           1 => 
@@ -1916,7 +1954,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::qBALcfAEvGxednFR',
+            '_route' => 'generated::BIVLyyPivjPT0ebz',
             'id' => NULL,
           ),
           1 => 
@@ -1934,7 +1972,31 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      478 => 
+      475 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'view-cancelled-hotel-reservation',
+            'id' => NULL,
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      531 => 
       array (
         0 => 
         array (
@@ -1960,7 +2022,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      523 => 
+      577 => 
       array (
         0 => 
         array (
@@ -1983,7 +2045,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      551 => 
+      605 => 
       array (
         0 => 
         array (
@@ -2006,7 +2068,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      578 => 
+      632 => 
       array (
         0 => 
         array (
@@ -2029,7 +2091,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      607 => 
+      661 => 
       array (
         0 => 
         array (
@@ -2052,13 +2114,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      640 => 
+      694 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::KbVus7EP9gdV6qnY',
+            '_route' => 'generated::uzxj9fSMQtKfDYPl',
             'id' => NULL,
           ),
           1 => 
@@ -2075,7 +2137,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      696 => 
+      750 => 
       array (
         0 => 
         array (
@@ -2098,13 +2160,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      736 => 
+      790 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::9oV1Q5C0GGm5qhnc',
+            '_route' => 'generated::IWdXjtbPGVz64bn7',
             'tour_number' => NULL,
           ),
           1 => 
@@ -2122,13 +2184,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      791 => 
+      845 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::WnhdSX4YICrr8ncX',
+            '_route' => 'generated::LHugikZHEKMRJaQe',
             'tour_number' => NULL,
             'id' => NULL,
           ),
@@ -2148,7 +2210,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      840 => 
+      894 => 
       array (
         0 => 
         array (
@@ -2335,7 +2397,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::YCusdy88EoSEcoaf' => 
+    'generated::o5NbTRJSDNpRKQDi' => 
     array (
       'methods' => 
       array (
@@ -2358,7 +2420,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::YCusdy88EoSEcoaf',
+        'as' => 'generated::o5NbTRJSDNpRKQDi',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4258,7 +4320,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::yffpL5xnPbEebimf' => 
+    'generated::uYMK3EjJXgJ05Tjx' => 
     array (
       'methods' => 
       array (
@@ -4280,7 +4342,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::yffpL5xnPbEebimf',
+        'as' => 'generated::uYMK3EjJXgJ05Tjx',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4518,7 +4580,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::tVeaBWIwXIVudBoZ' => 
+    'generated::Q6IM4QjpdUmgcqkN' => 
     array (
       'methods' => 
       array (
@@ -4540,7 +4602,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::tVeaBWIwXIVudBoZ',
+        'as' => 'generated::Q6IM4QjpdUmgcqkN',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4630,7 +4692,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::WnhdSX4YICrr8ncX' => 
+    'generated::LHugikZHEKMRJaQe' => 
     array (
       'methods' => 
       array (
@@ -4652,7 +4714,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::WnhdSX4YICrr8ncX',
+        'as' => 'generated::LHugikZHEKMRJaQe',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4668,7 +4730,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::9oV1Q5C0GGm5qhnc' => 
+    'generated::IWdXjtbPGVz64bn7' => 
     array (
       'methods' => 
       array (
@@ -4690,7 +4752,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::9oV1Q5C0GGm5qhnc',
+        'as' => 'generated::IWdXjtbPGVz64bn7',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4892,7 +4954,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::GICz7tg9yvOn3Zqm' => 
+    'generated::ytMKKWFGjDLSfx4P' => 
     array (
       'methods' => 
       array (
@@ -4914,7 +4976,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::GICz7tg9yvOn3Zqm',
+        'as' => 'generated::ytMKKWFGjDLSfx4P',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4930,7 +4992,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::qBALcfAEvGxednFR' => 
+    'generated::BIVLyyPivjPT0ebz' => 
     array (
       'methods' => 
       array (
@@ -4952,7 +5014,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::qBALcfAEvGxednFR',
+        'as' => 'generated::BIVLyyPivjPT0ebz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4968,7 +5030,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::fvV2429lKHZKULVC' => 
+    'generated::SJEFI63NVcb5Fsta' => 
     array (
       'methods' => 
       array (
@@ -4990,7 +5052,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::fvV2429lKHZKULVC',
+        'as' => 'generated::SJEFI63NVcb5Fsta',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5006,7 +5068,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::KbVus7EP9gdV6qnY' => 
+    'generated::uzxj9fSMQtKfDYPl' => 
     array (
       'methods' => 
       array (
@@ -5027,7 +5089,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::KbVus7EP9gdV6qnY',
+        'as' => 'generated::uzxj9fSMQtKfDYPl',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5043,7 +5105,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::577m3hGYLPJ34pta' => 
+    'generated::8FewXnzXNF08etwt' => 
     array (
       'methods' => 
       array (
@@ -5064,7 +5126,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::577m3hGYLPJ34pta',
+        'as' => 'generated::8FewXnzXNF08etwt',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5080,7 +5142,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::2GPTdpdKP0aY1Izu' => 
+    'generated::nNVfS33991JpO5YV' => 
     array (
       'methods' => 
       array (
@@ -5101,7 +5163,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::2GPTdpdKP0aY1Izu',
+        'as' => 'generated::nNVfS33991JpO5YV',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5562,6 +5624,81 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'create-cancelled-hotel-reservation' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'create-cancelled-hotel-reservation',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'login_validation',
+        ),
+        'uses' => 'App\\Http\\Controllers\\PDFController@viewHotelCancelledReservatonPDF',
+        'controller' => 'App\\Http\\Controllers\\PDFController@viewHotelCancelledReservatonPDF',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'create-cancelled-hotel-reservation',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'view-cancelled-hotel-reservation' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'view-cancelled-hotel-reservation/{id?}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'login_validation',
+        ),
+        'uses' => 'App\\Http\\Controllers\\PDFController@viewPrintedHotelCancelledReservatonPDF',
+        'controller' => 'App\\Http\\Controllers\\PDFController@viewPrintedHotelCancelledReservatonPDF',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'view-cancelled-hotel-reservation',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'view-hotel-reservation' => 
     array (
       'methods' => 
@@ -5623,6 +5760,43 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'view-confirmation-voucher',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'cancellation-hotel-booking-accept' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'cancellation-hotel-booking-accept',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'login_validation',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ActionController@cancellationAccept',
+        'controller' => 'App\\Http\\Controllers\\ActionController@cancellationAccept',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'cancellation-hotel-booking-accept',
       ),
       'fallback' => false,
       'defaults' => 

@@ -39,6 +39,7 @@ use App\Models\ConfirmatonVoucher;
 use App\Models\TempAmendmentTourSchedule;
 use App\Models\TempReservationVoucher;
 use App\Models\TempReservationVoucherNumber;
+use App\Models\CancelledReservation;
 
 class DataController extends Controller {
     //                                  FUNCTIONS FOR GET DEVELOPER TOOLS DETAILS
@@ -456,7 +457,7 @@ class DataController extends Controller {
     public function getAmendedHotelReservationVoucherData( $id ) {
         $old_reservation_details = TourSchedule::with( 'hotelDetails' )->find( $id );
         $reservation_details = TempAmendmentTourSchedule::where( 'tour_id', $old_reservation_details->tour_id )->where( 'hotel', $old_reservation_details->hotel )->first();
-        if($reservation_details == null){
+        if ( $reservation_details == null ) {
             return 0;
         }
         $voucher = TempReservationVoucherNumber::where( 'tour_id', $reservation_details->tour_id )->where( 'hotel_id', $reservation_details->hotel )->first();
@@ -614,11 +615,75 @@ class DataController extends Controller {
     */
 
     public function getCancelledBooking( $tour_number ) {
-        $data = [];
-        $cancelled_booking = TempAmendmentTourSchedule::with('hotelDetails','confirmationDetails')->where('tour_number',$tour_number)->whereIn('hotel_booking_status',[2,3])->get();
-        $cancelled_count = count($cancelled_booking);
-        $data['cancelled_booking'] = $cancelled_booking ;
-        $data['cancelled_count'] = $cancelled_count ;
+        $cancelled_booking = CancelledReservation::with( 'hotelDetails.hotelCityDetails.cityName' )->where( 'tour_number', $tour_number )->whereIn( 'booking_status', [ 0, 2, 3 ] )->get();
+        return $cancelled_booking;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION GET CANCELLED BOOKING COUNT
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getCancelledBookingCount( $tour_number ) {
+        $cancelled_booking = CancelledReservation::with( 'hotelDetails.hotelCityDetails.cityName' )->where( 'tour_number', $tour_number )->whereIn( 'booking_status', [ 2, 3 ] )->get();
+        $count = count($cancelled_booking);
+        return $count;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION GET CANCELLED HOTEL RESERVATION
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getCancelledHotelReservationVoucherData( $id, $rates, $special_requirements ) {
+        $cancelled_booking = CancelledReservation::with( 'hotelDetails.hotelCityDetails.cityName', 'tourDetails.countryDetails', 'tourDetails.agentDetails' )->find( $id );
+        $cancelled_booking->rate = $rates;
+        $cancelled_booking->special_requirement = $special_requirements;
+        $cancelled_booking->reservation_sended = 1;
+        $cancelled_booking->booking_status = 2;
+        $cancelled_booking->save();
+        $data[ 'cancelled_booking' ] = $cancelled_booking;
+
+        $hotel_room_details = HotelRoomTypeMap::with( 'roomTypeDetails' )
+        ->select( 'room_type_id', DB::raw( 'MAX(id) as max_id' ) )
+        ->where( 'hotel_id', $cancelled_booking->hotel_id )
+        ->groupBy( 'room_type_id' )
+        ->get();
+        $data[ 'hotel_room_details' ] = $hotel_room_details;
+
+        $tour_room_details = TourRoomMap::with( 'roomCategory', 'roomType', 'roomBasis' )
+        ->where( 'tour_schedule_id', $cancelled_booking->tour_schedule_id )
+        ->where( 'hotel_id', $cancelled_booking->hotel_id )
+        ->get();
+        $data[ 'tour_room_details' ] = $tour_room_details;
+        return $data;
+    }
+
+    /*
+    ----------------------------------------------------------------------------------------------------------
+    PUBLIC FUNCTION GET PRINTED CANCELLED HOTEL RESERVATION
+    ----------------------------------------------------------------------------------------------------------
+    */
+
+    public function getPrintedCancelledHotelReservationVoucherData( $id ) {
+        $cancelled_booking = CancelledReservation::with( 'hotelDetails.hotelCityDetails.cityName', 'tourDetails.countryDetails', 'tourDetails.agentDetails' )->find( $id );
+        $data[ 'cancelled_booking' ] = $cancelled_booking;
+
+        $hotel_room_details = HotelRoomTypeMap::with( 'roomTypeDetails' )
+        ->select( 'room_type_id', DB::raw( 'MAX(id) as max_id' ) )
+        ->where( 'hotel_id', $cancelled_booking->hotel_id )
+        ->groupBy( 'room_type_id' )
+        ->get();
+
+        $data[ 'hotel_room_details' ] = $hotel_room_details;
+
+        $tour_room_details = TourRoomMap::with( 'roomCategory', 'roomType', 'roomBasis' )
+        ->where( 'tour_schedule_id', $cancelled_booking->tour_schedule_id )
+        ->where( 'hotel_id', $cancelled_booking->hotel_id )
+        ->get();
+        $data[ 'tour_room_details' ] = $tour_room_details;
         return $data;
     }
 

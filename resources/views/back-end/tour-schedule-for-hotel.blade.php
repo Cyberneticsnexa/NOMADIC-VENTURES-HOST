@@ -24,7 +24,7 @@
                 </div>
             </div>
         @endif
-        @if ($cancelled_booking['cancelled_count'] > 0)
+        @if ($cancelled_booking > 0)
             <div class="row mb-2">
                 <div class="col-12">
                     <a target="_blank" href="/cancelled-bookings/{{ $tour_schedule->tour_number }}"

@@ -147,4 +147,54 @@ class PDFController extends DataController {
         $pdf_name = $voucher_data['tour_details']->tour_number . ' - ' . $booking_date . ' confirmation voucher.pdf';
         return $this->defaultPDF2($data, $pdf_name);
     }
+
+    public function viewHotelCancelledReservatonPDF(Request $request) {
+
+
+        $voucher_data = $this->getCancelledHotelReservationVoucherData($request->cancel_id, $request->rates, $request->special_requirement);
+
+
+        $title = 'CANCELLED HOTEL RESERVATION VOUCHER ';
+
+        $title .= $voucher_data['cancelled_booking']->tour_number;
+
+        $data = [
+            'title' => $title,
+            'body_content' => 'back-end.pdf.cancelled-hotel-reservation',
+            'footer_content' => 'back-end.pdf.hotel-reservation-footer',
+            'voucher_data' => $voucher_data,
+            'printed_by' => Auth::user()->name,
+            'site_settings' => $this->getSiteSettings()
+        ];
+
+
+
+        $pdf_name = $voucher_data['cancelled_booking']->tour_number . ' - cancelled hotel reservation voucher.pdf';
+        return $this->defaultPDF2($data, $pdf_name);
+    }
+
+    public function viewPrintedHotelCancelledReservatonPDF ($id) {
+
+
+        $voucher_data = $this->getPrintedCancelledHotelReservationVoucherData($id);
+
+
+        $title = 'CANCELLED HOTEL RESERVATION VOUCHER ';
+
+        $title .= $voucher_data['cancelled_booking']->tour_number;
+
+        $data = [
+            'title' => $title,
+            'body_content' => 'back-end.pdf.cancelled-hotel-reservation',
+            'footer_content' => 'back-end.pdf.hotel-reservation-footer',
+            'voucher_data' => $voucher_data,
+            'printed_by' => Auth::user()->name,
+            'site_settings' => $this->getSiteSettings()
+        ];
+
+
+
+        $pdf_name = $voucher_data['cancelled_booking']->tour_number . ' - cancelled hotel reservation voucher.pdf';
+        return $this->defaultPDF2($data, $pdf_name);
+    }
 }

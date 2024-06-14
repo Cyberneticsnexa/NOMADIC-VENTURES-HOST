@@ -840,6 +840,7 @@
     'edit-driver-init-js' => '/assets/back-end/custom/js/edit-driver-init.js?v=5',
     'dashboard-init-js' => '/assets/back-end/custom/js/dashboard-init.js?v=5',
     'edit-tour-init-js' => '/assets/back-end/custom/js/edit-tour-init.js?v=5',
+    'cancelled-hotel-booking-init-js' => '/assets/back-end/custom/js/cancelled-hotel-booking-init.js?v=5',
     'live-path' => '',
   ),
   'view' => 
