@@ -10,7 +10,7 @@ function uploadImage( $image, $disk )
  {
     $extension = 'png';
     $name = $image->getClientOriginalName();
-    $unique_name = md5( $name . time() ).$name;
+    $unique_name = md5( $name . time() );
     $full_name = $unique_name . '.' . $extension;
 
     Storage::disk( 'image' )->put( $disk.'/'.$full_name, File::get( $image ) );
