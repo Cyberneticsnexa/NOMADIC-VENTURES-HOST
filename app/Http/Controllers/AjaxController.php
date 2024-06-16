@@ -24,7 +24,7 @@ class AjaxController extends Controller
 
     public function getTours(Request $request)
     {
-        $query = Tour::with('countryDetails','agentDetails','statusDetails');
+        $query = Tour::with('countryDetails','agentDetails','statusDetails'); 
 
         // filter
         $year_filter = $request->columns[1]['search']['value'];
