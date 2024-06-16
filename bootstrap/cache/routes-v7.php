@@ -13,21 +13,21 @@
 
 app('router')->setCompiledRoutes(
     array (
-  'compiled' => 
+  'compiled' =>
   array (
     0 => false,
-    1 => 
+    1 =>
     array (
-      '/sanctum/csrf-cookie' => 
+      '/sanctum/csrf-cookie' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'sanctum.csrf-cookie',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -38,16 +38,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/_ignition/health-check' => 
+      '/_ignition/health-check' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'ignition.healthCheck',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -58,16 +58,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/_ignition/execute-solution' => 
+      '/_ignition/execute-solution' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'ignition.executeSolution',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -77,16 +77,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/_ignition/update-config' => 
+      '/_ignition/update-config' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'ignition.updateConfig',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -96,16 +96,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/api/user' => 
+      '/api/user' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::o5NbTRJSDNpRKQDi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -116,16 +116,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/login' => 
+      '/login' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'login',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -136,16 +136,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/signin' => 
+      '/signin' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'signin',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -155,16 +155,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/logout' => 
+      '/logout' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'logout',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -175,16 +175,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/' => 
+      '/' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'dashboard',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -195,16 +195,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/site-settings' => 
+      '/site-settings' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'site-settings',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -215,16 +215,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/user' => 
+      '/user' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'user',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -235,16 +235,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/user-roll' => 
+      '/user-roll' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'user-roll',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -255,16 +255,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/vehicle' => 
+      '/vehicle' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'vehicle',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -275,16 +275,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/vehicle-type' => 
+      '/vehicle-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'vehicle-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -295,16 +295,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/add-driver' => 
+      '/add-driver' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'add-driver',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -315,16 +315,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/view-driver' => 
+      '/view-driver' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'view-driver',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -335,16 +335,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/manage-tour-from-transport' => 
+      '/manage-tour-from-transport' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'manage-tour-from-transport',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -355,16 +355,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/room-type' => 
+      '/room-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'room-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -375,16 +375,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/room-category' => 
+      '/room-category' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'room-category',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -395,16 +395,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-hotel' => 
+      '/create-hotel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-hotel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -415,16 +415,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/hotel-cities' => 
+      '/hotel-cities' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'hotel-cities',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -435,16 +435,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/hotel' => 
+      '/hotel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'hotel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -455,16 +455,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/basis' => 
+      '/basis' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'basis',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -475,16 +475,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/manage-tour-from-hotel-management' => 
+      '/manage-tour-from-hotel-management' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'manage-tour-from-hotel-management',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -495,16 +495,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/add-country-code' => 
+      '/add-country-code' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'add-country-code',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -515,16 +515,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-tour' => 
+      '/create-tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-tour',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -535,16 +535,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/agent' => 
+      '/agent' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'agent',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -555,16 +555,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/tour' => 
+      '/tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'tour',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -575,16 +575,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/guide-language' => 
+      '/guide-language' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'guide-language',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -595,16 +595,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/guide-register' => 
+      '/guide-register' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'guide-register',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -615,16 +615,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-site-settings' => 
+      '/create-site-settings' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-site-settings',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -634,16 +634,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-user-roll' => 
+      '/create-user-roll' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-user-roll',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -653,16 +653,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-user' => 
+      '/create-user' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-user',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -672,16 +672,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-user' => 
+      '/edit-user' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-user',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -691,16 +691,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-vehical-type' => 
+      '/create-vehical-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-vehical-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -710,16 +710,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-vehical-type' => 
+      '/edit-vehical-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-vehical-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -729,16 +729,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-vehical' => 
+      '/create-vehical' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-vehical',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -748,16 +748,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-vehical' => 
+      '/edit-vehical' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-vehical',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -767,16 +767,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-guide' => 
+      '/create-guide' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-guide',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -786,16 +786,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-room-type' => 
+      '/create-room-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-room-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -805,16 +805,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-room-type' => 
+      '/edit-room-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-room-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -824,16 +824,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-room-category' => 
+      '/create-room-category' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-room-category',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -843,16 +843,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-room-category' => 
+      '/edit-room-category' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-room-category',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -862,16 +862,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-hotel-cities' => 
+      '/create-hotel-cities' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-hotel-cities',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -881,16 +881,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-hotel-city' => 
+      '/edit-hotel-city' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-hotel-city',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -900,16 +900,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-basis' => 
+      '/create-basis' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-basis',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -919,16 +919,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-basis' => 
+      '/edit-basis' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-basis',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -938,16 +938,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/register-agent' => 
+      '/register-agent' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'register-agent',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -957,16 +957,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-agent-register' => 
+      '/edit-agent-register' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-agent-register',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -976,16 +976,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-driver' => 
+      '/create-driver' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-driver',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -995,16 +995,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/add-hotel' => 
+      '/add-hotel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'add-hotel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1014,16 +1014,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/assign-hotel-for-tour' => 
+      '/assign-hotel-for-tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'assign-hotel-for-tour',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1033,16 +1033,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/re-assign-hotel-for-tour' => 
+      '/re-assign-hotel-for-tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 're-assign-hotel-for-tour',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1052,16 +1052,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-country' => 
+      '/create-country' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-country',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1071,16 +1071,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-country' => 
+      '/edit-country' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-country',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1090,16 +1090,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/add-tour' => 
+      '/add-tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'add-tour',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1109,16 +1109,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/confirm-hotel-booking' => 
+      '/confirm-hotel-booking' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::8FewXnzXNF08etwt',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1128,16 +1128,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-hotels-for-tour' => 
+      '/get-hotels-for-tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::nNVfS33991JpO5YV',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1147,16 +1147,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-guide-language' => 
+      '/create-guide-language' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-guide-language',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1166,16 +1166,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-guide-language' => 
+      '/edit-guide-language' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-guide-language',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1185,16 +1185,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/edit-guide' => 
+      '/edit-guide' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-guide',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1204,16 +1204,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-tour' => 
+      '/get-tour' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-tour',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1223,16 +1223,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-tour-for-transport' => 
+      '/get-tour-for-transport' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-tour-for-transport',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1242,16 +1242,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-tour-for-hotel' => 
+      '/get-tour-for-hotel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-tour-for-hotel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1261,16 +1261,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-guide-for-language' => 
+      '/get-guide-for-language' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-guide-for-language',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1280,16 +1280,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-vehical-for-type' => 
+      '/get-vehical-for-type' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-vehical-for-type',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1299,16 +1299,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-hotel-for-city' => 
+      '/get-hotel-for-city' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-hotel-for-city',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1318,16 +1318,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-rooms-for-hotel' => 
+      '/get-rooms-for-hotel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-rooms-for-hotel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1337,16 +1337,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/get-pdf' => 
+      '/get-pdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'get-pdf',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1357,16 +1357,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-hotel-reservation' => 
+      '/create-hotel-reservation' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-hotel-reservation',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1376,16 +1376,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/create-cancelled-hotel-reservation' => 
+      '/create-cancelled-hotel-reservation' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-cancelled-hotel-reservation',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1395,16 +1395,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/cancellation-hotel-booking-accept' => 
+      '/cancellation-hotel-booking-accept' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'cancellation-hotel-booking-accept',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1414,16 +1414,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/user-email-verification' => 
+      '/user-email-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'user-email-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1433,16 +1433,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-user-email-verification' => 
+      '/update-user-email-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-user-email-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1452,16 +1452,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/basis-code-verification' => 
+      '/basis-code-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'basis-code-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1471,16 +1471,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-basis-code-verification' => 
+      '/update-basis-code-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-basis-code-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1490,16 +1490,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/room-category-verification' => 
+      '/room-category-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'room-category-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1509,16 +1509,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-room-type-verification' => 
+      '/update-room-type-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-room-type-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1528,16 +1528,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/driver-nic-verification' => 
+      '/driver-nic-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'driver-nic-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1547,16 +1547,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/guide-nic-verification' => 
+      '/guide-nic-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'guide-nic-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1566,16 +1566,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/vehicle-no-verification' => 
+      '/vehicle-no-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'vehicle-no-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1585,16 +1585,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/driver-licence-verification' => 
+      '/driver-licence-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'driver-licence-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1604,16 +1604,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/country-code-verification' => 
+      '/country-code-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'country-code-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1623,16 +1623,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-country-code-verification' => 
+      '/update-country-code-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-country-code-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1642,16 +1642,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-vehicle-no-verification' => 
+      '/update-vehicle-no-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-vehicle-no-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1661,16 +1661,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-guide-nic-verification' => 
+      '/update-guide-nic-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-guide-nic-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1680,16 +1680,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/update-driver-nic-verification' => 
+      '/update-driver-nic-verification' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-driver-nic-verification',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1700,26 +1700,26 @@ app('router')->setCompiledRoutes(
         ),
       ),
     ),
-    2 => 
+    2 =>
     array (
       0 => '{^(?|/edit\\-(?|user\\-roll(?:/([^/]++))?(*:41)|driver(?:/([^/]++))?(*:68)|hotel(?:/([^/]++))?(*:94)|tour(?:/([^/]++))?(*:119))|/assign\\-franchise(?|\\-from\\-transport(?:/([^/]++))?(*:180)|s(?:/([^/]++))?(*:203))|/view\\-(?|hotel(?|(?:/([^/]++))?(*:244)|\\-reservation(?:/([^/]++)(?:/([^/]++))?)?(*:293))|tour\\-schedule(?|\\-for\\-hotel\\-management(?:/([^/]++))?(*:357)|(?:/([^/]++))?(*:379)|\\-for\\-transpotaion(?:/([^/]++))?(*:420))|c(?|ancelled\\-hotel\\-reservation(?:/([^/]++))?(*:475)|onfirmation\\-voucher(?:/([^/]++)(?:/([^/]++))?)?(*:531)))|/update\\-(?|user\\-roll(?:/([^/]++))?(*:577)|driver(?:/([^/]++))?(*:605)|hotel(?:/([^/]++))?(*:632)|tour(?|(?:/([^/]++))?(*:661)|\\-franchise(?:/([^/]++))?(*:694)))|/c(?|reate\\-transport\\-franchise(?:/([^/]++))?(*:750)|ancelled\\-bookings(?:/([^/]++))?(*:790))|/re\\-assign\\-hotel(?:/([^/]++)(?:/([^/]++))?)?(*:845)|/tour\\-status(?:/([^/]++)(?:/([^/]++))?)?(*:894))/?$}sDu',
     ),
-    3 => 
+    3 =>
     array (
-      41 => 
+      41 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-user-roll',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1730,20 +1730,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      68 => 
+      68 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-driver',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1754,20 +1754,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      94 => 
+      94 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit-hotel',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1778,20 +1778,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      119 => 
+      119 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::SJEFI63NVcb5Fsta',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1802,20 +1802,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      180 => 
+      180 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'assign-franchise-from-transport',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1826,20 +1826,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      203 => 
+      203 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'assign-franchises',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1850,20 +1850,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      244 => 
+      244 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::uYMK3EjJXgJ05Tjx',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1874,22 +1874,22 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      293 => 
+      293 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'view-hotel-reservation',
             'id' => NULL,
             'date' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
             1 => 'date',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1900,20 +1900,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      357 => 
+      357 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::Q6IM4QjpdUmgcqkN',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1924,20 +1924,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      379 => 
+      379 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::ytMKKWFGjDLSfx4P',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1948,20 +1948,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      420 => 
+      420 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::BIVLyyPivjPT0ebz',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1972,20 +1972,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      475 => 
+      475 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'view-cancelled-hotel-reservation',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1996,22 +1996,22 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      531 => 
+      531 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'view-confirmation-voucher',
             'id' => NULL,
             'date' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
             1 => 'date',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2022,20 +2022,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      577 => 
+      577 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-user-roll',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2045,20 +2045,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      605 => 
+      605 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-driver',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2068,20 +2068,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      632 => 
+      632 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-hotel',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2091,20 +2091,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      661 => 
+      661 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'update-tour',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2114,20 +2114,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      694 => 
+      694 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::uzxj9fSMQtKfDYPl',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2137,20 +2137,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      750 => 
+      750 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'create-transport-franchise',
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2160,20 +2160,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      790 => 
+      790 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::IWdXjtbPGVz64bn7',
             'tour_number' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tour_number',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2184,22 +2184,22 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      845 => 
+      845 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::LHugikZHEKMRJaQe',
             'tour_number' => NULL,
             'id' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tour_number',
             1 => 'id',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2210,22 +2210,22 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      894 => 
+      894 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'tour-status',
             'id' => NULL,
             'status' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'id',
             1 => 'status',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2235,7 +2235,7 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
           0 => NULL,
           1 => NULL,
@@ -2249,56 +2249,56 @@ app('router')->setCompiledRoutes(
     ),
     4 => NULL,
   ),
-  'attributes' => 
+  'attributes' =>
   array (
-    'sanctum.csrf-cookie' => 
+    'sanctum.csrf-cookie' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'sanctum/csrf-cookie',
-      'action' => 
+      'action' =>
       array (
         'uses' => 'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show',
         'controller' => 'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show',
         'namespace' => NULL,
         'prefix' => 'sanctum',
-        'where' => 
+        'where' =>
         array (
         ),
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
         'as' => 'sanctum.csrf-cookie',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'ignition.healthCheck' => 
+    'ignition.healthCheck' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '_ignition/health-check',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'Spatie\\LaravelIgnition\\Http\\Middleware\\RunnableSolutionsEnabled',
         ),
@@ -2307,34 +2307,34 @@ app('router')->setCompiledRoutes(
         'as' => 'ignition.healthCheck',
         'namespace' => NULL,
         'prefix' => '_ignition',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'ignition.executeSolution' => 
+    'ignition.executeSolution' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => '_ignition/execute-solution',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'Spatie\\LaravelIgnition\\Http\\Middleware\\RunnableSolutionsEnabled',
         ),
@@ -2343,34 +2343,34 @@ app('router')->setCompiledRoutes(
         'as' => 'ignition.executeSolution',
         'namespace' => NULL,
         'prefix' => '_ignition',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'ignition.updateConfig' => 
+    'ignition.updateConfig' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => '_ignition/update-config',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'Spatie\\LaravelIgnition\\Http\\Middleware\\RunnableSolutionsEnabled',
         ),
@@ -2379,35 +2379,35 @@ app('router')->setCompiledRoutes(
         'as' => 'ignition.updateConfig',
         'namespace' => NULL,
         'prefix' => '_ignition',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::o5NbTRJSDNpRKQDi' => 
+    'generated::o5NbTRJSDNpRKQDi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'api/user',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'api',
           1 => 'auth:sanctum',
@@ -2417,36 +2417,36 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005210000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::o5NbTRJSDNpRKQDi',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login' => 
+    'login' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'login',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -2454,35 +2454,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@login',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'login',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'signin' => 
+    'signin' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'signin',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -2490,36 +2490,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AuthController@dologin',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'signin',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'logout' => 
+    'logout' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'logout',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -2527,36 +2527,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AuthController@dologout',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'logout',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'dashboard' => 
+    'dashboard' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '/',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2566,36 +2566,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@dashboard',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'dashboard',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'site-settings' => 
+    'site-settings' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'site-settings',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2605,36 +2605,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewSiteSetting',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'site-settings',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'user' => 
+    'user' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'user',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2644,36 +2644,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@userDetails',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'user',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'user-roll' => 
+    'user-roll' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'user-roll',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2683,36 +2683,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@userRoll',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'user-roll',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-user-roll' => 
+    'edit-user-roll' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'edit-user-roll/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2722,36 +2722,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@editUserRoll',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-user-roll',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'vehicle' => 
+    'vehicle' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'vehicle',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2761,36 +2761,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@vehical',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'vehicle',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'vehicle-type' => 
+    'vehicle-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'vehicle-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2800,36 +2800,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@vehicalType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'vehicle-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'add-driver' => 
+    'add-driver' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'add-driver',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2839,36 +2839,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@addDriver',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'add-driver',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'view-driver' => 
+    'view-driver' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-driver',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2878,36 +2878,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewDriver',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'view-driver',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-driver' => 
+    'edit-driver' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'edit-driver/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2917,36 +2917,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@editDriver',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-driver',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'manage-tour-from-transport' => 
+    'manage-tour-from-transport' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'manage-tour-from-transport',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2956,36 +2956,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@manageTourFromTransport',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'manage-tour-from-transport',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'assign-franchise-from-transport' => 
+    'assign-franchise-from-transport' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'assign-franchise-from-transport/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -2995,36 +2995,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@assignFranchiseFromTransport',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'assign-franchise-from-transport',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'room-type' => 
+    'room-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'room-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3034,36 +3034,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@roomType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'room-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'room-category' => 
+    'room-category' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'room-category',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3073,36 +3073,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@roomCategory',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'room-category',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-hotel' => 
+    'create-hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'create-hotel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3112,36 +3112,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@createHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'hotel-cities' => 
+    'hotel-cities' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'hotel-cities',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3151,36 +3151,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@hotelCities',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'hotel-cities',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'hotel' => 
+    'hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'hotel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3190,36 +3190,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewHotels',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-hotel' => 
+    'edit-hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'edit-hotel/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3229,36 +3229,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@editHotels',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'basis' => 
+    'basis' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'basis',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3268,36 +3268,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@basis',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'basis',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'manage-tour-from-hotel-management' => 
+    'manage-tour-from-hotel-management' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'manage-tour-from-hotel-management',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3307,36 +3307,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@manageTourFromHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'manage-tour-from-hotel-management',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'add-country-code' => 
+    'add-country-code' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'add-country-code',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3346,36 +3346,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@country',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'add-country-code',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-tour' => 
+    'create-tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'create-tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3385,36 +3385,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@createTour',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'agent' => 
+    'agent' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'agent',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3424,36 +3424,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@agent',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'agent',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'tour' => 
+    'tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3463,36 +3463,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@tour',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'assign-franchises' => 
+    'assign-franchises' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'assign-franchises/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3502,36 +3502,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@assignFranchises',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'assign-franchises',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'guide-language' => 
+    'guide-language' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'guide-language',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3541,36 +3541,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@guideLanguage',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'guide-language',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'guide-register' => 
+    'guide-register' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'guide-register',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3580,35 +3580,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@guideRegister',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'guide-register',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-site-settings' => 
+    'create-site-settings' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-site-settings',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3618,35 +3618,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createSiteSettings',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-site-settings',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-user-roll' => 
+    'create-user-roll' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-user-roll',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3656,35 +3656,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createUserRoll',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-user-roll',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-user' => 
+    'create-user' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-user',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3694,35 +3694,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createUser',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-user',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-user' => 
+    'edit-user' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-user',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3732,35 +3732,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateUser',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-user',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-vehical-type' => 
+    'create-vehical-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-vehical-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3770,35 +3770,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createVehicalType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-vehical-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-vehical-type' => 
+    'edit-vehical-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-vehical-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3808,35 +3808,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateVehicalType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-vehical-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-vehical' => 
+    'create-vehical' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-vehical',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3846,35 +3846,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createVehical',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-vehical',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-vehical' => 
+    'edit-vehical' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-vehical',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3884,35 +3884,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateVehical',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-vehical',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-guide' => 
+    'create-guide' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-guide',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3921,35 +3921,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createGuide',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-guide',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-room-type' => 
+    'create-room-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-room-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3959,35 +3959,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createRoomType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-room-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-room-type' => 
+    'edit-room-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-room-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -3997,35 +3997,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateRoomType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-room-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-room-category' => 
+    'create-room-category' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-room-category',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4035,35 +4035,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createRoomCategory',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-room-category',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-room-category' => 
+    'edit-room-category' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-room-category',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4073,35 +4073,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateRoomCategory',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-room-category',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-hotel-cities' => 
+    'create-hotel-cities' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-hotel-cities',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4111,35 +4111,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createHotelCity',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-hotel-cities',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-hotel-city' => 
+    'edit-hotel-city' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-hotel-city',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4149,35 +4149,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateHotelCity',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-hotel-city',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-basis' => 
+    'create-basis' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-basis',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4187,35 +4187,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createBasis',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-basis',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-basis' => 
+    'edit-basis' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-basis',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4225,35 +4225,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateBasis',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-basis',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'register-agent' => 
+    'register-agent' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'register-agent',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4263,35 +4263,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createAgent',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'register-agent',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-agent-register' => 
+    'edit-agent-register' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-agent-register',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4301,36 +4301,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateAgent',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-agent-register',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::uYMK3EjJXgJ05Tjx' => 
+    'generated::uYMK3EjJXgJ05Tjx' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-hotel/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4339,35 +4339,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::uYMK3EjJXgJ05Tjx',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-user-roll' => 
+    'update-user-roll' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-user-roll/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4376,35 +4376,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateUserRoll',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-user-roll',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-driver' => 
+    'create-driver' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-driver',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4413,35 +4413,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createDriver',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-driver',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-driver' => 
+    'update-driver' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-driver/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4450,35 +4450,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateDriver',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-driver',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-transport-franchise' => 
+    'create-transport-franchise' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-transport-franchise/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4487,35 +4487,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createTransportFranchise',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-transport-franchise',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'add-hotel' => 
+    'add-hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'add-hotel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4524,35 +4524,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'add-hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-hotel' => 
+    'update-hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-hotel/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4561,36 +4561,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Q6IM4QjpdUmgcqkN' => 
+    'generated::Q6IM4QjpdUmgcqkN' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-tour-schedule-for-hotel-management/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4599,35 +4599,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewTourScheduleForHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::Q6IM4QjpdUmgcqkN',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'assign-hotel-for-tour' => 
+    'assign-hotel-for-tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'assign-hotel-for-tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4636,35 +4636,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@assignHotelFromHM',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'assign-hotel-for-tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    're-assign-hotel-for-tour' => 
+    're-assign-hotel-for-tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 're-assign-hotel-for-tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4673,36 +4673,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@reAssignHotelFromHM',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 're-assign-hotel-for-tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::LHugikZHEKMRJaQe' => 
+    'generated::LHugikZHEKMRJaQe' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 're-assign-hotel/{tour_number?}/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4711,36 +4711,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@reAssignHotelView',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::LHugikZHEKMRJaQe',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::IWdXjtbPGVz64bn7' => 
+    'generated::IWdXjtbPGVz64bn7' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'cancelled-bookings/{tour_number?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4749,35 +4749,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@cancelledBooking',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::IWdXjtbPGVz64bn7',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-country' => 
+    'create-country' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-country',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4786,35 +4786,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createCountryCode',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-country',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-country' => 
+    'edit-country' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-country',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4823,35 +4823,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateCountry',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-country',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'add-tour' => 
+    'add-tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'add-tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4860,36 +4860,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@addTour',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'add-tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'tour-status' => 
+    'tour-status' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'tour-status/{id?}/{status?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4898,35 +4898,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@changeTourStatus',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'tour-status',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-tour' => 
+    'update-tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-tour/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4935,36 +4935,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateTour',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ytMKKWFGjDLSfx4P' => 
+    'generated::ytMKKWFGjDLSfx4P' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-tour-schedule/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -4973,36 +4973,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewTourSchedule',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::ytMKKWFGjDLSfx4P',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::BIVLyyPivjPT0ebz' => 
+    'generated::BIVLyyPivjPT0ebz' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-tour-schedule-for-transpotaion/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5011,36 +5011,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@viewTourScheduleForTranspotaion',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::BIVLyyPivjPT0ebz',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::SJEFI63NVcb5Fsta' => 
+    'generated::SJEFI63NVcb5Fsta' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'edit-tour/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5049,35 +5049,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ViewController@editTour',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::SJEFI63NVcb5Fsta',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::uzxj9fSMQtKfDYPl' => 
+    'generated::uzxj9fSMQtKfDYPl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-tour-franchise/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5086,35 +5086,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateTourFranchise',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::uzxj9fSMQtKfDYPl',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8FewXnzXNF08etwt' => 
+    'generated::8FewXnzXNF08etwt' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'confirm-hotel-booking',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5123,35 +5123,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@confirmHotelBooking',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::8FewXnzXNF08etwt',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::nNVfS33991JpO5YV' => 
+    'generated::nNVfS33991JpO5YV' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-hotels-for-tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5160,35 +5160,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getHotelsForTourConfirmation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::nNVfS33991JpO5YV',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-guide-language' => 
+    'create-guide-language' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-guide-language',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5197,35 +5197,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@createGuideLanguage',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-guide-language',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-guide-language' => 
+    'edit-guide-language' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-guide-language',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5234,35 +5234,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateLanguage',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-guide-language',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit-guide' => 
+    'edit-guide' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'edit-guide',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5271,35 +5271,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@updateGuide',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'edit-guide',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-tour' => 
+    'get-tour' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-tour',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5308,35 +5308,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getTours',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-tour',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-tour-for-transport' => 
+    'get-tour-for-transport' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-tour-for-transport',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5345,35 +5345,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getToursForTransport',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-tour-for-transport',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-tour-for-hotel' => 
+    'get-tour-for-hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-tour-for-hotel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5382,35 +5382,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getToursForHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-tour-for-hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-guide-for-language' => 
+    'get-guide-for-language' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-guide-for-language',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5419,35 +5419,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getGuideForLanguage',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-guide-for-language',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-vehical-for-type' => 
+    'get-vehical-for-type' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-vehical-for-type',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5456,35 +5456,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getVehicalForType',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-vehical-for-type',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-hotel-for-city' => 
+    'get-hotel-for-city' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-hotel-for-city',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5493,35 +5493,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getHotelForCity',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-hotel-for-city',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-rooms-for-hotel' => 
+    'get-rooms-for-hotel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'get-rooms-for-hotel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5530,36 +5530,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AjaxController@getRoomsForHotel',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-rooms-for-hotel',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'get-pdf' => 
+    'get-pdf' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'get-pdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5568,35 +5568,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\PDFController@generatePDF',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'get-pdf',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-hotel-reservation' => 
+    'create-hotel-reservation' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-hotel-reservation',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5605,35 +5605,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\PDFController@viewHotelReservatonPDF',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-hotel-reservation',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'create-cancelled-hotel-reservation' => 
+    'create-cancelled-hotel-reservation' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'create-cancelled-hotel-reservation',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5642,36 +5642,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\PDFController@viewHotelCancelledReservatonPDF',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'create-cancelled-hotel-reservation',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'view-cancelled-hotel-reservation' => 
+    'view-cancelled-hotel-reservation' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-cancelled-hotel-reservation/{id?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5680,36 +5680,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\PDFController@viewPrintedHotelCancelledReservatonPDF',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'view-cancelled-hotel-reservation',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'view-hotel-reservation' => 
+    'view-hotel-reservation' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-hotel-reservation/{id?}/{date?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5718,36 +5718,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\PDFController@viewPrintedHotelReservatonPDF',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'view-hotel-reservation',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'view-confirmation-voucher' => 
+    'view-confirmation-voucher' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'view-confirmation-voucher/{id?}/{date?}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5756,35 +5756,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\PDFController@viewConfirmationPDF',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'view-confirmation-voucher',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'cancellation-hotel-booking-accept' => 
+    'cancellation-hotel-booking-accept' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'cancellation-hotel-booking-accept',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5793,35 +5793,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ActionController@cancellationAccept',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'cancellation-hotel-booking-accept',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'user-email-verification' => 
+    'user-email-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'user-email-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5830,35 +5830,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@userEmailValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'user-email-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-user-email-verification' => 
+    'update-user-email-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-user-email-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5867,35 +5867,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateUserEmailValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-user-email-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'basis-code-verification' => 
+    'basis-code-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'basis-code-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5904,35 +5904,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@basisCodeValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'basis-code-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-basis-code-verification' => 
+    'update-basis-code-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-basis-code-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5941,35 +5941,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateBasisCodeValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-basis-code-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'room-category-verification' => 
+    'room-category-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'room-category-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -5978,35 +5978,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@roomTypeValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'room-category-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-room-type-verification' => 
+    'update-room-type-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-room-type-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6015,35 +6015,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateRoomTypeCodeValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-room-type-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'driver-nic-verification' => 
+    'driver-nic-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'driver-nic-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6052,35 +6052,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@driverNicValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'driver-nic-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'guide-nic-verification' => 
+    'guide-nic-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'guide-nic-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6089,35 +6089,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@guideNicValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'guide-nic-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'vehicle-no-verification' => 
+    'vehicle-no-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'vehicle-no-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6126,35 +6126,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@vehicleNumberValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'vehicle-no-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'driver-licence-verification' => 
+    'driver-licence-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'driver-licence-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6163,35 +6163,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@driverLicenceNoValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'driver-licence-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'country-code-verification' => 
+    'country-code-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'country-code-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6200,35 +6200,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@countryCodeValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'country-code-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-country-code-verification' => 
+    'update-country-code-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-country-code-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6237,35 +6237,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateCountryCodeValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-country-code-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-vehicle-no-verification' => 
+    'update-vehicle-no-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-vehicle-no-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6274,35 +6274,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateVehicleNoValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-vehicle-no-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-guide-nic-verification' => 
+    'update-guide-nic-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-guide-nic-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6311,35 +6311,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateGuideNicValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-guide-nic-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'update-driver-nic-verification' => 
+    'update-driver-nic-verification' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'update-driver-nic-verification',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'login_validation',
@@ -6348,19 +6348,19 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\ValidationAjax@updateDriverNicValidation',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'update-driver-nic-verification',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,

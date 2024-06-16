@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:BfHHWfrkuXzqIYSdVSdwRE1y1laABxQ7TsX8l3ubOPE=',
+    'key' => 'base64:nhZWTIzZp8snrBLVPhTbnILXvqR2UMKiPo8jAcf3Fmw=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -199,7 +199,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\framework/cache/data',
+        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -282,7 +282,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'nomadic_new',
+        'database' => 'nom',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -292,7 +292,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'nomadic_new',
+        'database' => 'nom',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -312,7 +312,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'nomadic_new',
+        'database' => 'nom',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -327,7 +327,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'nomadic_new',
+        'database' => 'nom',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -371,10 +371,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\fonts',
-      'font_cache' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\Indunil\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST',
+      'font_dir' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\fonts',
+      'font_cache' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\user\\AppData\\Local\\Temp',
+      'chroot' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -419,28 +419,28 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\app',
+        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\app',
         'throw' => false,
       ),
       'image' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\uploads/images',
+        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\uploads/images',
       ),
       'attachment' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\uploads/attachment',
+        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\uploads/attachment',
       ),
       'video' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\uploads/video',
+        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\uploads/video',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\app/public',
+        'root' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -460,7 +460,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\public\\storage' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\app/public',
+      'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\public\\storage' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -499,13 +499,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
+        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
+        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -557,7 +557,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
+        'path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -623,7 +623,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\resources\\views/vendor/mail',
+        0 => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -730,7 +730,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\framework/sessions',
+    'files' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -847,9 +847,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\resources\\views',
+      0 => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST\\storage\\framework\\views',
+    'compiled' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -931,7 +931,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\Users\\Indunil\\Desktop\\PROJECTS\\PERSONAL\\NOMADIC-VENTURES-HOST',
+    'remote_sites_path' => 'F:\\NomFinal\\NOMADIC-VENTURES-HOST',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
